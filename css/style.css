@@ -1,139 +1,72 @@
-*{
-    margin:0;
-    padding:0;
+@charset "UTF-8";
+/* Estilos del header*/
+header {
+  /* Div crear cuenta*/
+  /*Frase del encabezado*/
+  /*Botón Crear cuenta e imagen de crear cuenta*/
+  /* Título principal y el logo de Alicia*/
 }
-
-/*
-Estilos del header
-*/
-div{
-    background-color: rgb(128, 55, 170);
+header div {
+  background-color: rgb(128, 55, 170);
 }
-
-/* Div crear cuenta*/
-.seccion-crear-cuenta-frase{ 
-    display: flex;
-    list-style: none;
-    justify-content: flex-end;
-    
-
+header .seccion-crear-cuenta-frase {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
 }
-
-/*Frase del encabezado*/
-
-.frase-encabezado{
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16px;
-    padding: 10px;
-    margin-right: 250px;
+header .frase-encabezado {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  padding: 10px;
+  margin-right: 250px;
 }
-
-/*Botón Crear cuenta e imagen de crear cuenta*/
-
-.boton-crear-cuenta{
-    color:rgb(43, 3, 66);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 15px;
-    background-color: rgb(197, 157, 235);
-    padding: 8px;
-    border:2px solid rgb(78, 41, 107);
-    border-radius: 5px;
-    margin: 20px;
+header .boton-crear-cuenta {
+  color: rgb(43, 3, 66);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 15px;
+  background-color: rgb(197, 157, 235);
+  padding: 8px;
+  border: 2px solid rgb(78, 41, 107);
+  border-radius: 5px;
+  margin: 20px;
 }
-
- .img-crear-cuenta{
-    width: 30px;
-    margin: 5px;
-
+header .img-crear-cuenta {
+  width: 30px;
+  margin: 5px;
 }
-/* Formulario de Crear cuenta*/
-.envianos-un-mensaje {
-    display: flex;
-    flex-direction: column;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    font-weight:200;
-    padding: 10px 5px;
-
+header .tituloprincipal-logo-alicia {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgb(198, 149, 245);
+  background-image: url(../assets/Imagenes/bowls.png);
 }
-.name-email-message {
-    background-color: rgb(118, 63, 155);
-
-
+header .tituloprincipal-logo-alicia .img-ceramica-4-elementos {
+  width: 150px;
 }
-/* Título principal y el logo de Alicia*/
-
-.img-ceramica-4-elementos{
-    width: 150px;
+header .tituloprincipal-logo-alicia .titulo-principal {
+  color: rgb(24, 20, 20);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
 }
-.titulo-principal{
-    color: rgb(24, 20, 20);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-
-
+header nav {
+  background-color: rgb(107, 43, 167);
 }
-/* div que engloba a la imagen y al titulo principal*/
-.tituloprincipal-logo-alicia{
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    background-color: 
-    rgb(198, 149, 245);
-    background-image: url(../assets/Imagenes/bowls.png);
-}
-
-/*Estilos de la barra de navegación*/
-
-header nav ul li a{
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 15px;
-
-}
-
-nav{
-    background-color: rgb(107, 43, 167);
-}
-
 header nav ul {
-display: flex;
-list-style: none;
-padding: 5px;
+  display: flex;
+  list-style: none;
+  padding: 5px;
+}
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 15px;
 }
 
-/* Estilos del footer
-*/
-footer{
-    display:flex;
-    justify-content: space-between;
-    padding: 20px;
-    margin: 20px;
-    background-color: rgb(116, 20, 206);
-    
-}
-.caja-1{ 
-    display: flex;
-    justify-content: center;
-}
-.caja-2{
-    display: flex;
-}
-
-.celular-email{
-    background-color: rgb(116, 20, 206);
-    color:white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: smaller;
-}
-.img-pie-de-pagina{
-    width: 35px;
-}
-
-
+/*# sourceMappingURL=style.css.map */
