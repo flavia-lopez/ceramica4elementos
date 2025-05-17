@@ -1,23 +1,18 @@
 //SIMULADOR CARRITO DE COMPRAS//
   //Declaramos variables y constantes//
   //Variables globales//
-  const maxProductos = 10;
+  const maxProductos = 5;
   let carritoVacio = [];
   //Variables para el total y la cantidad de productos//
   let total = 0;
   let cantidadProductos = 0;
 
   let productos = [
-    { id:1, nombre: "Ensaladera de ceramica", precio: 15000},
-    { id:2, nombre: "Bandeja de ceramica", precio: 10000},
-    { id:3, nombre: "Taza de ceramica", precio: 6000},
-    { id:4, nombre: "Juego de 6 platos playos", precio: 20000},
-    { id:5, nombre: "Juego de 6 platos hondos", precio: 25000},
-    { id:6, nombre: "Maceta de ceramica", precio:12000},
-    { id:7, nombre: "portasahumerio-hoja", precio: 5000},
-    { id:8, nombre: "portautensilios de cocina", precio: 8000},
-    { id:9, nombre: "posa vasos", precio: 3000},
-    { id:10,nombre: "juego de 6 platos de postre", precio: 15000},
+    { id:1, nombre: "Cuenco de ceramica hojas", precio: 15000},
+    { id:2, nombre: "Bandeja de ceramica rectangular", precio: 10000},
+    { id:3, nombre: "Taza de ceramica", precio: 6000, stock: 2},
+    { id:4, nombre: "posa cuchara Frida Kahlo", precio: 18000},
+    { id:5,nombre: "posa cuchara flor azul", precio: 15000},
   ]
 
 console.log(productos);
@@ -43,18 +38,25 @@ console.log(productos);
       for (let i = 0; i < productos.length; i ++){
         if (productos[i].id === pregunta){
           carritoVacio.push(productos[i])
+          cantidadProductos++;
+          alert("Producto agregado al carrito")
+
+
 
 
       }
      
     }
-    cantidadProductos++;
-    } while (!isNaN (pregunta)){
+    
+    } while (!isNaN (pregunta)); {
       if (cantidadProductos >= maxProductos) {
-        alert("Limite de productos alcanzado")
+                alert("Limite de productos alcanzado");
         return carritoVacio;
+
       }
     }
+
+
     console.log(carritoVacio); 
    
 
@@ -77,6 +79,8 @@ console.log(productos);
       }
       alert(lista);
     }
+//Invocamos la funcion mostrarCarrito//
+      mostrarCarrito(carritoVacio)
 
     //Funciones para eliminar producto, calcular total, finalizar compra//
 
@@ -87,11 +91,18 @@ console.log(productos);
       }
       return carritoVacio;
     }
+    //invocamos la funcion eliminarProducto//
+    eliminarProducto(carritoVacio, 1);
+    console.log(carritoVacio);
 
     function calcularTotal(carritoVacio) {
       const total = carritoVacio.reduce((acum, producto) => acum + producto.precio, 0);
       alert("El total de su compra es: ", total);
       return total;
     }
+    //invocamos la funcion calcularTotal//
+    calcularTotal(carritoVacio);
+
+    //Funciones para finalizar compra//
 
     function finalizarCompra() {}
