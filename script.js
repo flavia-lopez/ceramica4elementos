@@ -56,7 +56,7 @@ console.log(productos);
           //Informa al usuario que el producto fue agregado al carrito//
           alert("Producto agregado al carrito")
 
-         }if(pregunta != 0 productos[i].id !== pregunta) {
+         }if(pregunta != 0 && productos[i].id !== pregunta) {
         //Si no encuentra el producto, informa al usuario y sale del ciclo for (el bucle do while continua)//
         alert("Producto no encontrado");
         break;
@@ -68,22 +68,18 @@ console.log(productos);
       alert("Limite de productos alcanzado");
       return carritoVacio; //termina la funcion y devuelve el carrito//
     }
-  }
- } while (pregunta !== 0); //el bucle continuara mientras el usuario no ingrese 0, cancelar o deja vacio el prompt// {
+  } while (pregunta !== 0); //el bucle continuara mientras el usuario no ingrese 0, cancelar o deja vacio el prompt// {
       //Muestra en consola el contenido actual del carrito en formato tabla//
       console.table(carritoVacio);
 
 
     console.log(carritoVacio); 
-   
 
-    
+}
+  //invocamos la funcion agregarProducto
+  let resultado = agregarProducto(carritoVacio);
+  console.log(resultado);
   
-    //invocamos la funcion agregarProducto
-   agregarProducto(carritoVacio);
-
-   console.log(agregarProducto(carritoVacio));
-
    //Funciones para mostrar el carrito y los productos//
     function mostrarCarrito(carritoVacio) {
       if (carritoVacio.length === 0) {
@@ -179,7 +175,7 @@ console.log(productos);
 
       }
 
-      //Creamo los objetos producto usando la funcion constructora//
+      //Creamos los objetos producto usando la funcion constructora//
 
       const producto1 = new Producto(1, "Cuenco de ceramica hojas", 15000, 1, "img/cuenco-de-ceramica-hojas.jpeg");
       const producto2 = new Producto(2, "Bandeja de ceramica rectangular", 10000, 1, "img/bandeja-de-ceramica-flor-azul.jpeg");
@@ -193,6 +189,46 @@ console.log(productos);
 
       //Mostramos los productos en el html//
       const contenedorProductos = document.getElementById("contenedor-productos");
+      const guardarBtn = document.getElementsByClassName("btn-agregaralcarrito");
+      //Recorremos un array productosArtesanales
+      productosArtesanales.forEach((producto) => {
+        const div = document.createElementById("div");
+        div.classList.add("producto");
+        div.innerHTML = `
+          <img src="${producto.imagen}" alt="${producto.nombre}">
+          <h3>${producto.nombre}</h3>
+          <p>Precio: $${producto.precio}</p>
+          <p>Stock: ${producto.stock}</p>
+          <button class="btn-agregaralcarrito">Agregar al carrito</button>
+        `;
+        contenedorProductos.appendChild(div);
 
+        //Agregamos el evento click al boton agregar al carrito//
+        const botonAgregar = div.querySelector(".btn-agregaralcarrito");
+        botonAgregar.addEventListener("click", () => {
+          agregarProducto(carritoVacio);
+        });
+      });
 
-    
+        //Guardamos los productos en el local storage//
+
+        function guardarProductosEnLocalStorage(productosArtesanales) {
+        const productosJSON = JSON.stringify(productosArtesanales);
+        localStorage.setItem("productos", productosJSON);
+        //Muestro un mensaje de confirmacion//
+        alert("Productos guardados en el local storage");
+       }
+       //invocamos la funcion guardarProductosEnLOcalStorage//
+       guardarProductosEnLocalStorage(productosArtesanales);
+
+       //Funcion para recuperar los productos del local storage//
+
+        function recuperarProductosDeLocalStorage() {
+          const productosJSON = localStorage.getItem("productos");
+          if (productosJSON) {
+            const productosrecuperados = JSON.parse(productosJSON);
+            //muestro un mensaje de confirmacion//
+            alert("Productos recuperados del local storage");
+            return productosrecuperados;
+          }
+        }
