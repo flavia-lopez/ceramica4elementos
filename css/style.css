@@ -69,4 +69,26 @@ header nav a {
   margin: 15px;
 }
 
+.btn-agregaralcarrito {
+    background-color: rgb(197, 157, 235);
+    color: rgb(43, 3, 66);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 8px;
+    border:2px solid rgb(78, 41, 107);
+    border-radius: 5px;
+    margin: 20px;
+}
+.btn-agregaralcarrito:hover {
+    background-color: rgb(78, 41, 107);
+    color: white;
+} 
+
+.img-de-productos {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
 /*# sourceMappingURL=style.css.map */
