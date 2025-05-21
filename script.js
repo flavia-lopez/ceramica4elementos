@@ -56,7 +56,7 @@ console.log(productos);
           //Informa al usuario que el producto fue agregado al carrito//
           alert("Producto agregado al carrito")
 
-         }if(pregunta != 0 && productos[i].id !== pregunta) {
+         }if(productos[i].id !== pregunta) {
         //Si no encuentra el producto, informa al usuario y sale del ciclo for (el bucle do while continua)//
         alert("Producto no encontrado");
         break;
@@ -64,16 +64,16 @@ console.log(productos);
      
     }
     //Verifica si se alcanzo el limite maximo de productos//
-    if (cantidadProductos >= maxProductos0){
+    if (cantidadProductos >= maxProductos){
       alert("Limite de productos alcanzado");
       return carritoVacio; //termina la funcion y devuelve el carrito//
     }
   } while (pregunta !== 0); //el bucle continuara mientras el usuario no ingrese 0, cancelar o deja vacio el prompt// {
       //Muestra en consola el contenido actual del carrito en formato tabla//
-      console.table(carritoVacio);
+      //console.table(carritoVacio);//
 
 
-    console.log(carritoVacio); 
+  //  console.log(carritoVacio); //
 
 }
   //invocamos la funcion agregarProducto
