@@ -3,6 +3,133 @@ import Toastify from 'toastify-js';
 
 
 //SIMULADOR CARRITO DE COMPRAS//
+//Agregamos el evento click al boton agregar al carrito//
+        //dentro del boton agregar al carrito, especificamente despues del click va la funcion fetch agregarProducto//
+        const botonAgregar = div.querySelector(".btn-agregaralcarrito");
+        botonAgregar.addEventListener("click",
+                //Simulamos una peticion para agregar un producto al carrito//
+        function simularFetchAgregarProducto(producto) {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    // Simula una respuesta exitosa
+                    resolve({
+                        ok: true,
+                        json: () => Promise.resolve({ mensaje: `Producto ${producto.nombre} agregado al carrito` })
+                    });
+                }, 500); // Simula 0.5 segundos de retardo
+            });
+        }(producto);
+        botonAgregar.addEventListener("click", () => {
+          agregarProducto(carritoVacio, producto);
+          renderizarCarrito();
+          Toastify({
+            text: `Producto ${producto.nombre} agregado al carrito`,
+            duration: 3000,
+            gravity: "bottom",
+            position: "right",
+            style: {
+              background: "linear-gradient(to right, #00b09b, #96c93d)",
+            },
+          }).showToast();
+        }););
+
+      //Agregamos un evento al boton Calcular total//
+      const btnCalcularTotal = document.querySelector("btn-calcular-total");
+      btnCalcularTotal.addEventListener("click", () => {
+        //Simulamos una peticion para calcular el total de la compra//
+        simularFetchCalcularTotal(carritoVacio).then(response => {
+            if (response.ok) {
+                response.json().then(data => {
+                    total = data.total;
+                    Toastify({
+                        text: `El total de su compra es: $${total}`,
+                        duration: 3000,
+                        gravity: "bottom",
+                        position: "right",
+                        style: {
+                            background: "linear-gradient(to right, #00b09b, #96c93d)",
+                        },
+                    }).showToast();
+                });
+            } else {
+                Toastify({
+                    text: "Error al calcular el total",
+                    duration: 3000,
+                    gravity: "bottom",
+                    position: "right",
+                    style: {
+                        background: "linear-gradient(to right, #ff0000, #ff7f00)",
+                    },
+                }).showToast();
+            }
+        });
+      });
+      //agregamos un evento al boton Finalizar compra//
+      const btnFinalizarCompra = document.querySelector("btn-finalizar-compra");
+      btnFinalizarCompra.addEventListener("click", () => {
+        //Simulamos una peticion para finalizar la compra//
+        simularFetchFinalizarCompra().then(response => {
+            if (response.ok) {
+                response.json().then(data => {
+                    Toastify({
+                        text: data.mensaje,
+                        duration: 3000,
+                        gravity: "bottom",
+                        position: "right",
+                        style: {
+                            background: "linear-gradient(to right, #00b09b, #96c93d)",
+                        },
+                    }).showToast();
+                    //Vaciamos el carrito despues de finalizar la compra//
+                    carritoVacio = [];
+                    renderizarCarrito();
+                });
+            } else {
+                Toastify({
+                    text: "Error al finalizar la compra",
+                    duration: 3000,
+                    gravity: "bottom",
+                    position: "right",
+                    style: {
+                        background: "linear-gradient(to right, #ff0000, #ff7f00)",
+                    },
+                }).showToast();
+            }
+        });
+      });
+
+          //Mostramos los productos en el html//
+      const contenedorProductos = document.querySelector("contenedor-productos");
+      const btnAgregarAlCarrito = document.querySelector(".btn-agregaralcarrito");
+      
+      //Recorremos un array productosArtesanales
+      productosArtesanales.forEach((producto) => {
+        const div = document.createElementById("div");
+        div.classList.add("producto");
+        div.innerHTML = `
+          <img src="${producto.imagen}" alt="${producto.nombre}">
+          <h3>${producto.nombre}</h3>
+          <p>Precio: $${producto.precio}</p>
+          <p>Stock: ${producto.stock}</p>
+          <button class="btn-agregaralcarrito">Agregar al carrito</button>
+        `;
+        contenedorProductos.appendChild(div);
+      });
+
+      //Paso 0: Definimos una funcion para mostrar mensajes de toastify//
+      function showToast(message) {
+        Toastify({
+          text: message,
+          duration: 3000,
+          gravity: "bottom",
+          position: "right",
+          style: {
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
+          },
+        }).showToast();
+      }
+
+
 //Paso 1: definimos la funcion constructora para Producto//
 
       function Producto(id, nombre, precio, stock, imagen) {
@@ -51,11 +178,11 @@ import Toastify from 'toastify-js';
   function agregarProducto(carritoVacio) {
     //Paso 5: Función para agregar productos al carrito//
     //Pregunta al usuario que producto desea agregar al carrito//
-    let pregunta = prompt("Ingrese el ID del producto que desea agregar al carrito (o 0 para cancelar):");
+    let pregunta = showToast("Ingrese el ID del producto que desea agregar al carrito (o 0 para cancelar):");
 
     //Si el usuario ingresa 0, cancela la operacion y sale de la funcion//
     if (pregunta === "0" || pregunta === null || pregunta.trim() === "") {
-      alert("Operacion cancelada");
+      showToast("Operacion cancelada");
       return carritoVacio; //termina la funcion y devuelve el carrito//
     }
 
@@ -64,7 +191,7 @@ import Toastify from 'toastify-js';
 
     //Verifica si el id ingresado es un numero valido//
     if (isNaN(pregunta) || pregunta <= 0) {
-      alert("ID invalido, por favor ingrese un numero valido");
+      showToast("Por favor, ingrese un ID valido");
       return carritoVacio; //termina la funcion y devuelve el carrito//
     }
 
@@ -75,18 +202,18 @@ import Toastify from 'toastify-js';
         //Verifica si el producto ya esta en el carrito//
         const productoExistente = carritoVacio.find(producto => producto.id === productosDisponibles[i].id);
         if (productoExistente) {
-          alert("El producto ya esta en el carrito");
+          showToast("El producto ya esta en el carrito");
           return carritoVacio; //termina la funcion y devuelve el carrito//
         }
         //Verifica si hay stock disponible del producto//
         if (productosDisponibles[i].stock <= 0) {
-          alert("No hay stock disponible del producto");
+          showToast("No hay stock disponible del producto");
           return carritoVacio; //termina la funcion y devuelve el carrito//
         }
         //Agrega el producto al carrito//
         carritoVacio.push(productosDisponibles[i]);
         cantidadProductos++;
-        alert("Producto agregado al carrito: " + productosDisponibles[i].nombre);
+        showToast("Producto agregado al carrito: " + productosDisponibles[i].nombre);
         renderizarProductos();
         break; //sale del bucle for in una vez que se agrega el producto al carrito//
       }
@@ -94,7 +221,7 @@ import Toastify from 'toastify-js';
     }
     //Verifica si se alcanzo el limite maximo de productos//
     if (cantidadProductos >= maxProductos){
-      alert("Limite de productos alcanzado");
+      showToast("Limite de productos alcanzado");
       return carritoVacio; //termina la funcion y devuelve el carrito//
     }
   } while (pregunta !== 0);
@@ -112,7 +239,7 @@ import Toastify from 'toastify-js';
 
     function calcularTotal(carritoVacio) {
       const total = carritoVacio.reduce((acum, producto) => acum + producto.precio, 0);
-      alert("El total de su compra es: ", total);
+      showToast("El total de su compra es: ", total);
       return total;
     }
 
@@ -120,7 +247,7 @@ import Toastify from 'toastify-js';
 
     function finalizarCompra(carritoVacio) {
       if (carritoVacio.length === 0) {
-        alert("El carrito esta vacio, no se puede finalizar la compra");
+        showToast("El carrito esta vacio, no se puede finalizar la compra");
         return;
       }
       //Simulamos una peticion para finalizar la compra//
@@ -133,7 +260,7 @@ import Toastify from 'toastify-js';
             renderizarCarrito();
           });
         } else {
-          alert("Error al finalizar la compra");
+          showToast("Error al finalizar la compra");
         }
       }
       );
@@ -141,7 +268,7 @@ import Toastify from 'toastify-js';
 
 //paso 6: renderizamos el carrito de compras en el HTML//
     function renderizarCarrito() {
-      const contenedorCarrito = document.getElementById("contenedor-carrito");
+      const contenedorCarrito = document.querySelector("#contenedor-carrito");
       contenedorCarrito.innerHTML = ""; // Limpiamos el contenedor antes de renderizar el carrito
       if (carritoVacio.length === 0) {
         contenedorCarrito.innerHTML = "<p>El carrito esta vacio</p>";
@@ -161,7 +288,7 @@ import Toastify from 'toastify-js';
         contenedorCarrito.appendChild(div);
       });
       // Agregamos el evento click al boton eliminar producto
-      const btnEliminarProducto = document.querySelectorAll(".btn-eliminar-producto");
+      const btnEliminarProducto = document.getElementsByClassName(".btn-eliminar-producto");
       btnEliminarProducto.forEach((btn) => {
         btn.addEventListener("click", (e) => {
           const idProducto = Number(e.target.getAttribute("data-id"));
@@ -180,7 +307,7 @@ import Toastify from 'toastify-js';
       });
     }
     //agregamos un evento al boton vaciar carrito//
-    const btnVaciarCarrito = document.getElementById("btn-vaciar-carrito");
+    const btnVaciarCarrito = document.getElementsByClassName("btn-vaciar-carrito");
     btnVaciarCarrito.addEventListener("click", () => {
       //Simulamos una peticion para vaciar el carrito//
       simularFetchVaciarCarrito().then(response => {
@@ -225,107 +352,3 @@ import Toastify from 'toastify-js';
       });
     }
 
-      // Paso 8:Mostramos los productos en el html//
-      const contenedorProductos = document.getElementById("contenedor-productos");
-      const btnAgregarAlCarrito = document.getElementsByClassName("btn-agregaralcarrito");
-      
-      //Recorremos un array productosArtesanales
-      productosArtesanales.forEach((producto) => {
-        const div = document.createElementById("div");
-        div.classList.add("producto");
-        div.innerHTML = `
-          <img src="${producto.imagen}" alt="${producto.nombre}">
-          <h3>${producto.nombre}</h3>
-          <p>Precio: $${producto.precio}</p>
-          <p>Stock: ${producto.stock}</p>
-          <button class="btn-agregaralcarrito">Agregar al carrito</button>
-        `;
-        contenedorProductos.appendChild(div);
-
-        //Paso 9:Agregamos el evento click al boton agregar al carrito//
-        //dentro del boton agregar al carrito, especificamente despues del click va la funcion fetch agregarProducto//
-        const botonAgregar = div.querySelector(".btn-agregaralcarrito");
-        botonAgregar.addEventListener("click",
-                //Simulamos una peticion para agregar un producto al carrito//
-        function simularFetchAgregarProducto(producto) {
-            return new Promise(resolve => {
-                setTimeout(() => {
-                    // Simula una respuesta exitosa
-                    resolve({
-                        ok: true,
-                        json: () => Promise.resolve({ mensaje: `Producto ${producto.nombre} agregado al carrito` })
-                    });
-                }, 500); // Simula 0.5 segundos de retardo
-            });
-        }(producto) => {
-          agregarProducto(carritoVacio);
-        });
-      });
-
-
-      //Agregamos un evento al boton Calcular total//
-      const btnCalcularTotal = document.getElementById("btn-calcular-total");
-      btnCalcularTotal.addEventListener("click", () => {
-        //Simulamos una peticion para calcular el total de la compra//
-        simularFetchCalcularTotal(carritoVacio).then(response => {
-            if (response.ok) {
-                response.json().then(data => {
-                    total = data.total;
-                    Toastify({
-                        text: `El total de su compra es: $${total}`,
-                        duration: 3000,
-                        gravity: "bottom",
-                        position: "right",
-                        style: {
-                            background: "linear-gradient(to right, #00b09b, #96c93d)",
-                        },
-                    }).showToast();
-                });
-            } else {
-                Toastify({
-                    text: "Error al calcular el total",
-                    duration: 3000,
-                    gravity: "bottom",
-                    position: "right",
-                    style: {
-                        background: "linear-gradient(to right, #ff0000, #ff7f00)",
-                    },
-                }).showToast();
-            }
-        });
-      });
-      //agregamos un evento al boton Finalizar compra//
-      const btnFinalizarCompra = document.getElementById("btn-finalizar-compra");
-      btnFinalizarCompra.addEventListener("click", () => {
-        //Simulamos una peticion para finalizar la compra//
-        simularFetchFinalizarCompra().then(response => {
-            if (response.ok) {
-                response.json().then(data => {
-                    Toastify({
-                        text: data.mensaje,
-                        duration: 3000,
-                        gravity: "bottom",
-                        position: "right",
-                        style: {
-                            background: "linear-gradient(to right, #00b09b, #96c93d)",
-                        },
-                    }).showToast();
-                    //Vaciamos el carrito despues de finalizar la compra//
-                    carritoVacio = [];
-                    renderizarCarrito();
-                });
-            } else {
-                Toastify({
-                    text: "Error al finalizar la compra",
-                    duration: 3000,
-                    gravity: "bottom",
-                    position: "right",
-                    style: {
-                        background: "linear-gradient(to right, #ff0000, #ff7f00)",
-                    },
-                }).showToast();
-            }
-        });
-      });
-
-   
