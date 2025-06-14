@@ -69,6 +69,8 @@ header nav a {
   margin: 15px;
 }
 
+/*Botones de la pagina de productos*/
+
 .btn-agregaralcarrito {
     background-color: rgb(197, 157, 235);
     color: rgb(43, 3, 66);
@@ -85,10 +87,108 @@ header nav a {
     background-color: rgb(78, 41, 107);
     color: white;
 } 
-
-.img-de-productos {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
+.btn-vaciar-carrito {
+    background-color: rgb(197, 157, 235);
+    color: rgb(43, 3, 66);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 8px;
+    border:2px solid rgb(78, 41, 107);
+    border-radius: 5px;
+    margin: 20px;
 }
+.btn-pagar { 
+    background-color: rgb(197, 157, 235);
+    color: rgb(43, 3, 66);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 8px;
+    border:2px solid rgb(78, 41, 107);
+    border-radius: 5px;
+    margin: 20px;
+}
+.btn-calcular-total {
+    background-color: rgb(197, 157, 235);
+    color: rgb(43, 3, 66);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 8px;
+    border:2px solid rgb(78, 41, 107);
+    border-radius: 5px;
+    margin: 20px;
+}
+.btn-finalizar-compra {
+    background-color: rgb(197, 157, 235);
+    color: rgb(43, 3, 66);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 8px;
+    border:2px solid rgb(78, 41, 107);
+    border-radius: 5px;
+    margin: 20px;
+}
+/* Estilos del contenedor de productos */
+#contenedor-productos {
+    display: grid;
+     gap: 20px;
+    margin: 20px;
+    padding: 20px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:repeat(3, 2fr);
+    grid-template-areas: "img-bandeja-rectangular img-tazas-de-ceramica img-posacucharas-frida"
+                         "img-cuenco-hojas img-posacucharas-flor-azul";
+
+    justify-items: center;
+    align-items: center;
+    background-color: #f0f0f0;
+
+    .img-bandeja-rectangular {
+        grid-area: img-bandeja-rectangular;
+        width: 200px;
+        height: 300px;
+       background-image: url(../assets/Imagenes/bandeja-rectangular.png);
+        background-size: cover;
+    }
+    .img-tazas-de-ceramica {
+        grid-area: img-tazas-de-ceramica;
+        width: 200px;
+        background-image: url(../assets/Imagenes/tazas-de-ceramica.png);
+        background-size: cover;
+    }
+    .img-posacucharas-frida {
+        grid-area: img-posacucharas-frida;
+        width: 200px;
+        background-image: url(../assets/Imagenes/posacucharas-frida.png);
+        background-size: cover;
+    }
+    .img-cuenco-hojas {
+        grid-area: img-cuenco-hojas;
+        width: 300px;
+        background-image: url(../assets/Imagenes/cuenco-hojas.png);
+        background-size: cover;
+    }
+    .img-posacucharas-flor-azul {
+        grid-area: img-posacucharas-flor-azul;
+        width: 300px;
+        background-image: url(../assets/Imagenes/posacucharas-flor-azul.png);
+        background-size: cover;
+    }
+
+                    
+                        
+
+}
+
+
+
 /*# sourceMappingURL=style.css.map */
