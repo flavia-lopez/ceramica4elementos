@@ -70,8 +70,8 @@
 
         // --- Elementos del DOM ---
         // Obtenemos las referencias a los elementos HTML
-        const contenedorProductos = document.getElementById("contenedor-productos"); // Asumiendo que es un ID
-        const contenedorCarrito = document.getElementById("contenedor-carrito");     // Asumiendo que es un ID
+        const contenedorProductos = document.getElementById("#contenedor-productos"); // Asumiendo que es un ID
+        const contenedorCarrito = document.getElementById("#contenedor-carrito");     // Asumiendo que es un ID
         const btnCalcularTotal = document.querySelector(".btn-calcular-total");      // Asumiendo que es una clase
         const btnFinalizarCompra = document.querySelector(".btn-finalizar-compra");  // Asumiendo que es una clase
         const btnVaciarCarrito = document.querySelector(".btn-vaciar-carrito");      // Asumiendo que es una clase
@@ -290,5 +290,5 @@
             renderizarProductos(); // Mostramos los productos al cargar la página
             renderizarCarrito();   // Inicializamos la vista del carrito (vacío o con datos si usaras localStorage)
         });
-    </script>
+    
 
