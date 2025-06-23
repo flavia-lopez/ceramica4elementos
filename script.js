@@ -22,7 +22,7 @@ import Toastify from 'toastify-js';
               background: "linear-gradient(to right, #00b09b, #96c93d)",
             },
           }).showToast();
-        }););
+        });
 
       //Agregamos un evento al boton Calcular total//
       const btnCalcularTotal = document.querySelector("btn-calcular-total");
@@ -347,7 +347,7 @@ import Toastify from 'toastify-js';
     });
     //paso 7: Simulamos una peticion para mostrar el carrito de compras//
 
-Clase Producto para estructurar los datos.
+/*Clase Producto para estructurar los datos.
  */
 function Producto(id, nombre, precio, stock, imagen) {
     this.id = id;
@@ -370,35 +370,35 @@ async function obtenerProductosAsync() {
             "nombre": "Cuenco de ceramica hojas",
             "precio": 15000,
             "stock": 1,
-            "imagen": "https://placehold.co/300x200/a3e635/000?text=Cuenco+Hojas"
+            "imagen": "assets/imagenes/cuenco-ceramica-hojas.jpg"
         },
         {
             "id": 2,
             "nombre": "Bandeja de ceramica rectangular",
             "precio": 10000,
             "stock": 1,
-            "imagen": "https://placehold.co/300x200/22d3ee/000?text=Bandeja+Rectangular"
+            "imagen": "assets/imagenes/bandeja-ceramica-rectangular.jpg"
         },
         {
             "id": 3,
             "nombre": "Taza de ceramica",
             "precio": 6000,
             "stock": 2,
-            "imagen": "https://placehold.co/300x200/fde047/000?text=Taza+Ceramica"
+            "imagen": "assets/imagenes/taza-ceramica.jpg"
         },
         {
             "id": 4,
             "nombre": "Posa cuchara Frida Kahlo",
             "precio": 18000,
             "stock": 1,
-            "imagen": "https://placehold.co/300x200/f87171/000?text=Posa+Frida"
+            "imagen": "../assets/imagenes/posa-cuchara-frida-kahlo.jpg"
         },
         {
             "id": 5,
             "nombre": "Posa cuchara flor azul",
             "precio": 15000,
             "stock": 1,
-            "imagen": "https://placehold.co/300x200/818cf8/000?text=Posa+Flor+Azul"
+            "imagen": "../assets/imagenes/posa-cuchara-flor-azul.jpg"
         }
     ];
 
@@ -413,14 +413,14 @@ async function obtenerProductosAsync() {
     });
 }
 
-// --- Ejemplo de uso de la función asíncrona ---
+// ---función asíncrona ---
 async function inicializarTienda() {
     console.log("Iniciando carga de productos...");
     try {
         const productos = await obtenerProductosAsync();
         console.log("Productos cargados exitosamente:", productos);
 
-        // Aquí podrías llamar a una función para renderizar los productos en tu UI
+        // llamamos a una función para renderizar los productos en mi UI
         // Por ejemplo: renderizarProductos(productos);
     } catch (error) {
         console.error("Error al cargar los productos:", error);
