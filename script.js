@@ -9,19 +9,7 @@ import Toastify from 'toastify-js';
 //Agregamos el evento click al boton agregar al carrito//
         //dentro del boton agregar al carrito, especificamente despues del click va la funcion fetch agregarProducto//
         const botonAgregar = div.querySelector(".btn-agregaralcarrito");
-        botonAgregar.addEventListener("click",
-                //Simulamos una peticion para agregar un producto al carrito//
-        function simularFetchAgregarProducto(producto) {
-            return new Promise(resolve => {
-                setTimeout(() => {
-                    // Simula una respuesta exitosa
-                    resolve({
-                        ok: true,
-                        json: () => Promise.resolve({ mensaje: `Producto ${producto.nombre} agregado al carrito` })
-                    });
-                }, 500); // Simula 0.5 segundos de retardo
-            });
-        }(producto);
+
         botonAgregar.addEventListener("click", () => {
           agregarProducto(carritoVacio, producto);
           renderizarCarrito();
@@ -132,23 +120,6 @@ import Toastify from 'toastify-js';
         }).showToast();
       }
 
-
-//Paso 1: definimos la funcion constructora para Producto//
-
-      function Producto(id, nombre, precio, stock, imagen) {
-        this.id = id;
-        this.nombre = nombre;
-        this.precio = precio;
-        this.stock = stock;
-        this.imagen = imagen;
-
-        //Para mostrar el producto en el html//
-        this.mostrarinfo = function () {
-          return `Producto: ${this.nombre} | Precio: ${this.precio} | Stock: ${this.stock} | Imagen: ${this.imagen}`;
-        }
-
-      }
-
   //Declaramos variables y constantes//
   //Variables globales//
   const maxProductos = 5;
@@ -156,15 +127,47 @@ import Toastify from 'toastify-js';
   let total = 0;
   let cantidadProductos = 0;
 
-  // Paso 2:Creamos una lista de productos disponibles//
+  // Paso 2:Creamos una lista de productos disponibles y lo pasamos a JSON//
+  productosDisponibles =
 
-      const productosDisponibles = [
-        new Producto(1, "Cuenco de ceramica hojas", 15000, 1, "img/cuenco-de-ceramica-hojas.jpeg"),
-        new Producto(2, "Bandeja de ceramica rectangular", 10000, 1, "img/bandeja-de-ceramica-flor-azul.jpeg"),
-        new Producto(3, "Taza de ceramica", 6000, 2, "img/taza-de-ceramica.jpeg"),
-        new Producto(4, "posa cuchara Frida Kahlo", 18000, 1, "img/posa-cuchara-frida-kahlo.jpeg"),
-        new Producto(5, "posa cuchara flor azul", 15000, 1, "img/posa-cucharas-flor-azul.jpeg"),
-     ]
+ [
+  {
+    "id": 1,
+    "nombre": "Cuenco de ceramica hojas",
+    "precio": 15000,
+    "stock": 1,
+    "imagen": "../assets/imagenes/cuenco-ceramica-hojas.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Bandeja de ceramica rectangular",
+    "precio": 10000,
+    "stock": 1,
+    "imagen": "../assets/imagenes/bandeja-ceramica-rectangular.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Taza de ceramica",
+    "precio": 6000,
+    "stock": 2,
+    "imagen": "../assets/imagenes/taza-ceramica.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Posa cuchara Frida Kahlo",
+    "precio": 18000,
+    "stock": 1,
+    "imagen": "assets/imagenes/posa-cuchara-frida-kahlo.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Posa cuchara flor azul",
+    "precio": 15000,
+    "stock": 1,
+    "imagen": "../assets/imagenes/posa-cuchara-flor-azul.jpg"
+  }
+]
+
 
      //Paso 3: Declaramos una variable para almacenar el carrito de compras//
      let carritoVacio = [];
@@ -343,14 +346,87 @@ import Toastify from 'toastify-js';
       });
     });
     //paso 7: Simulamos una peticion para mostrar el carrito de compras//
-    function simularFetchMostrarCarrito(carritoVacio) {
-      return new Promise(resolve => {
+
+Clase Producto para estructurar los datos.
+ */
+function Producto(id, nombre, precio, stock, imagen) {
+    this.id = id;
+    this.nombre = nombre;
+    this.precio = precio;
+    this.stock = stock;
+    this.imagen = imagen;
+}
+
+/**
+ * Simula una llamada asíncrona a una API para obtener productos.
+ * Retorna una Promesa que resuelve con el array de productos.
+ * @returns {Promise<Array<Producto>>} Una promesa que se resuelve con la lista de productos.
+ */
+async function obtenerProductosAsync() {
+    // Datos de productos que serían obtenidos de una API
+    const productosJson = [
+        {
+            "id": 1,
+            "nombre": "Cuenco de ceramica hojas",
+            "precio": 15000,
+            "stock": 1,
+            "imagen": "https://placehold.co/300x200/a3e635/000?text=Cuenco+Hojas"
+        },
+        {
+            "id": 2,
+            "nombre": "Bandeja de ceramica rectangular",
+            "precio": 10000,
+            "stock": 1,
+            "imagen": "https://placehold.co/300x200/22d3ee/000?text=Bandeja+Rectangular"
+        },
+        {
+            "id": 3,
+            "nombre": "Taza de ceramica",
+            "precio": 6000,
+            "stock": 2,
+            "imagen": "https://placehold.co/300x200/fde047/000?text=Taza+Ceramica"
+        },
+        {
+            "id": 4,
+            "nombre": "Posa cuchara Frida Kahlo",
+            "precio": 18000,
+            "stock": 1,
+            "imagen": "https://placehold.co/300x200/f87171/000?text=Posa+Frida"
+        },
+        {
+            "id": 5,
+            "nombre": "Posa cuchara flor azul",
+            "precio": 15000,
+            "stock": 1,
+            "imagen": "https://placehold.co/300x200/818cf8/000?text=Posa+Flor+Azul"
+        }
+    ];
+
+    return new Promise(resolve => {
+        // Simula un retardo de red de 1 segundo
         setTimeout(() => {
-          // Simula una respuesta exitosa
-          resolve({
-            ok: true,
-            json: () => Promise.resolve(carritoVacio)
-          });
-        }, 500); // Simula 0.5 segundos de retardo
-      });
+            const productosInstanciados = productosJson.map(p =>
+                new Producto(p.id, p.nombre, p.precio, p.stock, p.imagen)
+            );
+            resolve(productosInstanciados);
+        }, 1000);
+    });
+}
+
+// --- Ejemplo de uso de la función asíncrona ---
+async function inicializarTienda() {
+    console.log("Iniciando carga de productos...");
+    try {
+        const productos = await obtenerProductosAsync();
+        console.log("Productos cargados exitosamente:", productos);
+
+        // Aquí podrías llamar a una función para renderizar los productos en tu UI
+        // Por ejemplo: renderizarProductos(productos);
+    } catch (error) {
+        console.error("Error al cargar los productos:", error);
     }
+    console.log("Carga de productos finalizada.");
+}
+
+// Llama a la función para inicializar la tienda al cargar la página
+inicializarTienda();
