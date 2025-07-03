@@ -1,41 +1,10 @@
 /* Estilos del header*/
 
 header {
-    div {
-        background-color: rgb(128, 55, 170);
+    .seccion-frase {
+        background-color: rgb(198, 149, 245);
     }
-    /* Div crear cuenta*/
-    .seccion-crear-cuenta-frase {
-        display: flex;
-        list-style: none;
-        justify-content: flex-end;
-    }
-    /*Frase del encabezado*/
-    .frase-encabezado {
-        color: white;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 16px;
-        padding: 10px;
-        margin-right: 250px;
-    }
-    /*Botón Crear cuenta e imagen de crear cuenta*/
-    .boton-crear-cuenta {
-        color:rgb(43, 3, 66);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
-        text-decoration: none;
-        font-size: 15px;
-        background-color: rgb(197, 157, 235);
-        padding: 8px;
-        border:2px solid rgb(78, 41, 107);
-        border-radius: 5px;
-        margin: 20px;
-    }
-    .img-crear-cuenta {
-        width: 30px;
-        margin: 5px;
     
-    }
 
     /* Título principal y el logo de Alicia*/
 
@@ -48,7 +17,7 @@ header {
         background-image: url(../assets/Imagenes/bowls.png);
 
         .img-ceramica-4-elementos{
-            width: 150px;
+            width: 100px;
         }
         .titulo-principal{
             color: rgb(24, 20, 20);
@@ -59,7 +28,7 @@ header {
         
         }
     }
-    nav{
+    nav {
         background-color: rgb(107, 43, 167);
         ul {
             display: flex;
@@ -75,6 +44,11 @@ header {
         }
     }
 
+}
+
+/*Estilos del main de productos artesanales*/
+.contenedor-productos-artesanales {
+    
 }
 
 /*Estilos de los botones de agregar al carrito en la seccion productos*/
