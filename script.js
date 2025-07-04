@@ -139,6 +139,27 @@ function showToast(message, isError = false) {
     }).showToast();
 }
 
+// --- Funciones de Local Storage ---
+/**
+ * Guarda el carrito actual en el Local Storage.
+ */
+function guardarCarritoEnLocalStorage() {
+    localStorage.setItem('carritoCompras', JSON.stringify(carrito));
+}
+
+/**
+ * Carga el carrito desde el Local Storage.
+ * @returns {Array<Producto>} El carrito cargado o un array vacío si no hay datos.
+ */
+function cargarCarritoDeLocalStorage() {
+    const carritoGuardado = localStorage.getItem('carritoCompras');
+    if (carritoGuardado) {
+        // Mapear los objetos cargados a instancias de Producto para asegurar métodos/propiedades
+        return JSON.parse(carritoGuardado).map(p => new Producto(p.id, p.nombre, p.precio, p.stock, p.imagen));
+    }
+    return [];
+}
+
 // --- Lógica del Carrito ---
 /**
  * Agrega un producto al carrito.
