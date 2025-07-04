@@ -75,7 +75,7 @@ async function simularFetchVaciarCarrito() {
 async function obtenerProductosDisponiblesDesdeJson() {
     try {
         // Llamada fetch real al archivo productos.json
-        const response = await fetch('productos.json'); // Ajusta la ruta si productos.json está en una ubicación diferente
+        const response = await fetch('../productos.json'); // Ajusta la ruta si productos.json está en una ubicación diferente
         if (!response.ok) {
             throw new Error(`Error HTTP! estado: ${response.status}`);
         }
