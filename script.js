@@ -1,55 +1,71 @@
 
 // Este archivo contiene la lógica JavaScript para la aplicación del carrito de compras.
-
-// --- Funciones de Simulación (JSON Directo para simular API) ---
-// Simula la adición de un producto al carrito
-function simularFetchAgregarProducto(producto) {
+// Define una función mock para fetch que simula una respuesta de red.
+// Esto permite "reemplazar" las Promises directas con una llamada a 'fetch' simulada.
+async function mockFetch(url, options = {}) {
     return new Promise(resolve => {
         setTimeout(() => {
+            let responseData = {};
+            let okStatus = true;
+            let message = "";
+
+            // Lógica para simular diferentes respuestas basadas en la URL
+            if (url.includes("agregarProducto")) {
+                const producto = options.body ? JSON.parse(options.body) : {};
+                message = `Producto "${producto.nombre}" agregado al carrito`;
+                responseData = { mensaje: message };
+            } else if (url.includes("calcularTotal")) {
+                const carrito = options.body ? JSON.parse(options.body) : [];
+                const total = carrito.reduce((acc, prod) => acc + prod.precio, 0);
+                responseData = { total: total };
+            } else if (url.includes("finalizarCompra")) {
+                message = "¡Compra finalizada con éxito!";
+                responseData = { mensaje: message };
+            } else if (url.includes("vaciarCarrito")) {
+                message = "Carrito vaciado correctamente.";
+                responseData = { mensaje: message };
+            } else {
+                okStatus = false;
+                message = "Endpoint simulado no reconocido.";
+                responseData = { error: message };
+            }
+
+            // Resuelve la promesa con un objeto que imita la respuesta de un fetch real
             resolve({
-                ok: true,
-                json: () => Promise.resolve({ mensaje: `Producto "${producto.nombre}" agregado al carrito` })
+                ok: okStatus,
+                status: okStatus ? 200 : 400,
+                json: async () => responseData, // Devuelve una Promise que resuelve con los datos
+                text: async () => JSON.stringify(responseData) // Para simular .text()
             });
         }, 300); // Retraso simulado
     });
 }
 
-// Simula el cálculo del total de la compra
-function simularFetchCalcularTotal(carrito) {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            const total = carrito.reduce((acc, prod) => acc + prod.precio, 0);
-            resolve({
-                ok: true,
-                json: () => Promise.resolve({ total: total })
-            });
-        }, 300); // Retraso simulado
+// Ahora, las funciones de simulación utilizarán el mockFetch
+async function simularFetchAgregarProducto(producto) {
+    return await mockFetch('/api/agregarProducto', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(producto)
     });
 }
 
-// Simula la finalización de la compra
-function simularFetchFinalizarCompra() {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve({
-                ok: true,
-                json: () => Promise.resolve({ mensaje: "¡Compra finalizada con éxito!" })
-            });
-        }, 500); // Retraso simulado
+async function simularFetchCalcularTotal(carrito) {
+    return await mockFetch('/api/calcularTotal', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(carrito)
     });
 }
 
-// Simula el vaciado del carrito
-function simularFetchVaciarCarrito() {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve({
-                ok: true,
-                json: () => Promise.resolve({ mensaje: "Carrito vaciado correctamente." })
-            });
-        }, 300); // Retraso simulado
-    });
+async function simularFetchFinalizarCompra() {
+    return await mockFetch('/api/finalizarCompra', { method: 'POST' });
 }
+
+async function simularFetchVaciarCarrito() {
+    return await mockFetch('/api/vaciarCarrito', { method: 'POST' });
+}
+
 
 /**
  * Obtiene la lista de productos disponibles desde el archivo 'productos.json'.
