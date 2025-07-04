@@ -50,6 +50,63 @@ function simularFetchVaciarCarrito() {
     });
 }
 
+/**
+ * Simula la obtención de la lista de productos disponibles desde una API.
+ * Retorna una Promesa que resuelve con la respuesta simulada de fetch.
+ * @returns {Promise<Object>} Una promesa que se resuelve con un objeto simulando la respuesta de fetch.
+ */
+async function simularFetchProductosDisponibles() {
+    // Los datos de productos se engloban aquí para simular que vienen de una API
+    const productosData = [
+        {
+            "id": 1,
+            "nombre": "Cuenco de ceramica hojas",
+            "precio": 15000,
+            "stock": 1,
+            "imagen": "../assets/imagenes/cuenco-de-ceramica-hojas.jpeg"
+        },
+        {
+            "id": 2,
+            "nombre": "Bandeja de ceramica rectangular",
+            "precio": 10000,
+            "stock": 1,
+            "imagen": "../assets/imagenes/bandeja-de-ceramica-flor-azul.jpeg"
+        },
+        {
+            "id": 3,
+            "nombre": "Taza de ceramica",
+            "precio": 6000,
+            "stock": 2,
+            "imagen": "../assets/imagenes/tazas-de-ceramica.jpeg"
+        },
+        {
+            "id": 4,
+            "nombre": "Posa cuchara Frida Kahlo",
+            "precio": 18000,
+            "stock": 1,
+            "imagen": "../assets/imagenes/posa-cucharas-frida-kahlo.jpeg"
+        },
+        {
+            "id": 5,
+            "nombre": "Posa cuchara flor azul",
+            "precio": 15000,
+            "stock": 1,
+            "imagen": "../assets/imagenes/posa-cucharas-flor-azul.jpeg"
+        }
+    ];
+
+    return new Promise(resolve => {
+        setTimeout(() => {
+            // Simula una respuesta exitosa de fetch
+            resolve({
+                ok: true,
+                json: () => Promise.resolve(productosData)
+            });
+        }, 500); // Simula un retardo de red
+    });
+}
+
+
 
 /**
  * Representa un producto con sus propiedades.
