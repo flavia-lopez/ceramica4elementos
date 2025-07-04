@@ -1,10 +1,5 @@
 
   
-
-import Toastify from 'toastify-js';
-
-
-
 // --- Funciones de Simulación (JSON Directo para simular API) ---
 // Simula la adición de un producto al carrito
 function simularFetchAgregarProducto(producto) {
@@ -115,7 +110,7 @@ const productosDisponibles = [
 // --- Elementos del DOM ---
 // Referencias a los elementos HTML
 const contenedorProductos = document.getElementById("contenedor-productos");
-const contenedorCarrito = document.getElementById("carrito-contenido");
+const contenedorCarrito = document.getElementById("#carrito-contenido");
 const btnCalcularTotal = document.querySelector(".btn-calcular-total");
 const btnFinalizarCompra = document.querySelector(".btn-finalizar-compra");
 const btnVaciarCarrito = document.querySelector(".btn-vaciar-carrito");
