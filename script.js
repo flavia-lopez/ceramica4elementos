@@ -1,5 +1,6 @@
 
-  
+// Este archivo contiene la lógica JavaScript para la aplicación del carrito de compras.
+
 // --- Funciones de Simulación (JSON Directo para simular API) ---
 // Simula la adición de un producto al carrito
 function simularFetchAgregarProducto(producto) {
@@ -9,7 +10,7 @@ function simularFetchAgregarProducto(producto) {
                 ok: true,
                 json: () => Promise.resolve({ mensaje: `Producto "${producto.nombre}" agregado al carrito` })
             });
-        }, 300); // Retardo simulado
+        }, 300); // Retraso simulado
     });
 }
 
@@ -22,7 +23,7 @@ function simularFetchCalcularTotal(carrito) {
                 ok: true,
                 json: () => Promise.resolve({ total: total })
             });
-        }, 300); // Retardo simulado
+        }, 300); // Retraso simulado
     });
 }
 
@@ -34,7 +35,7 @@ function simularFetchFinalizarCompra() {
                 ok: true,
                 json: () => Promise.resolve({ mensaje: "¡Compra finalizada con éxito!" })
             });
-        }, 500); // Retardo simulado
+        }, 500); // Retraso simulado
     });
 }
 
@@ -46,68 +47,39 @@ function simularFetchVaciarCarrito() {
                 ok: true,
                 json: () => Promise.resolve({ mensaje: "Carrito vaciado correctamente." })
             });
-        }, 300); // Retardo simulado
+        }, 300); // Retraso simulado
     });
 }
 
 /**
- * Simula la obtención de la lista de productos disponibles desde una API.
- * Retorna una Promesa que resuelve con la respuesta simulada de fetch.
- * @returns {Promise<Object>} Una promesa que se resuelve con un objeto simulando la respuesta de fetch.
+ * Obtiene la lista de productos disponibles desde el archivo 'productos.json'.
+ * Esta función ahora utiliza una llamada fetch real.
+ * @returns {Promise<Object>} Una promesa que se resuelve con la respuesta de fetch.
  */
-async function simularFetchProductosDisponibles() {
-    // Los datos de productos se engloban aquí para simular que vienen de una API
-    const productosData = [
-        {
-            "id": 1,
-            "nombre": "Cuenco de ceramica hojas",
-            "precio": 15000,
-            "stock": 1,
-            "imagen": "../assets/imagenes/cuenco-de-ceramica-hojas.jpeg"
-        },
-        {
-            "id": 2,
-            "nombre": "Bandeja de ceramica rectangular",
-            "precio": 10000,
-            "stock": 1,
-            "imagen": "../assets/imagenes/bandeja-de-ceramica-flor-azul.jpeg"
-        },
-        {
-            "id": 3,
-            "nombre": "Taza de ceramica",
-            "precio": 6000,
-            "stock": 2,
-            "imagen": "../assets/imagenes/tazas-de-ceramica.jpeg"
-        },
-        {
-            "id": 4,
-            "nombre": "Posa cuchara Frida Kahlo",
-            "precio": 18000,
-            "stock": 1,
-            "imagen": "../assets/imagenes/posa-cucharas-frida-kahlo.jpeg"
-        },
-        {
-            "id": 5,
-            "nombre": "Posa cuchara flor azul",
-            "precio": 15000,
-            "stock": 1,
-            "imagen": "../assets/imagenes/posa-cucharas-flor-azul.jpeg"
+async function obtenerProductosDisponiblesDesdeJson() {
+    try {
+        // Llamada fetch real al archivo productos.json
+        const response = await fetch('productos.json'); // Ajusta la ruta si productos.json está en una ubicación diferente
+        if (!response.ok) {
+            throw new Error(`Error HTTP! estado: ${response.status}`);
         }
-    ];
-
-    return new Promise(resolve => {
-        setTimeout(() => {
-            // Simula una respuesta exitosa de fetch
-            resolve({
-                ok: true,
-                json: () => Promise.resolve(productosData)
-            });
-        }, 500); // Simula un retardo de red
-    });
+        const data = await response.json();
+        return {
+            ok: true,
+            json: () => Promise.resolve(data)
+        };
+    } catch (error) {
+        console.error("Error al obtener productos.json:", error);
+        return {
+            ok: false,
+            statusText: error.message,
+            json: () => Promise.resolve({ message: `Error al cargar productos: ${error.message}` })
+        };
+    }
 }
 
 
-
+// --- Clase Producto (usando sintaxis de clase ES6) ---
 /**
  * Representa un producto con sus propiedades.
  */
@@ -125,49 +97,13 @@ class Producto {
 const MAX_PRODUCTOS_CARRITO = 5; // Límite máximo de productos en el carrito
 let carrito = []; // Array que almacena los productos en el carrito
 
-// Lista de productos disponibles (el JSON proporcionado por el usuario)
-const productosDisponibles = [
-    {
-        "id": 1,
-        "nombre": "Cuenco de ceramica hojas",
-        "precio": 15000,
-        "stock": 1,
-        "imagen": "../assets/imagenes/cuenco-de-ceramica-hojas.jpeg"
-    },
-    {
-        "id": 2,
-        "nombre": "Bandeja de ceramica rectangular",
-        "precio": 10000,
-        "stock": 1,
-        "imagen": "../assets/imagenes/bandeja-de-ceramica-flor-azul.jpeg"
-    },
-    {
-        "id": 3,
-        "nombre": "Taza de ceramica",
-        "precio": 6000,
-        "stock": 2,
-        "imagen": "../assets/imagenes/tazas-de-ceramica.jpeg"
-    },
-    {
-        "id": 4,
-        "nombre": "Posa cuchara Frida Kahlo",
-        "precio": 18000,
-        "stock": 1,
-        "imagen": "../assets/imagenes/posa-cucharas-frida-kahlo.jpeg"
-    },
-    {
-        "id": 5,
-        "nombre": "Posa cuchara flor azul",
-        "precio": 15000,
-        "stock": 1,
-        "imagen": "../assets/imagenes/posa-cucharas-flor-azul.jpeg"
-    }
-];
+// La lista de productos disponibles ahora se obtiene de forma asíncrona
+// y no se declara globalmente aquí.
 
 // --- Elementos del DOM ---
 // Referencias a los elementos HTML
 const contenedorProductos = document.getElementById("contenedor-productos");
-const contenedorCarrito = document.getElementById("#carrito-contenido");
+const contenedorCarrito = document.getElementById("carrito-contenido");
 const btnCalcularTotal = document.querySelector(".btn-calcular-total");
 const btnFinalizarCompra = document.querySelector(".btn-finalizar-compra");
 const btnVaciarCarrito = document.querySelector(".btn-vaciar-carrito");
@@ -211,7 +147,7 @@ function guardarCarritoEnLocalStorage() {
 function cargarCarritoDeLocalStorage() {
     const carritoGuardado = localStorage.getItem('carritoCompras');
     if (carritoGuardado) {
-        // Mapear los objetos cargados a instancias de Producto para asegurar métodos/propiedades
+        // Mapea los objetos cargados a instancias de Producto para asegurar métodos/propiedades
         return JSON.parse(carritoGuardado).map(p => new Producto(p.id, p.nombre, p.precio, p.stock, p.imagen));
     }
     return [];
@@ -245,6 +181,7 @@ async function agregarProducto(producto) {
         if (response.ok) {
             const data = await response.json();
             carrito.push(producto); // Agrega el producto al array del carrito
+            guardarCarritoEnLocalStorage(); // Guarda el carrito
             renderizarCarrito();    // Actualiza la vista del carrito
             updateTotalDisplay();   // Actualiza el total
             showToast(data.mensaje);
@@ -266,6 +203,7 @@ function eliminarProducto(idProducto) {
     carrito = carrito.filter(producto => producto.id !== idProducto);
 
     if (carrito.length < initialCartLength) {
+        guardarCarritoEnLocalStorage(); // Guarda el carrito
         renderizarCarrito();
         updateTotalDisplay();
         showToast(`Producto (ID: ${idProducto}) eliminado del carrito.`, true);
@@ -275,22 +213,23 @@ function eliminarProducto(idProducto) {
 // --- Renderizado del DOM ---
 /**
  * Renderiza la lista de productos disponibles en el HTML.
+ * @param {Array<Object>} productosParaRenderizar - Array de objetos de producto a renderizar.
  */
-function renderizarProductos() {
+function renderizarProductos(productosParaRenderizar) {
     if (!contenedorProductos) {
         console.error("El contenedor de productos (#contenedor-productos) no fue encontrado en el DOM.");
         return;
     }
     contenedorProductos.innerHTML = ""; // Limpia el contenedor antes de renderizar
 
-    // Instanciar objetos Producto desde el JSON para asegurar consistencia
-    const productosParaRenderizar = productosDisponibles.map(p =>
+    // Instancia objetos Producto desde el JSON para asegurar consistencia
+    const productosInstanciados = productosParaRenderizar.map(p =>
         new Producto(p.id, p.nombre, p.precio, p.stock, p.imagen)
     );
 
-    productosParaRenderizar.forEach((producto) => {
+    productosInstanciados.forEach((producto) => {
         const divProducto = document.createElement("div");
-        divProducto.classList.add("producto"); 
+        divProducto.classList.add("producto");
         divProducto.innerHTML = `
             <img src="${producto.imagen}" alt="${producto.nombre}" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/333333?text=Imagen+no+disponible';">
             <h3>${producto.nombre}</h3>
@@ -300,7 +239,7 @@ function renderizarProductos() {
         `;
         contenedorProductos.appendChild(divProducto);
 
-        // Agregamos el evento click al botón "Agregar al carrito" de cada producto
+        // Agrega el evento click al botón "Agregar al carrito" de cada producto
         const botonAgregarProducto = divProducto.querySelector(".btn-agregaralcarrito");
         botonAgregarProducto.addEventListener("click", () => agregarProducto(producto));
     });
@@ -332,7 +271,7 @@ function renderizarCarrito() {
             `;
             contenedorCarrito.appendChild(divCarritoItem);
 
-            // Agregamos el evento click al botón eliminar producto
+            // Agrega el evento click al botón eliminar producto
             const btnEliminarProducto = divCarritoItem.querySelector(".btn-danger");
             btnEliminarProducto.addEventListener("click", (e) => {
                 const idProducto = Number(e.target.dataset.id);
@@ -353,7 +292,7 @@ async function updateTotalDisplay() {
             const data = await response.json();
             totalDisplay.textContent = data.total.toString();
         } catch (error) {
-            console.error("Error al actualizar el display del total:", error);
+            console.error("Error al actualizar la visualización del total:", error);
             totalDisplay.textContent = "Error";
         }
     } else {
@@ -361,7 +300,7 @@ async function updateTotalDisplay() {
     }
 }
 
-// --- Event Listeners Globales ---
+// --- Listeners de Eventos Globales ---
 if (btnCalcularTotal) {
     btnCalcularTotal.addEventListener("click", async () => {
         if (carrito.length === 0) {
@@ -387,9 +326,10 @@ if (btnFinalizarCompra) {
             if (response.ok) {
                 const data = await response.json();
                 showToast(data.mensaje);
-                carrito = [];
-                renderizarCarrito();
-                updateTotalDisplay();
+                carrito = []; // Vacía el carrito
+                guardarCarritoEnLocalStorage(); // Guarda el carrito vacío
+                renderizarCarrito(); // Actualiza la vista del carrito
+                updateTotalDisplay(); // Actualiza el total a 0
             } else {
                 showToast("Error al finalizar la compra.", true);
             }
@@ -414,9 +354,10 @@ if (btnVaciarCarrito) {
             if (response.ok) {
                 const data = await response.json();
                 showToast(data.mensaje, true);
-                carrito = [];
-                renderizarCarrito();
-                updateTotalDisplay();
+                carrito = []; // Vacía el carrito
+                guardarCarritoEnLocalStorage(); // Guarda el carrito vacío
+                renderizarCarrito(); // Actualiza la vista del carrito
+                updateTotalDisplay(); // Actualiza el total a 0
             } else {
                 showToast("Error al vaciar el carrito.", true);
             }
@@ -443,8 +384,24 @@ if (btnPagar) {
 }
 
 // --- Inicialización ---
-document.addEventListener("DOMContentLoaded", () => {
-    renderizarProductos();
-    renderizarCarrito();
+document.addEventListener("DOMContentLoaded", async () => { // Hace la función asíncrona
+    carrito = cargarCarritoDeLocalStorage(); // Carga el carrito al inicio
+
+    try {
+        const response = await obtenerProductosDisponiblesDesdeJson(); // Usa la función fetch real
+        if (response.ok) {
+            const fetchedProductsData = await response.json();
+            // Pasa los productos obtenidos a renderizarProductos
+            renderizarProductos(fetchedProductsData);
+        } else {
+            console.error("Error al cargar productos disponibles:", response.statusText);
+            showToast("Error al cargar los productos disponibles.", true);
+        }
+    } catch (error) {
+        console.error("Error de red al cargar productos disponibles:", error);
+        showToast("Error de conexión al cargar los productos.", true);
+    }
+
+    renderizarCarrito(); // Renderiza el carrito después de intentar cargar productos
 });
 
