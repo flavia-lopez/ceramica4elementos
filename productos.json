@@ -4,34 +4,34 @@
     "nombre": "Cuenco de ceramica hojas",
     "precio": 15000,
     "stock": 1,
-    "imagen": "../assets/imagenes/cuenco-de-ceramica-hojas.jpeg"
+    "imagen": "../assets/Imagenes/cuenco-de-ceramica-hojas.jpeg"
   },
   {
     "id": 2,
     "nombre": "Bandeja de ceramica rectangular",
     "precio": 10000,
     "stock": 1,
-    "imagen": "../assets/imagenes/bandeja-de-ceramica-flor-azul.jpeg"
+    "imagen": "../assets/Imagenes/bandeja-de-ceramica-flor-azul.jpeg"
   },
   {
     "id": 3,
     "nombre": "Taza de ceramica",
     "precio": 6000,
     "stock": 2,
-    "imagen": "../assets/imagenes/tazas-de-ceramica.jpeg"
+    "imagen": "../assets/Imagenes/tazas-de-ceramica.jpeg"
   },
   {
     "id": 4,
     "nombre": "Posa cuchara Frida Kahlo",
     "precio": 18000,
     "stock": 1,
-    "imagen": "../assets/imagenes/posa-cucharas-frida-kahlo.jpeg"
+    "imagen": "../assets/Imagenes/posa-cucharas-frida-kahlo.jpeg"
   },
   {
     "id": 5,
     "nombre": "Posa cuchara flor azul",
     "precio": 15000,
     "stock": 1,
-    "imagen": "../assets/imagenes/posa-cucharas-flor-azul.jpeg"
+    "imagen": "../assets/Imagenes/posa-cucharas-flor-azul.jpeg"
   }
 ]

@@ -1,11 +1,24 @@
 
-
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(244, 241, 247);
+}
 
 /* Estilos del header*/
 
 header {
     .seccion-frase {
         background-color: rgb(198, 149, 245);
+        .frase-encabezado {
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+        }
     }
     
 
@@ -46,6 +59,55 @@ header {
             margin: 15px;
         }
     }
+
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(198, 149, 245);
+    padding: 20px;
+    margin-top: 20px;
+
+    .caja-1{
+       .img-pie-de-pagina {
+        width: 50px;
+
+       } 
+       h3 {
+        color: rgb(24, 20, 20);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+
+       }
+    }
+    .caja-2 {
+        .img-pie-de-pagina {
+            width: 50px;
+        }
+        h3 {
+            color: rgb(24, 20, 20);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+        }
+    }
+    .caja-3 {
+        display: flex;
+
+        .img-pie-de-pagina {
+            width: 50px;
+        }
+        h3 {
+            color: rgb(24, 20, 20);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+        }
+    }
+
 
 }
 
