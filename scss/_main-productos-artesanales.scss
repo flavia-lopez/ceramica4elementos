@@ -1,0 +1,41 @@
+/*Estilos del main de productos artesanales*/
+.contenedor-productos-artesanales {
+    
+}
+
+/*Estilos de los botones de agregar al carrito en la seccion productos*/
+.contenedor-principal-de-productos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(198, 149, 245);
+    padding: 20px;
+    margin-top: 20px;
+    .producto {
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 10px;
+        width: 200px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+.btn-agregaralcarrito {
+    background-color: rgb(197, 157, 235);
+    color: rgb(43, 3, 66);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 8px;
+    border:2px solid rgb(78, 41, 107);
+    border-radius: 5px;
+    margin: 20px;
+}
+
+}
