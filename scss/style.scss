@@ -50,7 +50,7 @@ header {
             display: flex;
             list-style: none;
             padding: 5px;
-        }
+            
         a{
             color: white;
             text-decoration: none;
@@ -60,6 +60,7 @@ header {
         }
     }
 
+}
 }
 
 footer{
@@ -151,4 +152,86 @@ footer{
     margin: 20px;
 }
 
+}
+
+/*Estilos del main de quien soy*/
+.main-quiensoy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(198, 149, 245);
+    margin-top: 30px;
+
+    .img-alicia {
+        width: 200px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .titulo-quiensoy {
+        color: rgb(24, 20, 20);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+    .texto-quiensoy {
+        color: rgb(24, 20, 20);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 800px;
+        text-align: justify;
+    }
+}
+/*Estilos del main talleres*/
+.main-talleres {
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(198, 149, 245);
+    margin-top: 30px;  
+    .titulo-talleres {
+        color: rgb(24, 20, 20);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size: 35px;
+        margin-bottom: 20px; 
+    }
+    .texto-talleres {
+        color: rgb(24, 20, 20);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 800px;
+        text-align: justify;
+    }
+}
+/*Estilos del main contacto*/
+.main-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(198, 149, 245);
+    margin-top: 30px;
+
+    .titulo-contacto {
+        color: rgb(24, 20, 20);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+    .texto-contacto {
+        color: rgb(24, 20, 20);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 800px;
+        text-align: justify;
+        
+        }
 }

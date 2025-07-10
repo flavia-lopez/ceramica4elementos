@@ -45,7 +45,7 @@ header nav ul {
   list-style: none;
   padding: 5px;
 }
-header nav a {
+header nav ul a {
   color: white;
   text-decoration: none;
   font-weight: 500;
@@ -126,6 +126,86 @@ footer .caja-3 h3 {
   border: 2px solid rgb(78, 41, 107);
   border-radius: 5px;
   margin: 20px;
+}
+
+/*Estilos del main de quien soy*/
+.main-quiensoy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(198, 149, 245);
+  margin-top: 30px;
+}
+.main-quiensoy .img-alicia {
+  width: 200px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.main-quiensoy .titulo-quiensoy {
+  color: rgb(24, 20, 20);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.main-quiensoy .texto-quiensoy {
+  color: rgb(24, 20, 20);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  text-align: justify;
+}
+
+/*Estilos del main talleres*/
+.main-talleres {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(198, 149, 245);
+  margin-top: 30px;
+}
+.main-talleres .titulo-talleres {
+  color: rgb(24, 20, 20);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.main-talleres .texto-talleres {
+  color: rgb(24, 20, 20);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  text-align: justify;
+}
+
+/*Estilos del main contacto*/
+.main-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(198, 149, 245);
+  margin-top: 30px;
+}
+.main-contacto .titulo-contacto {
+  color: rgb(24, 20, 20);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.main-contacto .texto-contacto {
+  color: rgb(24, 20, 20);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  text-align: justify;
 }
 
 /*# sourceMappingURL=style.css.map */
