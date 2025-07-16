@@ -1,20 +1,9 @@
 
-@import "reset.scss";
-@import "main-productos-artesanales.scss";
-@import "main-quiensoy.scss";
-@import "main-talleres.scss";
-@import "main-contacto.scss";
-@import "main-comocomprar.scss";
-@import "main-fotosyvideos.scss";
-@import "header.scss";
-@import "footer.scss";
-
-
-
-
-
-
-
-
-
+@import "base/_reset.scss";
+@import "layout/_footer.scss";
+@import "layout/header.scss";
+@import "layout/_main-contacto.scss";
+@import "_layout/_main-productos-artesanales.scss";
+@import "layout/_main-quiensoy.scss";
+@import "_layout/_main-talleres.scss";
 
