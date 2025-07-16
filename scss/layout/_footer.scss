@@ -1,8 +1,11 @@
+/*Estilos del footer*/
+@import "../utilities/_variables.scss";
+
 footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(198, 149, 245);
+    background-color: $background-header;
     padding: 20px;
     margin-top: 20px;
 
@@ -12,8 +15,8 @@ footer{
 
        } 
        h3 {
-        color: rgb(24, 20, 20);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: $text-color-header;
+        font-family: $font-general;
         font-weight: bold;
         font-size: 15px;
 
@@ -24,8 +27,8 @@ footer{
             width: 50px;
         }
         h3 {
-            color: rgb(24, 20, 20);
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: $text-color-header;
+            font-family: $font-general;
             font-weight: bold;
             font-size: 15px;
         }
@@ -37,8 +40,8 @@ footer{
             width: 50px;
         }
         h3 {
-            color: rgb(24, 20, 20);
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: $text-color-header;
+            font-family: $font-general;
             font-weight: bold;
             font-size: 15px;
         }

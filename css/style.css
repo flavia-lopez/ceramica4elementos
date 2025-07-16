@@ -6,12 +6,56 @@ body {
   background-color: rgb(244, 241, 247);
 }
 
+/*Estilos del footer*/
+/*Variables de color*/
+/*Variables de fuente*/
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(130, 20, 204);
+  padding: 20px;
+  margin-top: 20px;
+}
+footer .caja-1 .img-pie-de-pagina {
+  width: 50px;
+}
+footer .caja-1 h3 {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+}
+footer .caja-2 .img-pie-de-pagina {
+  width: 50px;
+}
+footer .caja-2 h3 {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+}
+footer .caja-3 {
+  display: flex;
+}
+footer .caja-3 .img-pie-de-pagina {
+  width: 50px;
+}
+footer .caja-3 h3 {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/*Variables de color*/
+/*Variables de fuente*/
 /* Estilos del header*/
 header {
   /* Título principal y el logo de Alicia*/
 }
 header .seccion-frase {
-  background-color: rgb(198, 149, 245);
+  background-color: rgb(130, 20, 204);
 }
 header .seccion-frase .frase-encabezado {
   color: white;
@@ -22,23 +66,23 @@ header .seccion-frase .frase-encabezado {
   padding: 10px;
 }
 header .tituloprincipal-logo-alicia {
+  background-color: rgb(130, 20, 204);
   display: flex;
   justify-content: center;
   padding: 20px;
-  background-color: rgb(198, 149, 245);
   background-image: url(../assets/Imagenes/bowls.png);
 }
 header .tituloprincipal-logo-alicia .img-ceramica-4-elementos {
   width: 100px;
 }
 header .tituloprincipal-logo-alicia .titulo-principal {
-  color: rgb(24, 20, 20);
+  color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
   font-weight: bold;
 }
 header nav {
-  background-color: rgb(107, 43, 167);
+  background-color: rgb(130, 20, 204);
 }
 header nav ul {
   display: flex;
@@ -53,43 +97,29 @@ header nav ul a {
   margin: 15px;
 }
 
-footer {
+/*Estilos del main contacto*/
+.main-contacto {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  background-color: rgb(198, 149, 245);
   padding: 20px;
-  margin-top: 20px;
+  background-color: rgb(198, 149, 245);
+  margin-top: 30px;
 }
-footer .caja-1 .img-pie-de-pagina {
-  width: 50px;
-}
-footer .caja-1 h3 {
+.main-contacto .titulo-contacto {
   color: rgb(24, 20, 20);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 35px;
+  margin-bottom: 20px;
 }
-footer .caja-2 .img-pie-de-pagina {
-  width: 50px;
-}
-footer .caja-2 h3 {
+.main-contacto .texto-contacto {
   color: rgb(24, 20, 20);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  font-size: 15px;
-}
-footer .caja-3 {
-  display: flex;
-}
-footer .caja-3 .img-pie-de-pagina {
-  width: 50px;
-}
-footer .caja-3 h3 {
-  color: rgb(24, 20, 20);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  font-size: 15px;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  text-align: justify;
 }
 
 /*Estilos del main de productos artesanales*/
@@ -143,16 +173,17 @@ footer .caja-3 h3 {
   margin-bottom: 20px;
 }
 .main-quiensoy .titulo-quiensoy {
-  color: rgb(24, 20, 20);
+  color: rgb(253, 250, 250);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   font-size: 35px;
   margin-bottom: 20px;
 }
 .main-quiensoy .texto-quiensoy {
-  color: rgb(24, 20, 20);
+  color: rgb(247, 241, 241);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 18px;
+  font-weight: bold;
   line-height: 1.6;
   max-width: 800px;
   text-align: justify;
@@ -183,29 +214,7 @@ footer .caja-3 h3 {
   text-align: justify;
 }
 
-/*Estilos del main contacto*/
-.main-contacto {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: rgb(198, 149, 245);
-  margin-top: 30px;
-}
-.main-contacto .titulo-contacto {
-  color: rgb(24, 20, 20);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  font-size: 35px;
-  margin-bottom: 20px;
-}
-.main-contacto .texto-contacto {
-  color: rgb(24, 20, 20);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
-  max-width: 800px;
-  text-align: justify;
-}
+/*Variables de color*/
+/*Variables de fuente*/
 
 /*# sourceMappingURL=style.css.map */

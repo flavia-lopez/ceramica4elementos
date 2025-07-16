@@ -1,11 +1,12 @@
+@import "../utilities/_variables.scss";
 /* Estilos del header*/
 
 header {
     .seccion-frase {
-        background-color: rgb(198, 149, 245);
+        background-color: $background-header;
         .frase-encabezado {
-            color: white;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: $text-color-header;
+            font-family: $font-general;
             font-size: 15px;
             font-weight: bold;
             text-align: center;
@@ -17,19 +18,19 @@ header {
     /* Título principal y el logo de Alicia*/
 
     .tituloprincipal-logo-alicia{
+        background-color: $background-header;
         display: flex;
         justify-content: center;
         padding: 20px;
-        background-color: 
-        rgb(198, 149, 245);
+        
         background-image: url(../assets/Imagenes/bowls.png);
 
         .img-ceramica-4-elementos{
             width: 100px;
         }
         .titulo-principal{
-            color: rgb(24, 20, 20);
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: $text-color-header;
+            font-family: $font-general;
             font-size: 20px;
             font-weight: bold;
         
@@ -37,17 +38,17 @@ header {
         }
     }
     nav {
-        background-color: rgb(107, 43, 167);
+        background-color: $background-header;
         ul {
             display: flex;
             list-style: none;
             padding: 5px;
             
         a{
-            color: white;
+            color: $text-color-header;
             text-decoration: none;
             font-weight: 500;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-family: $font-general;
             margin: 15px;
         }
     }
