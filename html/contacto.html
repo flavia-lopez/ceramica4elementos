@@ -13,17 +13,19 @@
 <body>
    
    <header> 
-       <!--Frase sobre cerámica sujeto a cambios-->
+                  <!--Div crear cuenta, link, ícono y frase-->
+ 
+    <div class="seccion-frase"> 
 
-       <div class="seccion-frase">
-        <h3>El arte es un estado del alma</h3>
+        <h3 class="frase-encabezado">El arte es un estado del alma</h3>
     </div>
 
-    <!--Título principal y el logo de Alicia-->
-        <div class="tituloprincipal-logo-alicia">
-            <img class="img-ceramica-4-elementos" src="../assets/Imagenes/ceramicaalicia.jpg" alt="dibujo pieza de cerámica">
-            <h1 class="titulo-principal">Cerámica 4 elementos</h1>
-        </div>
+
+        <!--Título principal y el logo de Alicia-->
+<div class="tituloprincipal-logo-alicia">
+    <img class="img-ceramica-4-elementos" src="../assets/Imagenes/ceramicaalicia.jpg" alt="dibujo pieza de cerámica">
+    <h1 class="titulo-principal">Cerámica 4 elementos</h1>
+</div>
 
     <!--Navbar-->
     
@@ -55,16 +57,29 @@
 
     <main class="main-contacto">
         <h1 class="titulo-contacto">Contacto</h1>
-        <p class="texto-contacto">Para contactarnos comunicate con nosotros a través de los siguientes medios:
-            <ul>
-                <li>Teléfono: +54 9 11 3267-0015</li> <img class="img-telefono" src="../assets/iconos/telefono-alicia.png" alt="icono-telefono">
-                <li>Email: aliumans@yahoo.com.ar</li> <img class="img-mail" src="../assets/iconos/carta.png" alt="icono-email">
-                <li>WhatsApp: <a href="https://wa.me/5491132670015" target="_blank">Enviar mensaje</a></li> <img class="img-whatsapp" src="../assets/iconos/whatsapp.png" alt="icono-whatsapp">
-            </ul>
-        </p>
+        <p class="texto-contacto">Para contactarnos comunicate con nosotros a través de los siguientes medios:</p>
+        <section class="seccion-medios-de-contacto">
+      <div class="medios-de-contacto"> 
+            <img class="icono-contacto" src="../assets/iconos/llamada.png" alt="telefono-alicia">
+            <h3 class="texto-contacto">Celular: +5491132670015</h3>
+           </div>
+
+           <div class="medios-de-contacto">
+               <img class="icono-contacto" src="../assets/iconos/carta.png" alt="email-alicia">
+               <h3 class="texto-contacto">Email: aliumans@yahoo.com.ar</h3>
+           </div>
+
+           <div class="medios-de-contacto">
+               <img class="icono-contacto" src="../assets/iconos/whatsapp.png" alt="whatsapp-alicia">
+               <h3 class="texto-contacto">WhatsApp: <a href="https://wa.me/5491132670015" target="_blank">Enviar mensaje</a></h3>
+           </div>
+        </section>
+     
+
+
     </main>
 
-    <footer>
+    
  
 <footer>
     <div class="caja-1">
@@ -89,7 +104,7 @@
     
 </footer>
 
-    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -10,6 +10,8 @@ footer{
     margin-top: 20px;
 
     .caja-1{
+        display: flex;
+        align-items: center;
        .img-pie-de-pagina {
         width: 50px;
 
@@ -23,6 +25,8 @@ footer{
        }
     }
     .caja-2 {
+        display: flex;
+        align-items: center;
         .img-pie-de-pagina {
             width: 50px;
         }
@@ -34,18 +38,11 @@ footer{
         }
     }
     .caja-3 {
-        display: flex;
 
         .img-pie-de-pagina {
-            width: 50px;
+            padding: 5px;
+            width: 60px;
         }
-        h3 {
-            color: $text-color-header;
-            font-family: $font-general;
-            font-weight: bold;
-            font-size: 15px;
-        }
-    }
 
-
+}
 }

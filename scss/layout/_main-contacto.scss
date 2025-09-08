@@ -5,22 +5,47 @@
     align-items: center;
     padding: 20px;
     background-color: rgb(198, 149, 245);
-    margin-top: 30px;
+    margin-top: 0px;
 
     .titulo-contacto {
-        color: rgb(24, 20, 20);
+     color: rgb(253, 250, 250);
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-weight: bold;
         font-size: 35px;
         margin-bottom: 20px;
+        padding: 10px;
     }
     .texto-contacto {
-        color: rgb(24, 20, 20);
+        color: rgb(253, 250, 250);
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 18px;
+        font-size: 25px;
         line-height: 1.6;
         max-width: 800px;
         text-align: justify;
+        padding: 10px;
         
         }
+
+        .seccion-medios-de-contacto{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: rgb(150, 103, 196);
+
+            .medios-de-contacto {
+                color: rgb(253, 250, 250);
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 20px;
+                line-height: 1.6;
+                max-width: 800px;
+                text-align: center;
+                padding: 10px;
+            }
+           
+        }
+        
+    
+
 }

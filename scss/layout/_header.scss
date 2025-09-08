@@ -21,6 +21,7 @@ header {
         background-color: $background-header;
         display: flex;
         justify-content: center;
+        align-items: center;
         padding: 20px;
         
         background-image: url(../assets/Imagenes/bowls.png);
@@ -39,10 +40,12 @@ header {
     }
     nav {
         background-color: $background-header;
+        
         ul {
             display: flex;
             list-style: none;
             padding: 5px;
+            justify-content: space-around;
             
         a{
             color: $text-color-header;
