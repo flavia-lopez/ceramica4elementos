@@ -35,13 +35,19 @@
             background-color: rgb(150, 103, 196);
 
             .medios-de-contacto {
+                display: flex;
+                align-items: center;
                 color: rgb(253, 250, 250);
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                 font-size: 20px;
-                line-height: 1.6;
-                max-width: 800px;
                 text-align: center;
                 padding: 10px;
+
+                .icono-contacto{
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 10px;
+                }
             }
            
         }
