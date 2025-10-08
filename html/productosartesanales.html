@@ -17,12 +17,8 @@
 <body>
     <header>
         <!--Frase sobre cerámica sujeto a cambios-->
-        <div class="seccion-crear-cuenta-frase">
+        <div class="seccion-frase">
             <h3 class="frase-encabezado">El arte es un estado del alma</h3>
-            <li>
-                <a class="btn btn-outline-light" href="crearcuenta.html">Crear cuenta</a>
-            </li>
-            <img class="img-crear-cuenta" src="../assets/iconos/agregar-usuario.png" alt="Crear cuenta">
         </div>
 
         <!--Título principal y el logo de Alicia-->
@@ -45,65 +41,298 @@
         </nav>
     </header>
 
-    <main class="flex-grow w-full max-w-6xl mx-auto p-4 bg-white rounded-xl shadow-lg my-8">
-        <div class="titulo-productos-artesanales text-center mb-8">
-            <h1 class="text-4xl font-bold text-gray-800 mb-2">Tienda en línea</h1>
-            <h2 class="text-3xl font-semibold text-gray-700">Productos artesanales</h2>
-        </div>
+    <!--Main de productos artesanales-->
+    <main class="main-productos-artesanales">
+        <!--titulo principal-->
+        <h1 id="titulo-productos-artesanales">Productos Artesanales</h1>
+        <!--subtitulo-->
+        <h2 class="subtitulo-productos-artesanales">Productos personalizados a pedido</h2>
+ 
+        <!--sección de ensaladeras-->
+        <section class="seccion-ensaladeras">
+            <h2>Ensaladeras</h2>
+            <div class="ensaladera">
+                
+                <img src="" alt="Ensaladera roja con la tecnica burbujas">
+                <h3>Ensaladera roja con la tecnica burbujas</h3>
+                <div>
 
-        <!-- Sección de Productos Disponibles -->
-        <section class="mb-12">
-            <h2 class="text-3xl font-semibold text-gray-700 mb-6 text-center">Nuestros Productos</h2>
-            <div id="contenedor-productos" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                <!-- Los productos se renderizarán aquí dinámicamente desde JavaScript -->
+            <div class="ensaladera">
+                <img src="" alt="Ensaladera natural con toques verdes">
+                <h3>Ensaladera natural con toques verdes</h3>
+                <p>Medidas: 24cm de diametro</p>
+            </div>     
+            
+            <div class="ensaladera">
+                <img src="" alt="Ensaladera natural con toques gris oscuro">
+                <h3>Ensaladera natural con toques gris ocuro</h3>
+                <p>Medidas 12cm de diametro y 5cm de profundidad.</p>
             </div>
+            <div class="ensaladera">
+                <img src="" alt="Ensaladera natural con toques verdes y rosados">
+                <h3>Ensaladera natural con toques verdes y rosados</h3>
+                <p>Medidas: 24cm de diametro y 5cm de profundidad</p>
+            </div>
+            <div class="ensaladera">
+                <img src="" alt="Ensaladera natural con toques verdes y rosados">
+                <h3>Ensaladera natural con toques verdes y rosados</h3>
+                <p>Medidas: 20cm de diametro y 5cm de profundidad.</p>
+            </div>
+            <div class="ensaladera">
+                <img src="" alt="Ensaladera amarrila">
+                <h3>Ensaladera amarrilla</h3>
+                <p>Medidas: 20cm de diametro y 5cm de profundidad.</p>
+            </div>
+
         </section>
 
-        <!-- Sección del Carrito de Compras -->
-        <section class="carrito mb-12">
-            <h2 class="text-3xl font-semibold text-gray-700 mb-6 text-center">Tu Carrito</h2>
-            <p class="text-gray-600 mb-4 text-center">Aquí se mostrarán los productos agregados al carrito.</p>
-            <div id="carrito-contenido" class="carrito-contenido">
-                <!-- Aquí se mostrarán los productos agregados al carrito dinámicamente -->
+<!--seccion compoteras-->
+<section class="seccion-compoteras">
+<!--subtitulo-->
+<h2>Compoteras</h2>
+
+            <div class="compotera">
+                <h2>Compoteras</h2>
+                <img src="" alt="compotera marmolada">
+                <h3>Compotera marmolada</h3>
+                <p>Medidas: 15cm de diametro y 5 cm de profundidad.</p>
             </div>
 
-            <!-- Botones de Acción del Carrito -->
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
-                <button class="btn-calcular-total py-3 px-6 text-lg font-semibold w-full sm:w-auto">Calcular Total</button>
-                <button class="btn-finalizar-compra py-3 px-6 text-lg font-semibold w-full sm:w-auto">Finalizar Compra</button>
-                <button class="btn-vaciar-carrito py-3 px-6 text-lg font-semibold w-full sm:w-auto">Vaciar Carrito</button>
-                <button class="btn-pagar py-3 px-6 text-lg font-semibold w-full sm:w-auto">Enviar Pedido-pagar</button>
+            <div class="compotera">
+                <img src="" alt="Compotera rustica azul">
+                <h3>Compotera rustica azul</h3>
+                <p>Medidas: 15cm de diametro y 5 cm de profundidad.</p>
+            </div>
+            
+            <div class="compotera">
+                <img src="" alt="Compotera rustica roja">
+                <h3>Compotera rustica roja</h3>
+                <p>Medidas: 15cm de diametro y 5 cm de profundidad
             </div>
 
-            <!-- Total carrito-->
-            <div class="total-carrito text-center mt-6">
-                <p class="text-2xl font-bold text-gray-800">Total: $<span id="total-display">0</span></p>
-            </div>
-        </section>
+</section>
+
+
+            <section class="juego-de-platos">
+                <h2>Juegos de platos</h2>
+
+                <div class="platos">
+                    <img src="" alt="Juego de platos negro y natural">
+                    <h3>Juego de platos negro y natural</h3>
+                    <p>Medidas: Plato llano 27cm, Plato hondo 22cm y Plato postre 20cm</p>
+                </div>
+
+                <div class="platos">
+                    <img src="" alt="Juego de platos rosa y verde">
+                    <h3>Juego de platos rosa y verde</h3>
+                    <p>Medidas: Plato llano 27cm, Plato hondo 22cm y Plato postre 20cm</p>
+                </div>
+
+                <div class="platos">
+                    <img src="" alt="Juego de platos con dibujos tribales">
+                    <h3>Juego de platos con dibujos tribales</h3>
+                    <p>Medidas: Plato llano 27cm, Plato hondo 22cm y Plato postre 20cm</p>
+                </div>
+
+                <div class="platos">
+                    <img src="" alt="Plato con tecnica de salpicado">
+                    <h3>Platp con tecnica de salpicado.</h3>
+                    <p>Medidas: Plato llano 27cm, Plato hondo 22cm y Plato postre 20cm</p>
+                </div>
+
+            </section>
+
+            <section class="tazas">
+                <h2>Tazas de cafe</h2>
+                <div class="taza">
+                    <img src="" alt="Taza de cafe natual con toques verdes y amarillos">
+                    <h3>Taza de cafe natual con toques verdes y amarillos</h3>
+                    <p>Medidas: 10cm de diametro y 8cm de altura.</p>
+                </div>
+                <div class="taza">
+                    <img src="" alt="Taza de cafe natural con toques rosas y azules">
+                    <h3>Taza de cafe natural con toques rosas y azules</h3>
+                    <p>Medidas: 10cm de diametro y 8cm de altura.</p>
+
+                </div>
+            </section>
+
+            <section class="macetas">
+                <h2>Macetas</h2>
+                <div class="maceta">
+                    <img src="" alt="Maceta de pared">
+                    <h3>Maceta de pared</h3>
+                    <p>Medidas: 15cm de diametro y 10cm de profundidad
+                </div>
+                
+                <div class="maceta">
+                    <img src="" alt="Maceta con carita y pies">
+                    <h3>Maceta con carita y pies</h3>
+                    <p>Medidas: 15cm de diametro y 10cm de profundidad</p>
+                </div>
+
+                <div class="maceta">
+                    <img src="" alt="Maceta con carita y pies">
+                    <h3>Maceta con carita y pies</h3>
+                    <p>Medidas: 15cm de diametro y 10cm de profundidad</p>
+
+                </div>
+
+                <div class="maceta">
+                    <img src="" alt="Maceta nena">
+                    <h3>Maceta de nena</h3>
+                    <p>Medidas: 15cm de diametro y 10cm de profundidad</p>
+                </div>
+
+                <div class="maceta">
+                    <img src="" alt="maceta">
+                    <h3>Maceta</h3>
+                    <p>Medidas: 15cm de diametro y 10cm de profundidad
+                </div>
+
+            </section>
+
+            <section class="posacucharas">
+                <h2>Posacucharas</h2>
+
+                <div></div>
+                <div></div>
+                <div></div>
+
+            </section>
+
+            <section class="otros-productos">
+                <h2>Otros productos</h2>
+
+                <div class="otros">
+                    <img src="" alt="Mates coloridos">
+                    <h3>Mates coloridos</h3>
+                    <p>Medidas: </p>
+                </div>
+
+                <div class="otros">
+                    <img src="" alt="Muestra de casitas">
+                    <h3>Muestra de casitas</h3>
+                    <p>Medidas: </p>
+                </div>
+
+                <div class="otros">
+                    <img src="" alt="Fuente de agua de pared">
+                    <h3>Fuente de agua de pared</h3>
+                </div>
+
+                <div class="otros">
+                    <img src="" alt="Tutores para plantas">
+                    <h3>Tutores para plantas</h3>
+                </div>
+
+                <div class="otros">
+                    <img src="" alt="Imanes">
+                    <h3>Imanes</h3>
+                </div>
+
+                <div class="otros">
+                    <img src="" alt="Florero ballena">
+                    <h3>Florero ballena</h3>
+                </div>
+
+                <div class="otros">
+                    <img src="" alt="Jarra de 1 litro">
+                    <h3>Jarra de 1 litro</h3>
+                </div>
+
+                <div class="otros">
+                    <img src="" alt="Florero doble o macetero">
+                    <h3>Florero doble o macetero</h3>
+                </div>
+
+               <div class="otros">
+                    <img src="" alt="Fuente gris con adornos">
+                    <h3>Fuente gris con adornos</h3>
+
+               </div>
+
+               <div class="otros">
+                   <img src="" alt="Medidor de fideos">
+                   <h3>Medidor de fideos</h3>
+               </div>
+
+               <div class="otros">
+                   <img src="" alt="Cuadro decorativo pajarito amarillo">
+                   <h3>Cuadro decorativo pajarito amarillo.</h3>
+               </div>
+
+               <div class="otros">
+                   <img src="" alt="Jabonera blanca y azul">
+                   <h3>Jabonera blanca y azul</h3>
+                </div>
+
+                <div class="otros">
+                    <img src="" alt="Fuente de sal">
+                    <h3>Fuente de sal</h3>
+                </div>
+
+                <div class="otros">
+                   <img src="" alt="Fuente gris con adornos">
+                   <h3>Fuente gris con adornos</h3>
+
+               </div>
+
+               <div class="otros">
+                   <img src="" alt="Medidor de fideos">
+                   <h3>Medidor de fideos</h3>
+               </div>
+
+               <div class="otros">
+                   <img src="" alt="Cuadro decorativo pajarito amarillo">
+                   <h3>Cuadro decorativo pajarito amarillo.</h3>
+               </div>
+
+               <div class="otros">
+                   <img src="" alt="Jabonera blanca y azul">
+                   <h3>Jabonera blanca y azul</h3>
+                </div>
+
+                <div class="otros">
+                    <img src="" alt="Fuente de sal">
+                    <h3>Fuente de sal</h3>
+                </div>
+
+                <div class="otros">
+                    <img src="" alt="Adorno senior con rulos de espiral">
+                    <h3>Adorno senior con rulos de espiral</h3>
+                </div>
+
+            </section>
+ 
+
+
     </main>
 
     <footer>
         <div class="caja-1">
-            <img class="img-pie-de-pagina" src="../assets/iconos/telefono-alicia.png" alt="Ícono de teléfono">
-            <h3 class="celular-email">Celular: +54 9 11 3267-0015</h3>
+            <img class="img-pie-de-pagina" src="../assets/iconos/telefono-alicia.png" alt="icono-telefono">
+            <h3 class="celular-email" >Celular: +54 9 11 3267-0015</h3>
         </div>
         <div class="caja-2">
-            <img class="img-pie-de-pagina" src="../assets/iconos/carta.png" alt="Ícono de carta de email">
-            <h3 class="celular-email">E-mail: aliumans@yahoo.com.ar</h3>
+            <img class="img-pie-de-pagina" src="../assets/iconos/carta.png" alt="carta-email">
+            <h3 class="celular-email" >E-mail: aliumans@yahoo.com.ar</h3>
         </div>
+    
+        <!--links de contacto fb, wapp, instagram-->
+
         <div class="caja-3">
             <a href="https://wa.me/5491132670015" target="_blank">
-                <img class="img-pie-de-pagina" src="../assets/iconos/whatsapp.png" alt="Ícono de WhatsApp">
-            </a>
-            <img class="img-pie-de-pagina" src="../assets/iconos/instagram(2).png" alt="Ícono de Instagram">
-            <a href="https://www.facebook.com/profile.php?id=100043645346423" target="_blank">
-                <img class="img-pie-de-pagina" src="../assets/iconos/facebook.png" alt="Ícono de Facebook"></a>
+                <img class="img-pie-de-pagina" src="../assets/iconos/whatsapp.png" alt="icono-whatsapp" target="_blank">
+              </a>
+            <img class="img-pie-de-pagina" src="../assets/iconos/instagram(2).png" alt="icono-Instagram">
+            <a href="https://www.facebook.com/profile.php?id=100043645346423" target="_blank"> 
+                <img  class="img-pie-de-pagina" src="../assets/iconos/facebook.png" alt=""></a> 
         </div>
+     
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!-- Toastify JS (ruta y sintaxis corregidas) -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="../script.js"></script>
+
 </body>
 </html>
