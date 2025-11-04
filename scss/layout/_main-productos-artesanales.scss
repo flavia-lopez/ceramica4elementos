@@ -1,39 +1,413 @@
 /*Estilos del main de productos artesanales*/
 
-
-/*Estilos de los botones de agregar al carrito en la seccion productos*/
-.contenedor-principal-de-productos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.main-productos-artesanales {
+ display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    margin-top: 0px;
     background-color: rgb(198, 149, 245);
-    padding: 20px;
-    margin-top: 20px;
-    .producto {
-        background-color: white;
-        border-radius: 10px;
-        padding: 20px;
-        margin: 10px;
-        width: 200px;
-        text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.2s;
 
-        &:hover {
-            transform: scale(1.05);
+    /* Estilos del título */
+
+    #titulo-productos-artesanales {
+        color: rgb(253, 250, 250);
+        font-size: 35px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    /* Estilos del subtitulo */
+
+    .subtitulo-productos-artesanales {
+        color: rgb(253, 250, 250);
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        margin-bottom: 20px;
+        padding: 10px;
+        
+        .apedido {
+            color: rgb(255, 223, 0); /* Color diferente para "a pedido!" */
+            font-style: italic; /* Estilo cursiva para resaltar */
+            font-size: 35px;
         }
     }
-.btn-agregaralcarrito {
-    background-color: rgb(197, 157, 235);
-    color: rgb(43, 3, 66);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 15px;
-    padding: 8px;
-    border:2px solid rgb(78, 41, 107);
-    border-radius: 5px;
-    margin: 20px;
+
+    /* Estilos del subtitulo de las secciones */
+
+    .seccion-ensaladeras {
+            display: grid;
+            display: flex;
+            border: 1px, solid rgb(150, 103, 196);
+            border-radius: 10px;
+            
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 150px);
+            grid-template-areas:
+                "ensaladera-hojas ensaladera-toques-verdes"
+                "ensaladera-gris-oscuro ensaladera-burbujas"
+                "ensaladera-verde-rosa ensaladera-amarilla"
+                ;
+            gap: 30px;
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+                .ensaladera-hojas {
+                    grid-area: ensaladera-hojas;
+                }
+
+                .ensaladera-toques-verdes {
+                    grid-area: ensaladera-toques-verdes;
+                }
+
+                .ensaladera-gris-oscuro {
+                    grid-area: ensaladera-gris-oscuro;
+                }
+
+                .ensaladera-burbujas {
+                    grid-area: ensaladera-burbujas;
+                }
+
+                .ensaladera-verde-rosa {        
+                    grid-area: ensaladera-verde-rosa;
+                }
+
+                .ensaladera-amarilla {
+                    grid-area: ensaladera-amarilla;
+                }
+
+        
+        .subtitulo-ensaladera {
+            color: rgb(253, 250, 250);
+            text-align: start;
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .ensaladera { 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+            background-color: rgb(90, 44, 136);
+            border-radius: 10px;
+
+  
+
+        /* Estilos de la descripcion de la imagen */
+
+               .descripcion {
+                
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 20 px;
+                color: rgb(253, 250, 250);
+               }
+
+               .medidas {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 18px;
+                color: rgb(253, 250, 250);
+                }
+
+            .ensaladera-hojas, .ensaladera-toques-verdes, .ensaladera-gris-oscuro, .ensaladera-burbujas, .ensaladera-verde-rosa, .ensaladera-amarilla {
+               width: 80%;
+
+            }
+
+        }
+
+    }     
+        /* Estilos de la seccion de compoteras */    
+
+        .seccion-compoteras {
+        display: grid;
+        display: flex;
+        border: 1px, solid rgb(150, 103, 196);
+        border-radius: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 150px);
+        grid-template-areas:
+           "compotera-azul compotera-roja"
+           "compotera-marmolada compotera-marmolada"
+            ;
+        gap: 20px;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+            .compotera-azul {
+                grid-area: compotera-azul;
+            }
+
+            .compotera-roja {
+                grid-area: compotera-roja;
+            }
+
+            .compotera-marmolada {
+                grid-area: compotera-marmolada;
+            }
+
+            .subtitulo-compoteras {
+                color: rgb(253, 250, 250);
+                text-align: start;
+                font-size: 25px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: bold;
+                padding: 10px;
+
+    }
+
+
+
+        .compotera { 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+            background-color: rgb(90, 44, 136);
+            border-radius: 10px;
+
+        /* Estilos de la descripcion de la imagen */
+
+               .descripcion {
+                
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 20 px;
+                color: rgb(253, 250, 250);
+               }
+
+               .medidas {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 18px;
+                color: rgb(253, 250, 250);
+                }
+
+            }
+.compotera-azul, .compotera-roja, .compotera-marmolada {
+           width: 80%;
+
+        }
 }
 
+.seccion-platos {
+    display: grid;
+    display: flex;
+    border: 1px, solid rgb(150, 103, 196);
+    border-radius: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 150px);
+    grid-template-areas:
+      "plato-negro plato-rosa"
+      "plato-dibujos-rupestres plato-salpicado"
+      ;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+        .plato-negro {
+            grid-area: plato-negro;
+        }
+
+        .plato-rosa {
+            grid-area: plato-rosa;
+        }
+
+        .plato-dibujos-rupestres {
+            grid-area: plato-dibujos-rupestres;
+        }
+
+        .plato-salpicado {
+            grid-area: plato-salpicado;
+        }
+
+        /*Estilo del subtitulo platos*/
+        .subtitulo-platos {
+           color: rgb(253, 250, 250);
+           text-align: start;
+           font-size: 25px;
+           font-family: Verdana, Geneva, Tahoma, sans-serif;
+           font-weight: bold;
+           padding: 10px;
+
+        }
+
+        /*Estilos de los divs platos*/
+     
+        .platos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+            background-color: rgb(90, 44, 136);
+            border-radius: 10px;
+
+        /* Estilos de la descripcion de la imagen */
+
+               .descripcion {
+
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 20 px;
+                color: rgb(253, 250, 250);
+               }
+
+               .medidas {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 18px;
+                color: rgb(253, 250, 250);
+                }
+
+            }
+
+            .plato-negro, .plato-rosa, .plato-dibujos-rupestres, .plato-salpicado {
+               width: 80%;
+
+}
+}
+
+.seccion-tazas {
+    display: grid;
+    display: flex;
+    border: 1px, solid rgb(150, 103, 196);
+    border-radius: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 150px);
+    grid-template-areas:
+      "taza-verde-amarillo taza-azul-rosa"
+      ;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .taza-verde-amarillo {
+        grid-area: taza-verde-amarillo;
+    }
+
+    .taza-azul-rosa {
+        grid-area: taza-azul-rosa;
+    }
+
+    /*Estilos del subtitulo taza*/
+    .subtitulo-tazas {
+        color: rgb(253, 250, 250);
+        text-align: start;
+        font-size: 25px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    /*Estilos de los divs tazas*/
+    .taza {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+        background-color: rgb(90, 44, 136);
+        border-radius: 10px;
+
+        /* Estilos de la descripcion de la imagen */
+
+        .descripcion {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            color: rgb(253, 250, 250);
+        }
+
+        .medidas {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+            color: rgb(253, 250, 250);
+        }
+       .taza-verde-amarillo, .taza-azul-rosa {
+           width: 50%;
+    }
+
+}
+
+/* Estilos del div macetas*/
+
+.seccion-macetas {
+    display: grid;
+    display: flex;
+    border: 1px, solid rgb(150, 103, 196);
+    border-radius: 10px;
+    background-color: rgb(90, 44, 136);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 150px);
+    grid-template-areas:
+      "maceta-pared maceta-carita-pies"
+      "maceta-nena maceta-pies"
+      ;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .maceta-pared {
+        grid-area: maceta-pared;
+    }
+
+    .maceta-carita-pies {
+        grid-area: maceta-carita-pies;
+    }
+
+    .maceta-nena {
+        grid-area: maceta-nena;
+    }
+
+    .maceta-pies {
+        grid-area: maceta-pies;
+    }
+
+    .subtitulo-macetas {
+        color: rgb(253, 250, 250);
+        text-align: start;
+        font-size: 25px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    .maceta-unica {
+        .descripcion {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            color: rgb(253, 250, 250);
+        }
+
+        .medidas {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+            color: rgb(253, 250, 250);
+        }
+    }
+
+    /*tamano de las imagenes de las macetas*/
+
+    .maceta-pared, .maceta-carita-pies, .maceta-nena, .maceta-pies {
+        width: 80%;
+
+}
+
+
+
+}
+}
 }
