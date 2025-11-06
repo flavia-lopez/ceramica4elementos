@@ -71,7 +71,7 @@ header .tituloprincipal-logo-alicia {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-image: url(../assets/Imagenes/bowls.png);
+  background-image: url(../assets/imagenes/jarrones-luz-violeta.jpg);
 }
 header .tituloprincipal-logo-alicia .img-ceramica-4-elementos {
   width: 100px;
@@ -206,15 +206,38 @@ header nav ul a {
   margin-top: 0px;
   background-color: rgb(198, 149, 245);
 }
-.main-index #todo-lo-que-tenemos {
-  color: rgb(253, 250, 250);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  font-size: 35px;
+.main-index .bienvenida-index {
+  color: white;
+  text-align: center;
   margin-bottom: 20px;
 }
-.main-index .carousel-item img {
-  width: 200px;
+.main-index .bienvenida-index .titulo-bienvenida {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.main-index .bienvenida-index .parrafo-bienvenida {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.main-index .div-productos-artesanales .subtitulo-index {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 30px;
+  text-align: left;
+}
+.main-index .div-productos-artesanales .a-pedido {
+  text-decoration: none;
+  color: yellow;
+  font-weight: bold;
+  background-color: rgb(123, 63, 247);
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.main-index .div-productos-artesanales .a-pedido:hover {
+  background-color: rgb(100, 50, 200);
 }
 
 /*Estilos del main de productos artesanales*/
