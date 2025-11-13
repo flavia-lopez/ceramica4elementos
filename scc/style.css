@@ -1,0 +1,694 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(244, 241, 247);
+}
+
+/*Estilos del footer*/
+/*Variables de color*/
+/*Variables de fuente*/
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(130, 20, 204);
+  padding: 30px;
+  margin-top: 0;
+}
+footer .caja-1 {
+  display: flex;
+  align-items: center;
+}
+footer .caja-1 .img-pie-de-pagina {
+  width: 50px;
+}
+footer .caja-1 h3 {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+}
+footer .caja-2 {
+  display: flex;
+  align-items: center;
+}
+footer .caja-2 .img-pie-de-pagina {
+  width: 50px;
+}
+footer .caja-2 h3 {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+}
+footer .caja-3 .img-pie-de-pagina {
+  padding: 5px;
+  width: 60px;
+}
+
+/*Variables de color*/
+/*Variables de fuente*/
+/* Estilos del header*/
+header {
+  /* Título principal y el logo de Alicia*/
+}
+header .seccion-frase {
+  background-color: rgb(130, 20, 204);
+}
+header .seccion-frase .frase-encabezado {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px;
+  margin: 0;
+}
+header .tituloprincipal-logo-alicia {
+  background-color: rgb(130, 20, 204);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-image: url(../assets/Imagenes/polvo-rosa.jpg);
+  background-size: cover;
+  background-position: center;
+}
+header .tituloprincipal-logo-alicia .img-ceramica-4-elementos {
+  width: 100px;
+}
+header .tituloprincipal-logo-alicia .titulo-principal {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+header nav {
+  background-color: rgb(130, 20, 204);
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: space-around;
+}
+header nav ul a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 15px;
+}
+
+.main-como-comprar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(198, 149, 245);
+  margin-top: 30px;
+}
+.main-como-comprar .titulo-como-comprar {
+  color: rgb(243, 241, 241);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 10px;
+}
+.main-como-comprar .texto-como-comprar {
+  color: rgb(243, 241, 241);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  text-align: justify;
+  padding: 10px;
+}
+.main-como-comprar .contacto-como-comprar {
+  color: rgb(243, 241, 241);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.6;
+  max-width: 800px;
+  text-align: justify;
+  padding: 10px;
+}
+.main-como-comprar .lista-como-comprar {
+  color: rgb(243, 241, 241);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.6;
+  max-width: 800px;
+  text-align: justify;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+/*Estilos del main contacto*/
+.main-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(198, 149, 245);
+  margin-top: 0px;
+}
+.main-contacto .titulo-contacto {
+  color: rgb(253, 250, 250);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.main-contacto .texto-contacto {
+  color: rgb(253, 250, 250);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  line-height: 1.6;
+  max-width: 800px;
+  text-align: justify;
+  padding: 10px;
+}
+.main-contacto .seccion-medios-de-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgb(150, 103, 196);
+}
+.main-contacto .seccion-medios-de-contacto .medios-de-contacto {
+  display: flex;
+  align-items: center;
+  color: rgb(253, 250, 250);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+}
+.main-contacto .seccion-medios-de-contacto .medios-de-contacto .icono-contacto {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.main-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  margin-top: 0px;
+  background-color: rgb(198, 149, 245);
+  /*div talleres y fotos varias*/
+  /*div ejemplos de piezas*/
+}
+.main-index .bienvenida-index {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.main-index .bienvenida-index .titulo-bienvenida {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.main-index .bienvenida-index .parrafo-bienvenida {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.main-index .div-productos-artesanales .subtitulo-index {
+  font-size: 2rem;
+  color: white;
+  text-align: left;
+}
+.main-index .div-productos-artesanales .a-pedido {
+  text-decoration: none;
+  color: yellow;
+  font-weight: bold;
+  background-color: rgb(123, 63, 247);
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  /*Enlace a la pagina de productos artesanales*/
+}
+.main-index .div-productos-artesanales .a-pedido:hover {
+  background-color: rgb(223, 41, 183);
+}
+.main-index .div-productos-artesanales .a-pedido .enlace-producto .ejemplo-producto {
+  width: 40px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.main-index .div-talleres {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-index .div-talleres .subtitulo-index {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+}
+.main-index .div-talleres .parrafo-talleres {
+  font-size: 1.2rem;
+  color: white;
+}
+.main-index .div-talleres .foto-talleres {
+  width: 30%;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.main-index .div-ejemplos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-index .div-ejemplos .subtitulo-index {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+}
+.main-index .div-ejemplos .img-taza, .main-index .div-ejemplos .img-jabonera, .main-index .div-ejemplos .img-imanes {
+  width: 20%;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+/*Estilos del main de productos artesanales*/
+.main-productos-artesanales {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  margin-top: 0px;
+  background-color: rgb(198, 149, 245);
+  /* Estilos del título */
+  /* Estilos del subtitulo */
+  /* Estilos del subtitulo de las secciones */
+  /* Estilos de la seccion de compoteras */
+}
+.main-productos-artesanales #titulo-productos-artesanales {
+  color: rgb(253, 250, 250);
+  font-size: 35px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.main-productos-artesanales .subtitulo-productos-artesanales {
+  color: rgb(253, 250, 250);
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.main-productos-artesanales .subtitulo-productos-artesanales .apedido {
+  color: rgb(255, 223, 0); /* Color diferente para "a pedido!" */
+  font-style: italic; /* Estilo cursiva para resaltar */
+  font-size: 35px;
+}
+.main-productos-artesanales .seccion-ensaladeras {
+  display: grid;
+  display: flex;
+  border: 1px, solid rgb(150, 103, 196);
+  border-radius: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 150px);
+  grid-template-areas: "ensaladera-hojas ensaladera-toques-verdes" "ensaladera-gris-oscuro ensaladera-burbujas" "ensaladera-verde-rosa ensaladera-amarilla";
+  gap: 30px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.main-productos-artesanales .seccion-ensaladeras .ensaladera-hojas {
+  grid-area: ensaladera-hojas;
+}
+.main-productos-artesanales .seccion-ensaladeras .ensaladera-toques-verdes {
+  grid-area: ensaladera-toques-verdes;
+}
+.main-productos-artesanales .seccion-ensaladeras .ensaladera-gris-oscuro {
+  grid-area: ensaladera-gris-oscuro;
+}
+.main-productos-artesanales .seccion-ensaladeras .ensaladera-burbujas {
+  grid-area: ensaladera-burbujas;
+}
+.main-productos-artesanales .seccion-ensaladeras .ensaladera-verde-rosa {
+  grid-area: ensaladera-verde-rosa;
+}
+.main-productos-artesanales .seccion-ensaladeras .ensaladera-amarilla {
+  grid-area: ensaladera-amarilla;
+}
+.main-productos-artesanales .seccion-ensaladeras .subtitulo-ensaladera {
+  color: rgb(253, 250, 250);
+  text-align: start;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  padding: 10px;
+}
+.main-productos-artesanales .seccion-ensaladeras .ensaladera {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(90, 44, 136);
+  border-radius: 10px;
+  /* Estilos de la descripcion de la imagen */
+}
+.main-productos-artesanales .seccion-ensaladeras .ensaladera .descripcion {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20 px;
+  color: rgb(253, 250, 250);
+}
+.main-productos-artesanales .seccion-ensaladeras .ensaladera .medidas {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  color: rgb(253, 250, 250);
+}
+.main-productos-artesanales .seccion-ensaladeras .ensaladera .ensaladera-hojas, .main-productos-artesanales .seccion-ensaladeras .ensaladera .ensaladera-toques-verdes, .main-productos-artesanales .seccion-ensaladeras .ensaladera .ensaladera-gris-oscuro, .main-productos-artesanales .seccion-ensaladeras .ensaladera .ensaladera-burbujas, .main-productos-artesanales .seccion-ensaladeras .ensaladera .ensaladera-verde-rosa, .main-productos-artesanales .seccion-ensaladeras .ensaladera .ensaladera-amarilla {
+  width: 80%;
+}
+.main-productos-artesanales .seccion-compoteras {
+  display: grid;
+  display: flex;
+  border: 1px, solid rgb(150, 103, 196);
+  border-radius: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 150px);
+  grid-template-areas: "compotera-azul compotera-roja" "compotera-marmolada compotera-marmolada";
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.main-productos-artesanales .seccion-compoteras .compotera-azul {
+  grid-area: compotera-azul;
+}
+.main-productos-artesanales .seccion-compoteras .compotera-roja {
+  grid-area: compotera-roja;
+}
+.main-productos-artesanales .seccion-compoteras .compotera-marmolada {
+  grid-area: compotera-marmolada;
+}
+.main-productos-artesanales .seccion-compoteras .subtitulo-compoteras {
+  color: rgb(253, 250, 250);
+  text-align: start;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  padding: 10px;
+}
+.main-productos-artesanales .seccion-compoteras .compotera {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(90, 44, 136);
+  border-radius: 10px;
+  /* Estilos de la descripcion de la imagen */
+}
+.main-productos-artesanales .seccion-compoteras .compotera .descripcion {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20 px;
+  color: rgb(253, 250, 250);
+}
+.main-productos-artesanales .seccion-compoteras .compotera .medidas {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  color: rgb(253, 250, 250);
+}
+.main-productos-artesanales .seccion-compoteras .compotera-azul, .main-productos-artesanales .seccion-compoteras .compotera-roja, .main-productos-artesanales .seccion-compoteras .compotera-marmolada {
+  width: 80%;
+}
+.main-productos-artesanales .seccion-platos {
+  display: grid;
+  display: flex;
+  border: 1px, solid rgb(150, 103, 196);
+  border-radius: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 150px);
+  grid-template-areas: "plato-negro plato-rosa" "plato-dibujos-rupestres plato-salpicado";
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /*Estilo del subtitulo platos*/
+  /*Estilos de los divs platos*/
+}
+.main-productos-artesanales .seccion-platos .plato-negro {
+  grid-area: plato-negro;
+}
+.main-productos-artesanales .seccion-platos .plato-rosa {
+  grid-area: plato-rosa;
+}
+.main-productos-artesanales .seccion-platos .plato-dibujos-rupestres {
+  grid-area: plato-dibujos-rupestres;
+}
+.main-productos-artesanales .seccion-platos .plato-salpicado {
+  grid-area: plato-salpicado;
+}
+.main-productos-artesanales .seccion-platos .subtitulo-platos {
+  color: rgb(253, 250, 250);
+  text-align: start;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  padding: 10px;
+}
+.main-productos-artesanales .seccion-platos .platos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(90, 44, 136);
+  border-radius: 10px;
+  /* Estilos de la descripcion de la imagen */
+}
+.main-productos-artesanales .seccion-platos .platos .descripcion {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20 px;
+  color: rgb(253, 250, 250);
+}
+.main-productos-artesanales .seccion-platos .platos .medidas {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  color: rgb(253, 250, 250);
+}
+.main-productos-artesanales .seccion-platos .plato-negro, .main-productos-artesanales .seccion-platos .plato-rosa, .main-productos-artesanales .seccion-platos .plato-dibujos-rupestres, .main-productos-artesanales .seccion-platos .plato-salpicado {
+  width: 80%;
+}
+.main-productos-artesanales .seccion-tazas {
+  display: grid;
+  display: flex;
+  border: 1px, solid rgb(150, 103, 196);
+  border-radius: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 150px);
+  grid-template-areas: "taza-verde-amarillo taza-azul-rosa";
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /*Estilos del subtitulo taza*/
+  /*Estilos de los divs tazas*/
+  /* Estilos del div macetas*/
+}
+.main-productos-artesanales .seccion-tazas .taza-verde-amarillo {
+  grid-area: taza-verde-amarillo;
+}
+.main-productos-artesanales .seccion-tazas .taza-azul-rosa {
+  grid-area: taza-azul-rosa;
+}
+.main-productos-artesanales .seccion-tazas .subtitulo-tazas {
+  color: rgb(253, 250, 250);
+  text-align: start;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  padding: 10px;
+}
+.main-productos-artesanales .seccion-tazas .taza {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(90, 44, 136);
+  border-radius: 10px;
+  /* Estilos de la descripcion de la imagen */
+}
+.main-productos-artesanales .seccion-tazas .taza .descripcion {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  color: rgb(253, 250, 250);
+}
+.main-productos-artesanales .seccion-tazas .taza .medidas {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  color: rgb(253, 250, 250);
+}
+.main-productos-artesanales .seccion-tazas .taza .taza-verde-amarillo, .main-productos-artesanales .seccion-tazas .taza .taza-azul-rosa {
+  width: 50%;
+}
+.main-productos-artesanales .seccion-tazas .seccion-macetas {
+  display: grid;
+  display: flex;
+  border: 1px, solid rgb(150, 103, 196);
+  border-radius: 10px;
+  background-color: rgb(90, 44, 136);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 150px);
+  grid-template-areas: "maceta-pared maceta-carita-pies" "maceta-nena maceta-pies";
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /*tamano de las imagenes de las macetas*/
+}
+.main-productos-artesanales .seccion-tazas .seccion-macetas .maceta-pared {
+  grid-area: maceta-pared;
+}
+.main-productos-artesanales .seccion-tazas .seccion-macetas .maceta-carita-pies {
+  grid-area: maceta-carita-pies;
+}
+.main-productos-artesanales .seccion-tazas .seccion-macetas .maceta-nena {
+  grid-area: maceta-nena;
+}
+.main-productos-artesanales .seccion-tazas .seccion-macetas .maceta-pies {
+  grid-area: maceta-pies;
+}
+.main-productos-artesanales .seccion-tazas .seccion-macetas .subtitulo-macetas {
+  color: rgb(253, 250, 250);
+  text-align: start;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  padding: 10px;
+}
+.main-productos-artesanales .seccion-tazas .seccion-macetas .maceta-unica .descripcion {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  color: rgb(253, 250, 250);
+}
+.main-productos-artesanales .seccion-tazas .seccion-macetas .maceta-unica .medidas {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  color: rgb(253, 250, 250);
+}
+.main-productos-artesanales .seccion-tazas .seccion-macetas .maceta-pared, .main-productos-artesanales .seccion-tazas .seccion-macetas .maceta-carita-pies, .main-productos-artesanales .seccion-tazas .seccion-macetas .maceta-nena, .main-productos-artesanales .seccion-tazas .seccion-macetas .maceta-pies {
+  width: 80%;
+}
+
+/*Estilos del main de quien soy*/
+.main-quiensoy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  margin-top: 0px;
+  background-color: rgb(198, 149, 245);
+}
+.main-quiensoy .img-alicia {
+  width: 200px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.main-quiensoy .titulo-quiensoy {
+  color: rgb(253, 250, 250);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.main-quiensoy .texto-quiensoy {
+  color: rgb(247, 241, 241);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.6;
+  max-width: 800px;
+  text-align: justify;
+}
+
+/*Estilos del main talleres*/
+.main-talleres {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  background-color: rgb(198, 149, 245);
+  margin: 0px;
+  /*Seccion de imagenes de talleres*/
+}
+.main-talleres .titulo-talleres {
+  color: rgb(250, 246, 246);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.main-talleres .texto-talleres {
+  color: rgb(252, 247, 247);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.6;
+  max-width: 800px;
+  text-align: justify;
+}
+.main-talleres .section-imagenes-talleres {
+  /*titulo imagenes de los talleres */
+  display: grid;
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "foto-talleres-1 foto-talleres-2" "foto-talleres-3 foto-talleres-3";
+  gap: 15px;
+  padding: 10px;
+}
+.main-talleres .section-imagenes-talleres .titulo-imagenes-talleres {
+  color: rgb(250, 246, 246);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  margin-left: 20px;
+}
+.main-talleres .section-imagenes-talleres .foto-talleres-1 {
+  grid-area: foto-talleres-1;
+}
+.main-talleres .section-imagenes-talleres .foto-talleres-2 {
+  grid-area: foto-talleres-2;
+}
+.main-talleres .section-imagenes-talleres .foto-talleres-3 {
+  grid-area: foto-talleres-3;
+}
+.main-talleres .section-imagenes-talleres .foto-talleres-1, .main-talleres .section-imagenes-talleres .foto-talleres-2, .main-talleres .section-imagenes-talleres .foto-talleres-3 {
+  width: 50%;
+  border-radius: 10px;
+}
+
+/*Variables de color*/
+/*Variables de fuente*/
+
+/*# sourceMappingURL=style.css.map */

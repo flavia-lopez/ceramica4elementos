@@ -29,7 +29,6 @@
     .subtitulo-index {
         font-size: 2rem;
         color: white;
-        margin-bottom: 30px;
         text-align: left;
     }
     .a-pedido {
@@ -42,11 +41,68 @@
         transition: background-color 0.3s ease;
 
         &:hover {
-            background-color: rgb(100, 50, 200);
+            background-color: rgb(223, 41, 183);
+        }
+
+        /*Enlace a la pagina de productos artesanales*/
+
+        .enlace-producto {
+
+            .ejemplo-producto {
+            width: 40px;
+            margin-top: 20px;
+            border-radius: 10px;
+       } 
+        }
+
+
+
+    }
+
+
+}
+
+/*div talleres y fotos varias*/
+
+    .div-talleres{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .subtitulo-index {
+            font-size: 2rem;
+            color: white;
+            text-align: center;
+        }
+        .parrafo-talleres {
+            font-size: 1.2rem;
+            color: white;
+        }
+        .foto-talleres {
+            width: 30%;
+            margin-top: 20px;
+            border-radius: 10px;
         }
     }
-    
 
+    /*div ejemplos de piezas*/
+
+    .div-ejemplos {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+
+
+        .subtitulo-index {
+            font-size: 2rem;
+            color: white;
+            text-align: center;
+        }
+        .img-taza, .img-jabonera, .img-imanes {
+            width: 20%;
+            margin: 10px;
+            border-radius: 10px;
+        }
     }
 
 
