@@ -30,6 +30,10 @@ footer .caja-1 h3 {
   font-weight: bold;
   font-size: 15px;
 }
+footer .caja-1:hover {
+  background-color: rgb(150, 103, 196);
+  border-radius: 10px;
+}
 footer .caja-2 {
   display: flex;
   align-items: center;
@@ -69,7 +73,7 @@ header .seccion-frase .frase-encabezado {
 header .tituloprincipal-logo-alicia {
   background-color: rgb(130, 20, 204);
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 50px;
   background-image: url(../assets/Imagenes/polvo-rosa.jpg);
@@ -77,7 +81,8 @@ header .tituloprincipal-logo-alicia {
   background-position: center;
 }
 header .tituloprincipal-logo-alicia .img-ceramica-4-elementos {
-  width: 100px;
+  padding-right: 20px;
+  width: 150px;
 }
 header .tituloprincipal-logo-alicia .titulo-principal {
   color: white;
@@ -229,6 +234,8 @@ header nav ul a {
   margin: 0 auto;
 }
 .main-index .div-productos-artesanales .subtitulo-index {
+  display: flex;
+  justify-content: center;
   font-size: 2rem;
   color: white;
   text-align: left;
@@ -247,14 +254,17 @@ header nav ul a {
   background-color: rgb(223, 41, 183);
 }
 .main-index .div-productos-artesanales .a-pedido .enlace-producto .ejemplo-producto {
-  width: 40px;
+  width: 20%;
   margin-top: 20px;
   border-radius: 10px;
 }
 .main-index .div-talleres {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .main-index .div-talleres .subtitulo-index {
   font-size: 2rem;
@@ -266,12 +276,14 @@ header nav ul a {
   color: white;
 }
 .main-index .div-talleres .foto-talleres {
-  width: 30%;
+  align-self: center;
+  width: 40%;
   margin-top: 20px;
   border-radius: 10px;
 }
 .main-index .div-ejemplos {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

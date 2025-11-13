@@ -21,7 +21,7 @@ header {
     .tituloprincipal-logo-alicia{
         background-color: $background-header;
         display: flex;
-        justify-content: center;
+        justify-content:flex-start;
         align-items: center;
         padding: 50px;
 
@@ -29,10 +29,11 @@ header {
         background-size: cover;
         background-position: center;
 
-        .img-ceramica-4-elementos{
-            width: 100px;
+        .img-ceramica-4-elementos {
+            padding-right: 20px;
+            width: 150px;
         }
-        .titulo-principal{
+        .titulo-principal {
             color: $text-color-header;
             font-family: $font-general;
             font-size: 20px;
@@ -41,6 +42,7 @@ header {
         
         }
     }
+
     nav {
         background-color: $background-header;
         

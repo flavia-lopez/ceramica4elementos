@@ -23,6 +23,11 @@ footer{
         font-size: 15px;
 
        }
+
+       &:hover {
+        background-color: rgb(150, 103, 196);
+        border-radius: 10px;
+       }
     }
     .caja-2 {
         display: flex;

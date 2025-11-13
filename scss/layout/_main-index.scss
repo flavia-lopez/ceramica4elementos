@@ -27,6 +27,8 @@
 
     .div-productos-artesanales {
     .subtitulo-index {
+        display: flex;
+        justify-content: center;
         font-size: 2rem;
         color: white;
         text-align: left;
@@ -49,10 +51,11 @@
         .enlace-producto {
 
             .ejemplo-producto {
-            width: 40px;
+            width: 20%;
             margin-top: 20px;
             border-radius: 10px;
        } 
+
         }
 
 
@@ -66,8 +69,11 @@
 
     .div-talleres{
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
 
         .subtitulo-index {
             font-size: 2rem;
@@ -79,7 +85,8 @@
             color: white;
         }
         .foto-talleres {
-            width: 30%;
+            align-self: center;
+            width: 40%;
             margin-top: 20px;
             border-radius: 10px;
         }
@@ -89,6 +96,7 @@
 
     .div-ejemplos {
         display:flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
 
