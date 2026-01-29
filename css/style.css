@@ -633,8 +633,53 @@ header nav ul a {
   display: grid;
   border: 1px, solid rgb(150, 103, 196);
   border-radius: 10px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 150px);
+  grid-template-columns: repeat(1 1fr);
+  grid-template-rows: repeat(3, 100px);
+  grid-template-areas: "posacucharas-gatito" "posacucharas-frida" "posacucharas-blanca";
+  gap: 20px;
+  /*Estilos del subtitulo posacucharas*/
+}
+.main-productos-artesanales .posacucharas .posacucharas-gatito {
+  grid-area: posacucharas-gatito;
+}
+.main-productos-artesanales .posacucharas .posacucharas-frida {
+  grid-area: posacucharas-frida;
+}
+.main-productos-artesanales .posacucharas .posacucharas-blanca {
+  grid-area: posacucharas-blanca;
+}
+.main-productos-artesanales .posacucharas .subtitulo-posacucharas {
+  color: rgb(253, 250, 250);
+  text-align: center;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  padding: 10px;
+  /*Estilos de los divs posacucharas*/
+}
+.main-productos-artesanales .posacucharas .subtitulo-posacucharas .div-posacuchara {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(90, 44, 136);
+  border-radius: 10px;
+  /* Estilos de la descripcion de la imagen */
+}
+.main-productos-artesanales .posacucharas .subtitulo-posacucharas .div-posacuchara .descripcion {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20 px;
+  color: rgb(253, 250, 250);
+}
+.main-productos-artesanales .posacucharas .subtitulo-posacucharas .div-posacuchara .medidas {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  color: rgb(253, 250, 250);
+}
+.main-productos-artesanales .posacucharas .subtitulo-posacucharas .div-posacuchara .medidas .posacucharas-gatito, .main-productos-artesanales .posacucharas .subtitulo-posacucharas .div-posacuchara .medidas .posacucharas-frida, .main-productos-artesanales .posacucharas .subtitulo-posacucharas .div-posacuchara .medidas .posacucharas-blanca {
+  width: 30%;
 }
 
 /*Estilos del main de quien soy*/

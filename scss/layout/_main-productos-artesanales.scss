@@ -431,12 +431,72 @@ display: flex;
 display: grid;
 border: 1px, solid rgb(150, 103, 196);
 border-radius: 10px;
-grid-template-columns: repeat(2, 1fr);
-grid-template-rows: repeat(2, 150px);
+grid-template-columns: repeat(1 1fr);
+grid-template-rows: repeat(3, 100px);
+grid-template-areas: 
+"posacucharas-gatito"
+"posacucharas-frida"
+"posacucharas-blanca";
+gap: 20px;
 
 
+    .posacucharas-gatito {
+        grid-area: posacucharas-gatito;
+    }
+
+    .posacucharas-frida {
+        grid-area: posacucharas-frida;
+    }
+
+    .posacucharas-blanca {
+        grid-area: posacucharas-blanca;
+    }
+
+    /*Estilos del subtitulo posacucharas*/
+    .subtitulo-posacucharas {
+        color: rgb(253, 250, 250);
+        text-align: center;
+        font-size: 25px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        padding: 10px;
+ /*Estilos de los divs posacucharas*/
+    .div-posacuchara {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+        background-color: rgb(90, 44, 136);
+        border-radius: 10px;
+
+        /* Estilos de la descripcion de la imagen */
+
+               .descripcion {
+                
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 20 px;
+                color: rgb(253, 250, 250);
+               }
+
+               .medidas {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 18px;
+                color: rgb(253, 250, 250);
+
+                .posacucharas-gatito, .posacucharas-frida, .posacucharas-blanca {
+                   width: 30%;
+
+                }
 
 
-
+            }
+        }
+    }
 }
 }
+
+
+
+
