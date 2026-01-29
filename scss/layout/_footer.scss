@@ -1,7 +1,7 @@
 /*Estilos del footer*/
 @import "../utilities/_variables.scss";
 
-footer{
+footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -24,10 +24,7 @@ footer{
 
        }
 
-       &:hover {
-        background-color: rgb(150, 103, 196);
-        border-radius: 10px;
-       }
+
     }
     .caja-2 {
         display: flex;
@@ -42,7 +39,14 @@ footer{
             font-size: 15px;
         }
     }
+
+    /* facebook instagram y whatsapp*/
+
     .caja-3 {
+
+        display: flex;
+        align-items: center;
+        gap: 10px;
 
         .img-pie-de-pagina {
             padding: 5px;

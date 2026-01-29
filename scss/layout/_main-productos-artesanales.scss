@@ -278,6 +278,8 @@
 }
 }
 
+/* Estilos de la seccion tazas*/
+
 .seccion-tazas {
     display: grid;
     display: flex;
@@ -304,7 +306,7 @@
     /*Estilos del subtitulo taza*/
     .subtitulo-tazas {
         color: rgb(253, 250, 250);
-        text-align: start;
+        text-align: center;
         font-size: 25px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-weight: bold;
@@ -340,75 +342,101 @@
     }
 
 }
+}
 
 /* Estilos del div macetas*/
 
 .seccion-macetas {
-    display: grid;
+   display: grid;
     display: flex;
-
     border: 1px, solid rgb(150, 103, 196);
     border-radius: 10px;
-    background-color: rgb(90, 44, 136);
+    
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 150px);
     grid-template-areas:
-      "maceta-pared maceta-carita-pies"
-      "maceta-nena maceta-pies"
-      ;
+    "macetapared macetanena"
+    "macetapies macetacaritaconpies";
+
     gap: 20px;
     padding: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
 
-    .maceta-pared {
-        grid-area: maceta-pared;
+    .macetapared {
+        grid-area: macetapared;
+    }
+    .macetanena {
+        grid-area: macetanena;
+    }
+    .macetapies {
+        grid-area: macetapies;
+    }
+    .macetacaritaconpies {
+        grid-area: macetacaritaconpies;
     }
 
-    .maceta-carita-pies {
-        grid-area: maceta-carita-pies;
-    }
-
-    .maceta-nena {
-        grid-area: maceta-nena;
-    }
-
-    .maceta-pies {
-        grid-area: maceta-pies;
-    }
-
+    /*Estilos del subtitulo macetas*/
     .subtitulo-macetas {
         color: rgb(253, 250, 250);
-        text-align: start;
+        text-align: center;
         font-size: 25px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-weight: bold;
         padding: 10px;
-    }
+}
 
-    .maceta-unica {
-        .descripcion {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 20px;
-            color: rgb(253, 250, 250);
-        }
+/*Estilo del div macetas*/
 
-        .medidas {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 18px;
-            color: rgb(253, 250, 250);
-        }
-    }
-
-    /*tamano de las imagenes de las macetas*/
-
-    .maceta-pared, .maceta-carita-pies, .maceta-nena, .maceta-pies {
-        width: 80%;
-
+.maceta-unica {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(90, 44, 136);
+    border-radius: 10px;
 }
 
 
+/* Estilos de la descripcion de la imagen */
+
+               .descripcion {
+
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 20 px;
+                color: rgb(253, 250, 250);
+               }
+
+               .medidas {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 18px;
+                color: rgb(253, 250, 250);
+                }
+
+                .macetapared, .macetanena, .macetapies, .macetacaritaconpies {
+                   width: 80%;
+
+
+
 
 }
+}
+
+/*Estilos del div  posacucharas*/
+
+.posacucharas {
+display: flex;
+display: grid;
+border: 1px, solid rgb(150, 103, 196);
+border-radius: 10px;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(2, 150px);
+
+
+
+
+
 }
 }

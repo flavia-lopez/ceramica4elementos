@@ -16,6 +16,7 @@ footer {
   background-color: rgb(130, 20, 204);
   padding: 30px;
   margin-top: 0;
+  /* facebook instagram y whatsapp*/
 }
 footer .caja-1 {
   display: flex;
@@ -30,10 +31,6 @@ footer .caja-1 h3 {
   font-weight: bold;
   font-size: 15px;
 }
-footer .caja-1:hover {
-  background-color: rgb(150, 103, 196);
-  border-radius: 10px;
-}
 footer .caja-2 {
   display: flex;
   align-items: center;
@@ -46,6 +43,11 @@ footer .caja-2 h3 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   font-size: 15px;
+}
+footer .caja-3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 footer .caja-3 .img-pie-de-pagina {
   padding: 5px;
@@ -87,7 +89,7 @@ header .tituloprincipal-logo-alicia .img-ceramica-4-elementos {
 header .tituloprincipal-logo-alicia .titulo-principal {
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 }
 header nav {
@@ -275,9 +277,11 @@ header nav ul a {
   font-size: 1.2rem;
   color: white;
 }
-.main-index .div-talleres .foto-talleres {
-  align-self: center;
-  width: 40%;
+.main-index .div-talleres .enlace-talleres {
+  padding-left: 280px;
+}
+.main-index .div-talleres .enlace-talleres .foto-talleres {
+  width: 50%;
   margin-top: 20px;
   border-radius: 10px;
 }
@@ -311,6 +315,9 @@ header nav ul a {
   /* Estilos del subtitulo */
   /* Estilos del subtitulo de las secciones */
   /* Estilos de la seccion de compoteras */
+  /* Estilos de la seccion tazas*/
+  /* Estilos del div macetas*/
+  /*Estilos del div  posacucharas*/
 }
 .main-productos-artesanales #titulo-productos-artesanales {
   color: rgb(253, 250, 250);
@@ -523,7 +530,6 @@ header nav ul a {
   margin-bottom: 20px;
   /*Estilos del subtitulo taza*/
   /*Estilos de los divs tazas*/
-  /* Estilos del div macetas*/
 }
 .main-productos-artesanales .seccion-tazas .taza-verde-amarillo {
   grid-area: taza-verde-amarillo;
@@ -533,7 +539,7 @@ header nav ul a {
 }
 .main-productos-artesanales .seccion-tazas .subtitulo-tazas {
   color: rgb(253, 250, 250);
-  text-align: start;
+  text-align: center;
   font-size: 25px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
@@ -563,53 +569,72 @@ header nav ul a {
 .main-productos-artesanales .seccion-tazas .taza .taza-verde-amarillo, .main-productos-artesanales .seccion-tazas .taza .taza-azul-rosa {
   width: 50%;
 }
-.main-productos-artesanales .seccion-tazas .seccion-macetas {
+.main-productos-artesanales .seccion-macetas {
   display: grid;
   display: flex;
   border: 1px, solid rgb(150, 103, 196);
   border-radius: 10px;
-  background-color: rgb(90, 44, 136);
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 150px);
-  grid-template-areas: "maceta-pared maceta-carita-pies" "maceta-nena maceta-pies";
+  grid-template-areas: "macetapared macetanena" "macetapies macetacaritaconpies";
   gap: 20px;
   padding: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
-  /*tamano de las imagenes de las macetas*/
+  /*Estilos del subtitulo macetas*/
+  /*Estilo del div macetas*/
+  /* Estilos de la descripcion de la imagen */
 }
-.main-productos-artesanales .seccion-tazas .seccion-macetas .maceta-pared {
-  grid-area: maceta-pared;
+.main-productos-artesanales .seccion-macetas .macetapared {
+  grid-area: macetapared;
 }
-.main-productos-artesanales .seccion-tazas .seccion-macetas .maceta-carita-pies {
-  grid-area: maceta-carita-pies;
+.main-productos-artesanales .seccion-macetas .macetanena {
+  grid-area: macetanena;
 }
-.main-productos-artesanales .seccion-tazas .seccion-macetas .maceta-nena {
-  grid-area: maceta-nena;
+.main-productos-artesanales .seccion-macetas .macetapies {
+  grid-area: macetapies;
 }
-.main-productos-artesanales .seccion-tazas .seccion-macetas .maceta-pies {
-  grid-area: maceta-pies;
+.main-productos-artesanales .seccion-macetas .macetacaritaconpies {
+  grid-area: macetacaritaconpies;
 }
-.main-productos-artesanales .seccion-tazas .seccion-macetas .subtitulo-macetas {
+.main-productos-artesanales .seccion-macetas .subtitulo-macetas {
   color: rgb(253, 250, 250);
-  text-align: start;
+  text-align: center;
   font-size: 25px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   padding: 10px;
 }
-.main-productos-artesanales .seccion-tazas .seccion-macetas .maceta-unica .descripcion {
+.main-productos-artesanales .seccion-macetas .maceta-unica {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(90, 44, 136);
+  border-radius: 10px;
+}
+.main-productos-artesanales .seccion-macetas .descripcion {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 20px;
+  font-size: 20 px;
   color: rgb(253, 250, 250);
 }
-.main-productos-artesanales .seccion-tazas .seccion-macetas .maceta-unica .medidas {
+.main-productos-artesanales .seccion-macetas .medidas {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 18px;
   color: rgb(253, 250, 250);
 }
-.main-productos-artesanales .seccion-tazas .seccion-macetas .maceta-pared, .main-productos-artesanales .seccion-tazas .seccion-macetas .maceta-carita-pies, .main-productos-artesanales .seccion-tazas .seccion-macetas .maceta-nena, .main-productos-artesanales .seccion-tazas .seccion-macetas .maceta-pies {
+.main-productos-artesanales .seccion-macetas .macetapared, .main-productos-artesanales .seccion-macetas .macetanena, .main-productos-artesanales .seccion-macetas .macetapies, .main-productos-artesanales .seccion-macetas .macetacaritaconpies {
   width: 80%;
+}
+.main-productos-artesanales .posacucharas {
+  display: flex;
+  display: grid;
+  border: 1px, solid rgb(150, 103, 196);
+  border-radius: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 150px);
 }
 
 /*Estilos del main de quien soy*/
