@@ -72,6 +72,72 @@ footer .caja-3 a:hover .img-pie-de-pagina {
     transform: translateY(-10px);
   }
 }
+/* Estilos responsivos para el footer */
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(130, 20, 204);
+  padding: 30px;
+  margin-top: 0;
+  /* facebook instagram y whatsapp */
+}
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+}
+footer .caja-1, footer .caja-2 {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  footer .caja-1, footer .caja-2 {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+footer .caja-1 .img-pie-de-pagina, footer .caja-2 .img-pie-de-pagina {
+  width: 50px;
+}
+footer .caja-1 h3, footer .caja-2 h3 {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  margin: 0;
+}
+footer .caja-3 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+footer .caja-3 a {
+  display: inline-block;
+  text-decoration: none;
+  animation: flotarIcono 3s ease-in-out infinite;
+}
+footer .caja-3 a:nth-child(2) {
+  animation-delay: 0.4s;
+}
+footer .caja-3 a:nth-child(3) {
+  animation-delay: 0.8s;
+}
+footer .caja-3 a .img-pie-de-pagina {
+  padding: 5px;
+  width: 60px;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
+}
+footer .caja-3 a:hover {
+  animation-play-state: paused;
+}
+footer .caja-3 a:hover .img-pie-de-pagina {
+  transform: scale(1.2) translateY(-5px);
+  filter: brightness(1.2) drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+}
+
 /*Variables de color*/
 /*Variables de fuente*/
 /* Estilos del header*/
@@ -251,6 +317,8 @@ header .tituloprincipal-logo-alicia .img-ceramica-4-elementos {
   margin-right: 10px;
 }
 
+/*Variables de color*/
+/*Variables de fuente*/
 .main-index {
   display: flex;
   flex-direction: column;
@@ -342,6 +410,117 @@ header .tituloprincipal-logo-alicia .img-ceramica-4-elementos {
   width: 20%;
   margin: 10px;
   border-radius: 10px;
+}
+
+/*Modo responsive para main index*/
+.main-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: rgb(198, 149, 245);
+}
+.main-index .bienvenida-index {
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.main-index .bienvenida-index .titulo-bienvenida {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .main-index .bienvenida-index .titulo-bienvenida {
+    font-size: 1.8rem;
+  }
+}
+.main-index .bienvenida-index .parrafo-bienvenida {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.main-index .div-productos-artesanales {
+  width: 100%;
+  text-align: center;
+}
+.main-index .div-productos-artesanales .subtitulo-index {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 20px;
+}
+.main-index .div-productos-artesanales .a-pedido {
+  display: inline-block;
+  text-decoration: none;
+  color: yellow;
+  font-weight: bold;
+  background-color: rgb(123, 63, 247);
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.main-index .div-productos-artesanales .a-pedido:hover {
+  background-color: rgb(223, 41, 183);
+  transform: scale(1.05);
+}
+.main-index .div-productos-artesanales .enlace-producto .ejemplo-producto {
+  width: 60%;
+  max-width: 400px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .main-index .div-productos-artesanales .enlace-producto .ejemplo-producto {
+    width: 90%;
+  }
+}
+.main-index .div-talleres {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+}
+.main-index .div-talleres .enlace-talleres {
+  padding-left: 0;
+  text-align: center;
+}
+.main-index .div-talleres .enlace-talleres .foto-talleres {
+  width: 60%;
+  max-width: 500px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .main-index .div-talleres .enlace-talleres .foto-talleres {
+    width: 90%;
+  }
+}
+.main-index .div-ejemplos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-index .div-ejemplos .contenedor-imagenes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+.main-index .div-ejemplos .img-taza, .main-index .div-ejemplos .img-jabonera, .main-index .div-ejemplos .img-imanes {
+  width: 250px;
+  max-width: 80%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .main-index .div-ejemplos .img-taza, .main-index .div-ejemplos .img-jabonera, .main-index .div-ejemplos .img-imanes {
+    width: 90%;
+    height: auto;
+  }
 }
 
 /*Estilos del main de productos artesanales*/

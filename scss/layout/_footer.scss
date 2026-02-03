@@ -69,3 +69,71 @@ footer {
         transform: translateY(-10px); // Sube 10px
     }
 }
+
+/* Estilos responsivos para el footer */
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $background-header;
+    padding: 30px;
+    margin-top: 0;
+
+    // RESPONSIVE: En pantallas menores a 768px, apilamos las cajas
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 25px; // Espacio entre cada sección (celular, email, iconos)
+        text-align: center;
+    }
+
+    .caja-1, .caja-2 {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            flex-direction: column; // Icono arriba y texto abajo en móvil
+            gap: 5px;
+        }
+
+        .img-pie-de-pagina {
+            width: 50px;
+        } 
+        h3 {
+            color: $text-color-header;
+            font-family: $font-general;
+            font-weight: bold;
+            font-size: 15px;
+            margin: 0; // Evita márgenes extraños
+        }
+    }
+
+    /* facebook instagram y whatsapp */
+    .caja-3 {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            animation: flotarIcono 3s ease-in-out infinite;
+
+            &:nth-child(2) { animation-delay: 0.4s; }
+            &:nth-child(3) { animation-delay: 0.8s; }
+
+            .img-pie-de-pagina {
+                padding: 5px;
+                width: 60px;
+                transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
+            }
+
+            &:hover {
+                animation-play-state: paused;
+                .img-pie-de-pagina {
+                    transform: scale(1.2) translateY(-5px);
+                    filter: brightness(1.2) drop-shadow(0 5px 10px rgba(0,0,0,0.3));
+                }
+            }
+        }
+    }
+}

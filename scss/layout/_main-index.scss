@@ -1,3 +1,6 @@
+
+@import "../utilities/_variables.scss";
+
 .main-index {
     display: flex;
     flex-direction: column;
@@ -121,5 +124,127 @@
         }
     }
 
+}
 
+/*Modo responsive para main index*/
+
+.main-index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px; // Agregamos padding lateral para que el texto no toque los bordes en móvil
+    background-color: rgb(198, 149, 245);
+
+    .bienvenida-index {
+        color: white;
+        text-align: center;
+        margin-bottom: 30px;
+
+        .titulo-bienvenida {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+
+            @media (max-width: 768px) {
+                font-size: 1.8rem; // Título más pequeño en móvil
+            }
+        }
+        .parrafo-bienvenida {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+
+    .div-productos-artesanales {
+        width: 100%;
+        text-align: center;
+
+        .subtitulo-index {
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .a-pedido {
+            display: inline-block; // Para que el padding y transform funcionen bien
+            text-decoration: none;
+            color: yellow;
+            font-weight: bold;
+            background-color: rgb(123, 63, 247);
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: rgb(223, 41, 183);
+                transform: scale(1.05);
+            }
+        }
+
+        .enlace-producto {
+            .ejemplo-producto {
+                width: 60%; // En escritorio era 20%, aquí lo subimos
+                max-width: 400px; // Pero que no exceda un tamaño razonable
+                margin-top: 20px;
+                border-radius: 10px;
+
+                @media (max-width: 768px) {
+                    width: 90%; // En móvil casi todo el ancho
+                }
+            }
+        }
+    }
+
+    .div-talleres {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+
+        .enlace-talleres {
+            padding-left: 0; // Eliminamos el padding de 280px que rompía el diseño en móvil
+            text-align: center;
+
+            .foto-talleres {
+                width: 60%; 
+                max-width: 500px;
+                margin-top: 20px;
+                border-radius: 10px;
+
+                @media (max-width: 768px) {
+                    width: 90%;
+                }
+            }
+        }
+    }
+
+    .div-ejemplos {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .contenedor-imagenes {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; // Importante: para que bajen en móvil
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .img-taza, .img-jabonera, .img-imanes {
+            width: 250px; // Tamaño fijo sugerido
+            max-width: 80%; // Para que no se salga de la pantalla
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+
+            @media (max-width: 768px) {
+                width: 90%; // Una debajo de la otra en móvil
+                height: auto;
+            }
+        }
+    }
 }
