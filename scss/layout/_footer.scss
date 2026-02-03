@@ -1,4 +1,5 @@
-/*Estilos del footer*/
+
+/* Estilos del footer */
 @import "../utilities/_variables.scss";
 
 footer {
@@ -9,29 +10,12 @@ footer {
     padding: 30px;
     margin-top: 0;
 
-    .caja-1{
-        display: flex;
-        align-items: center;
-       .img-pie-de-pagina {
-        width: 50px;
-
-       } 
-       h3 {
-        color: $text-color-header;
-        font-family: $font-general;
-        font-weight: bold;
-        font-size: 15px;
-
-       }
-
-
-    }
-    .caja-2 {
+    .caja-1, .caja-2 {
         display: flex;
         align-items: center;
         .img-pie-de-pagina {
             width: 50px;
-        }
+        } 
         h3 {
             color: $text-color-header;
             font-family: $font-general;
@@ -40,18 +24,48 @@ footer {
         }
     }
 
-    /* facebook instagram y whatsapp*/
-
+    /* facebook instagram y whatsapp */
     .caja-3 {
-
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 15px; // Aumenté un poco el espacio para que respiren al moverse
 
-        .img-pie-de-pagina {
-            padding: 5px;
-            width: 60px;
+        a {
+            display: inline-block;
+            text-decoration: none;
+            /* Animación constante de flotado */
+            animation: flotarIcono 3s ease-in-out infinite;
+
+            // Retraso para que se muevan de forma escalonada (efecto ola)
+            &:nth-child(2) { animation-delay: 0.4s; }
+            &:nth-child(3) { animation-delay: 0.8s; }
+
+            .img-pie-de-pagina {
+                padding: 5px;
+                width: 60px;
+                /* Transición suave para cuando quites el mouse */
+                transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
+            }
+
+            /* Efecto al pasar el mouse */
+            &:hover {
+                animation-play-state: paused; // Se detiene el flotado al tocarlo
+                
+                .img-pie-de-pagina {
+                    transform: scale(1.2) translateY(-5px); // Crece y sube
+                    filter: brightness(1.2) drop-shadow(0 5px 10px rgba(0,0,0,0.3));
+                }
+            }
         }
-
+    }
 }
+
+/* Definición de la animación de levitación */
+@keyframes flotarIcono {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); // Sube 10px
+    }
 }

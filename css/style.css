@@ -6,7 +6,7 @@ body {
   background-color: rgb(244, 241, 247);
 }
 
-/*Estilos del footer*/
+/* Estilos del footer */
 /*Variables de color*/
 /*Variables de fuente*/
 footer {
@@ -16,29 +16,16 @@ footer {
   background-color: rgb(130, 20, 204);
   padding: 30px;
   margin-top: 0;
-  /* facebook instagram y whatsapp*/
+  /* facebook instagram y whatsapp */
 }
-footer .caja-1 {
+footer .caja-1, footer .caja-2 {
   display: flex;
   align-items: center;
 }
-footer .caja-1 .img-pie-de-pagina {
+footer .caja-1 .img-pie-de-pagina, footer .caja-2 .img-pie-de-pagina {
   width: 50px;
 }
-footer .caja-1 h3 {
-  color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  font-size: 15px;
-}
-footer .caja-2 {
-  display: flex;
-  align-items: center;
-}
-footer .caja-2 .img-pie-de-pagina {
-  width: 50px;
-}
-footer .caja-2 h3 {
+footer .caja-1 h3, footer .caja-2 h3 {
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
@@ -47,13 +34,44 @@ footer .caja-2 h3 {
 footer .caja-3 {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
-footer .caja-3 .img-pie-de-pagina {
+footer .caja-3 a {
+  display: inline-block;
+  text-decoration: none;
+  /* Animación constante de flotado */
+  animation: flotarIcono 3s ease-in-out infinite;
+  /* Efecto al pasar el mouse */
+}
+footer .caja-3 a:nth-child(2) {
+  animation-delay: 0.4s;
+}
+footer .caja-3 a:nth-child(3) {
+  animation-delay: 0.8s;
+}
+footer .caja-3 a .img-pie-de-pagina {
   padding: 5px;
   width: 60px;
+  /* Transición suave para cuando quites el mouse */
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
+}
+footer .caja-3 a:hover {
+  animation-play-state: paused;
+}
+footer .caja-3 a:hover .img-pie-de-pagina {
+  transform: scale(1.2) translateY(-5px);
+  filter: brightness(1.2) drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
 }
 
+/* Definición de la animación de levitación */
+@keyframes flotarIcono {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
 /*Variables de color*/
 /*Variables de fuente*/
 /* Estilos del header*/
@@ -108,6 +126,30 @@ header nav ul a {
   font-weight: 500;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 15px;
+}
+
+/* --- ESTILOS PARA MÓVIL (Por defecto) --- */
+header {
+  /* --- MEDIA QUERY PARA ESCRITORIO --- */
+  /* Cuando la pantalla sea más grande que 768px, cambia el diseño */
+}
+header .tituloprincipal-logo-alicia {
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+header .tituloprincipal-logo-alicia .img-ceramica-4-elementos {
+  width: 100px;
+}
+@media (min-width: 768px) {
+  header .tituloprincipal-logo-alicia {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 50px;
+  }
+  header .tituloprincipal-logo-alicia .img-ceramica-4-elementos {
+    width: 150px;
+  }
 }
 
 .main-como-comprar {

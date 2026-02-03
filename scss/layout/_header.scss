@@ -64,3 +64,30 @@ header {
 
 }
 }
+
+/* --- ESTILOS PARA MÓVIL (Por defecto) --- */
+header {
+    .tituloprincipal-logo-alicia {
+        flex-direction: column; // Apilado en celular
+        text-align: center;
+        padding: 20px;
+        
+        .img-ceramica-4-elementos {
+            width: 100px;
+        }
+    }
+
+    /* --- MEDIA QUERY PARA ESCRITORIO --- */
+    /* Cuando la pantalla sea más grande que 768px, cambia el diseño */
+    @media (min-width: 768px) {
+        .tituloprincipal-logo-alicia {
+            flex-direction: row; // Uno al lado del otro en PC
+            justify-content: flex-start;
+            padding: 50px;
+
+            .img-ceramica-4-elementos {
+                width: 150px;
+            }
+        }
+    }
+}
