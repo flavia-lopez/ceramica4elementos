@@ -32,3 +32,56 @@
         text-align: justify;
     }
 }
+
+/*modo responsive*/
+
+.main-quiensoy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px; // Padding lateral para que el texto no toque los bordes en móvil
+    margin-top: 0px;
+    background-color: rgb(198, 149, 245);
+    min-height: 80vh; // Asegura que cubra gran parte de la pantalla
+
+    .img-alicia {
+        width: 200px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); // Un toque de sombra para resaltar la foto
+        
+        @media (max-width: 480px) {
+            width: 180px; // Un poco más pequeña en celulares muy chicos
+        }
+    }
+
+    .titulo-quiensoy {
+        color: rgb(253, 250, 250);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size: 35px;
+        margin-bottom: 20px;
+        text-align: center;
+
+        @media (max-width: 768px) {
+            font-size: 28px; // Bajamos el tamaño en móvil
+        }
+    }
+
+    .texto-quiensoy {
+        color: rgb(247, 241, 241);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.6;
+        max-width: 800px;
+        text-align: justify;
+        padding: 0 10px;
+
+        @media (max-width: 768px) {
+            text-align: left; // En móvil, el alineado a la izquierda es más cómodo
+            font-size: 17px;
+            font-weight: normal; // El "bold" en párrafos largos de móvil puede cansar la vista
+        }
+    }
+}

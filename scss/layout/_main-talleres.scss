@@ -79,3 +79,93 @@
         
     }
 }
+
+/*Modo responsive para main talleres*/
+
+.main-talleres {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px; // Padding lateral para móvil
+    background-color: rgb(198, 149, 245);
+    margin: 0px;
+
+    .titulo-talleres {
+        color: rgb(250, 246, 246);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size: 35px;
+        margin-bottom: 20px; 
+        text-align: center;
+
+        @media (max-width: 768px) {
+            font-size: 28px;
+        }
+    }
+
+    .texto-talleres {
+        color: rgb(252, 247, 247);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.6;
+        max-width: 800px;
+        text-align: center;
+        padding-bottom: 20px;
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    .section-imagenes-talleres {
+        width: 100%;
+        max-width: 1000px;
+
+        .titulo-imagenes-talleres {
+            color: rgb(250, 246, 246);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            font-size: 25px;
+            text-align: center; // Centrado para que se vea mejor en todas las pantallas
+            margin-bottom: 20px;
+        }
+
+        .div-principal-fotos {
+            display: grid;
+            // Configuración para Escritorio: 2 columnas, 2 filas
+            grid-template-columns: repeat(2, 1fr); 
+            grid-template-areas: 
+                "foto1 foto2"
+                "foto3 foto3"; // La foto 3 ocupa todo el ancho abajo
+            gap: 20px;
+            padding: 10px;
+
+            // Ajuste para Móvil: Todo en una sola columna
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                    "foto1"
+                    "foto2"
+                    "foto3";
+                gap: 15px;
+            }
+
+            .foto-talleres-1 { grid-area: foto1; }
+            .foto-talleres-2 { grid-area: foto2; }
+            .foto-talleres-3 { grid-area: foto3; }
+            
+            .foto-talleres-1, .foto-talleres-2, .foto-talleres-3 {
+                width: 100%; // Que ocupe el 100% de su área del grid
+                height: 300px; // Altura fija para mantener orden
+                object-fit: cover; // Para que las fotos no se deformen
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+                @media (max-width: 768px) {
+                    height: 250px; // Un poco más bajas en móvil
+                }
+            }
+        }
+    }
+}

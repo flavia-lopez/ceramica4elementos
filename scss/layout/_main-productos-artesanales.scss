@@ -98,7 +98,130 @@
     }
 }
 }
-    
+
+/*modo responsive*/
+
+
+    .main-productos-artesanales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 15px; // Reducimos padding lateral en móviles
+    background-color: rgb(198, 149, 245);
+
+    #titulo-productos-artesanales {
+        color: rgb(253, 250, 250);
+        font-size: 35px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        margin-bottom: 20px;
+        padding: 10px;
+        text-align: center;
+
+        @media (max-width: 768px) {
+            font-size: 28px;
+        }
+    }
+
+    .subtitulo-productos-artesanales {
+        color: rgb(253, 250, 250);
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        margin-bottom: 20px;
+        padding: 10px;
+        text-align: center;
+        
+        @media (max-width: 768px) {
+            font-size: 24px;
+        }
+
+        .apedido {
+            color: rgb(255, 223, 0);
+            font-style: italic;
+            font-size: 35px;
+
+            @media (max-width: 768px) {
+                font-size: 28px;
+                display: block; // Salto de línea para que destaque en móvil
+            }
+        }
+    }
+
+    /* ESTRUCTURA DE SECCIONES RESPONSIVE */
+    .seccion-ensaladeras, 
+    .seccion-compoteras, 
+    .seccion-platos, 
+    .seccion-tazas, 
+    .seccion-macetas, 
+    .posacucharas, 
+    .otros-productos {
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 30px;
+        width: 100%;
+        max-width: 1200px;
+        padding: 20px;
+        margin-bottom: 40px;
+        border: 1px solid rgb(150, 103, 196);
+        border-radius: 10px;
+
+        /* BREAKPOINT TABLET: 2 columnas */
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        /* BREAKPOINT MÓVIL: 1 columna */
+        @media (max-width: 600px) {
+            grid-template-columns: 1fr;
+            padding: 10px;
+        }
+
+        h2 {
+            grid-column: 1 / -1; 
+            color: white;
+            font-size: 25px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .ensaladera, .compotera, .platos, .taza, .maceta-unica, .div-posacuchara, .otros {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(90, 44, 136);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 250px;       
+                object-fit: cover; // Cambiado a cover para que llenen mejor el espacio en móvil
+                border-radius: 5px;
+                margin-bottom: 15px;
+
+                @media (max-width: 600px) {
+                    height: 300px; // Un poco más altas en móvil para que luzcan
+                }
+            }
+
+            .descripcion {
+                font-size: 18px;
+                color: white;
+                margin-top: auto;   
+                padding-bottom: 5px;
+            }
+
+            .medidas {
+                font-size: 14px;
+                color: rgb(220, 220, 220);
+            }
+        }
+    }
+}
        
 
 
