@@ -2,9 +2,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
     background-color: rgb(198, 149, 245);
-    margin-top: 30px;
+
+    /* RESET TOTAL DE ESPACIOS SUPERIORES */
+    margin-top: 0 !important; 
+    padding-top: 40px; // Espacio interno arriba
+    border: 1px solid transparent; // Truco técnico: detiene el colapso de márgenes
 
     .titulo-como-comprar {
         color: rgb(243, 241, 241);

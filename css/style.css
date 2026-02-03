@@ -155,7 +155,11 @@ footer .caja-3 a:hover .img-pie-de-pagina {
 /*Variables de fuente*/
 /* Estilos del header*/
 header {
-  /* Título principal y el logo de Alicia*/
+  width: 100%;
+  z-index: 1000;
+  /* 1. Frase de arriba con pulso suave */
+  /* 2. Banner Principal con Efecto */
+  /* 3. Navegación Dinámica */
 }
 header .seccion-frase {
   background-color: rgb(130, 20, 204);
@@ -163,64 +167,183 @@ header .seccion-frase {
 header .seccion-frase .frase-encabezado {
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
   text-align: center;
-  padding: 15px;
+  padding: 10px;
   margin: 0;
+  letter-spacing: 1px;
+  animation: brilloSutil 3s ease-in-out infinite;
 }
 header .tituloprincipal-logo-alicia {
-  background-color: rgb(130, 20, 204);
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
-  padding: 50px;
-  background-image: url(../assets/Imagenes/polvo-rosa.jpg);
+  padding: 40px 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../assets/Imagenes/polvo-rosa.jpg);
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+  transition: all 0.5s ease;
+  /* Cambio a horizontal en PC */
 }
 header .tituloprincipal-logo-alicia .img-ceramica-4-elementos {
-  padding-right: 20px;
-  width: 150px;
+  width: 120px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+header .tituloprincipal-logo-alicia .img-ceramica-4-elementos:hover {
+  transform: rotate(360deg) scale(1.1);
 }
 header .tituloprincipal-logo-alicia .titulo-principal {
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 25px;
+  font-size: 28px;
   font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+@media (min-width: 768px) {
+  header .tituloprincipal-logo-alicia {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 50px 80px;
+  }
+  header .tituloprincipal-logo-alicia .img-ceramica-4-elementos {
+    margin-bottom: 0;
+    margin-right: 30px;
+    width: 150px;
+  }
+  header .tituloprincipal-logo-alicia .titulo-principal {
+    font-size: 40px;
+    text-align: left;
+  }
 }
 header nav {
   background-color: rgb(130, 20, 204);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 header nav ul {
   display: flex;
+  flex-direction: column;
   list-style: none;
-  padding: 0;
+  padding: 10px 0;
   margin: 0;
-  justify-content: space-around;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  header nav ul {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+  }
+}
+header nav ul li {
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  header nav ul li {
+    width: auto;
+  }
 }
 header nav ul a {
+  display: block;
   color: white;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin: 15px;
+  padding: 15px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+header nav ul a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 10px;
+  left: 50%;
+  background-color: #ffeb3b;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+header nav ul a:hover {
+  color: #ffeb3b;
+  letter-spacing: 1px;
+}
+header nav ul a:hover::after {
+  width: 50%;
+}
+
+/* --- ANIMACIONES EXTRA --- */
+@keyframes brilloSutil {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(0.98);
+  }
+}
+@keyframes entradaSuave {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+header {
+  animation: entradaSuave 1s ease-out;
 }
 
 /* --- ESTILOS PARA MÓVIL (Por defecto) --- */
 header {
+  background-color: rgb(130, 20, 204);
+  /* --- ESTILOS DEL NAV PARA MÓVIL --- */
   /* --- MEDIA QUERY PARA ESCRITORIO --- */
-  /* Cuando la pantalla sea más grande que 768px, cambia el diseño */
 }
 header .tituloprincipal-logo-alicia {
+  display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
   padding: 20px;
 }
 header .tituloprincipal-logo-alicia .img-ceramica-4-elementos {
   width: 100px;
 }
+header nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 15px;
+  padding-bottom: 20px;
+}
+header nav ul li {
+  width: 100%;
+  text-align: center;
+}
+header nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  padding: 10px 0;
+}
 @media (min-width: 768px) {
+  header {
+    /* Nav en horizontal para computadoras */
+  }
   header .tituloprincipal-logo-alicia {
     flex-direction: row;
     justify-content: flex-start;
@@ -229,15 +352,25 @@ header .tituloprincipal-logo-alicia .img-ceramica-4-elementos {
   header .tituloprincipal-logo-alicia .img-ceramica-4-elementos {
     width: 150px;
   }
+  header nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    padding-bottom: 0;
+    height: 80px;
+    align-items: center;
+  }
 }
 
 .main-como-comprar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   background-color: rgb(198, 149, 245);
-  margin-top: 30px;
+  /* RESET TOTAL DE ESPACIOS SUPERIORES */
+  margin-top: 0 !important;
+  padding-top: 40px;
+  border: 1px solid transparent;
 }
 .main-como-comprar .titulo-como-comprar {
   color: rgb(243, 241, 241);

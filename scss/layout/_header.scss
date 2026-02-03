@@ -2,73 +2,163 @@
 /* Estilos del header*/
 
 header {
+    width: 100%;
+    z-index: 1000;
+
+    /* 1. Frase de arriba con pulso suave */
     .seccion-frase {
         background-color: $background-header;
         .frase-encabezado {
             color: $text-color-header;
             font-family: $font-general;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: bold;
             text-align: center;
-            padding: 15px;
+            padding: 10px;
             margin: 0;
+            letter-spacing: 1px;
+            animation: brilloSutil 3s ease-in-out infinite;
         }
     }
-    
 
-    /* Título principal y el logo de Alicia*/
-
-    .tituloprincipal-logo-alicia{
-        background-color: $background-header;
+    /* 2. Banner Principal con Efecto */
+    .tituloprincipal-logo-alicia {
         display: flex;
-        justify-content:flex-start;
+        flex-direction: column; // Móvil primero
         align-items: center;
-        padding: 50px;
-
-        background-image: url(../assets/Imagenes/polvo-rosa.jpg);
+        padding: 40px 20px;
+        background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(../assets/Imagenes/polvo-rosa.jpg);
         background-size: cover;
         background-position: center;
+        background-attachment: fixed; // Efecto Parallax sutil
+        transition: all 0.5s ease;
 
         .img-ceramica-4-elementos {
-            padding-right: 20px;
-            width: 150px;
+            width: 120px;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+            transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+            &:hover {
+                transform: rotate(360deg) scale(1.1); // El logo gira una vez al pasar el mouse
+            }
         }
+
         .titulo-principal {
             color: $text-color-header;
             font-family: $font-general;
-            font-size: 25px;
+            font-size: 28px;
             font-weight: bold;
-        
-        
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        /* Cambio a horizontal en PC */
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: flex-start;
+            padding: 50px 80px;
+            
+            .img-ceramica-4-elementos {
+                margin-bottom: 0;
+                margin-right: 30px;
+                width: 150px;
+            }
+            .titulo-principal {
+                font-size: 40px;
+                text-align: left;
+            }
         }
     }
 
+    /* 3. Navegación Dinámica */
     nav {
         background-color: $background-header;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
         
         ul {
             display: flex;
+            flex-direction: column; // Móvil: uno abajo del otro
             list-style: none;
-            padding: 0;
+            padding: 10px 0;
             margin: 0;
-            justify-content: space-around;
+            align-items: center;
+
+            @media (min-width: 768px) {
+                flex-direction: row; // PC: Horizontal
+                justify-content: space-around;
+                padding: 0;
+            }
             
-        a{
-            color: $text-color-header;
-            text-decoration: none;
-            font-weight: 500;
-            font-family: $font-general;
-            margin: 15px;
+            li {
+                width: 100%;
+                text-align: center;
+
+                @media (min-width: 768px) {
+                    width: auto;
+                }
+            }
+
+            a {
+                display: block;
+                color: $text-color-header;
+                text-decoration: none;
+                font-weight: 600;
+                font-family: $font-general;
+                padding: 15px;
+                position: relative;
+                transition: all 0.3s ease;
+
+                // Línea animada que aparece desde abajo
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 3px;
+                    bottom: 10px;
+                    left: 50%;
+                    background-color: #ffeb3b; // Un toque dorado/amarillo para resaltar
+                    transition: all 0.3s ease;
+                    transform: translateX(-50%);
+                }
+
+                &:hover {
+                    color: #ffeb3b;
+                    letter-spacing: 1px; // Se estira un poquito al pasar el mouse
+                    &::after {
+                        width: 50%;
+                    }
+                }
+            }
         }
     }
+}
 
+/* --- ANIMACIONES EXTRA --- */
+@keyframes brilloSutil {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(0.98); }
 }
+
+@keyframes entradaSuave {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
+
+header {
+    animation: entradaSuave 1s ease-out;
+}
+
+
 
 /* --- ESTILOS PARA MÓVIL (Por defecto) --- */
 header {
+    background-color: $background-header; // Asegúrate de que la variable esté cargada
+
     .tituloprincipal-logo-alicia {
-        flex-direction: column; // Apilado en celular
+        display: flex;
+        flex-direction: column; // Apilado en celular (Logo arriba, título abajo)
+        align-items: center;
         text-align: center;
         padding: 20px;
         
@@ -77,8 +167,35 @@ header {
         }
     }
 
+    /* --- ESTILOS DEL NAV PARA MÓVIL --- */
+    nav {
+        ul {
+            display: flex;
+            flex-direction: column; // ENLACES UNO ABAJO DEL OTRO
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 15px; // Espacio entre cada enlace
+            padding-bottom: 20px;
+
+            li {
+                width: 100%; // Ocupa todo el ancho para centrar bien
+                text-align: center;
+
+                a {
+                    display: block; // Hace que toda la línea sea clickable
+                    text-decoration: none;
+                    color: $text-color-header;
+                    font-family: $font-general;
+                    font-size: 18px;
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+
     /* --- MEDIA QUERY PARA ESCRITORIO --- */
-    /* Cuando la pantalla sea más grande que 768px, cambia el diseño */
     @media (min-width: 768px) {
         .tituloprincipal-logo-alicia {
             flex-direction: row; // Uno al lado del otro en PC
@@ -87,6 +204,18 @@ header {
 
             .img-ceramica-4-elementos {
                 width: 150px;
+            }
+        }
+
+        /* Nav en horizontal para computadoras */
+        nav {
+            ul {
+                flex-direction: row; // Enlaces uno al lado del otro
+                justify-content: center;
+                gap: 40px; // Más espacio entre ellos en PC
+                padding-bottom: 0;
+                height: 80px; // O la altura que prefieras para tu header
+                align-items: center;
             }
         }
     }
