@@ -37,465 +37,75 @@
         }
     }
 
-    /* Estilos del subtitulo de las secciones */
-
-    .seccion-ensaladeras {
-            display: grid;
-            display: flex;
-            border: 1px, solid rgb(150, 103, 196);
-            border-radius: 10px;
-            
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 150px);
-            grid-template-areas:
-                "ensaladera-hojas ensaladera-toques-verdes"
-                "ensaladera-gris-oscuro ensaladera-burbujas"
-                "ensaladera-verde-rosa ensaladera-amarilla"
-                ;
-            gap: 30px;
-            padding: 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-
-                .ensaladera-hojas {
-                    grid-area: ensaladera-hojas;
-                }
-
-                .ensaladera-toques-verdes {
-                    grid-area: ensaladera-toques-verdes;
-                }
-
-                .ensaladera-gris-oscuro {
-                    grid-area: ensaladera-gris-oscuro;
-                }
-
-                .ensaladera-burbujas {
-                    grid-area: ensaladera-burbujas;
-                }
-
-                .ensaladera-verde-rosa {        
-                    grid-area: ensaladera-verde-rosa;
-                }
-
-                .ensaladera-amarilla {
-                    grid-area: ensaladera-amarilla;
-                }
-
-        
-        .subtitulo-ensaladera {
-            color: rgb(253, 250, 250);
-            text-align: start;
-            font-size: 25px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-weight: bold;
-            padding: 10px;
-        }
-
-        .ensaladera { 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 10px;
-            background-color: rgb(90, 44, 136);
-            border-radius: 10px;
-
-  
-
-        /* Estilos de la descripcion de la imagen */
-
-               .descripcion {
-                
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                font-size: 20 px;
-                color: rgb(253, 250, 250);
-               }
-
-               .medidas {
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                font-size: 18px;
-                color: rgb(253, 250, 250);
-                }
-
-            .ensaladera-hojas, .ensaladera-toques-verdes, .ensaladera-gris-oscuro, .ensaladera-burbujas, .ensaladera-verde-rosa, .ensaladera-amarilla {
-               width: 80%;
-
-            }
-
-        }
-
-    }     
-        /* Estilos de la seccion de compoteras */    
-
-        .seccion-compoteras {
-        display: grid;
-        display: flex;
-        border: 1px, solid rgb(150, 103, 196);
-        border-radius: 10px;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 150px);
-        grid-template-areas:
-           "compotera-azul compotera-roja"
-           "compotera-marmolada compotera-marmolada"
-            ;
-        gap: 20px;
-        padding: 20px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-
-            .compotera-azul {
-                grid-area: compotera-azul;
-            }
-
-            .compotera-roja {
-                grid-area: compotera-roja;
-            }
-
-            .compotera-marmolada {
-                grid-area: compotera-marmolada;
-            }
-
-            .subtitulo-compoteras {
-                color: rgb(253, 250, 250);
-                text-align: start;
-                font-size: 25px;
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                font-weight: bold;
-                padding: 10px;
-
-    }
-
-
-
-        .compotera { 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 10px;
-            background-color: rgb(90, 44, 136);
-            border-radius: 10px;
-
-        /* Estilos de la descripcion de la imagen */
-
-               .descripcion {
-                
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                font-size: 20 px;
-                color: rgb(253, 250, 250);
-               }
-
-               .medidas {
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                font-size: 18px;
-                color: rgb(253, 250, 250);
-                }
-
-            }
-.compotera-azul, .compotera-roja, .compotera-marmolada {
-           width: 80%;
-
-        }
-}
-
-.seccion-platos {
-    display: grid;
-    display: flex;
-    border: 1px, solid rgb(150, 103, 196);
-    border-radius: 10px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 150px);
-    grid-template-areas:
-      "plato-negro plato-rosa"
-      "plato-dibujos-rupestres plato-salpicado"
-      ;
-    gap: 20px;
+   /* ESTA ES LA ESTRUCTURA PARA TODAS LAS SECCIONES */
+.seccion-ensaladeras, 
+.seccion-compoteras, 
+.seccion-platos, 
+.seccion-tazas, 
+.seccion-macetas, 
+.posacucharas, 
+.otros-productos {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
     padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-        .plato-negro {
-            grid-area: plato-negro;
-        }
-
-        .plato-rosa {
-            grid-area: plato-rosa;
-        }
-
-        .plato-dibujos-rupestres {
-            grid-area: plato-dibujos-rupestres;
-        }
-
-        .plato-salpicado {
-            grid-area: plato-salpicado;
-        }
-
-        /*Estilo del subtitulo platos*/
-        .subtitulo-platos {
-           color: rgb(253, 250, 250);
-           text-align: start;
-           font-size: 25px;
-           font-family: Verdana, Geneva, Tahoma, sans-serif;
-           font-weight: bold;
-           padding: 10px;
-
-        }
-
-        /*Estilos de los divs platos*/
-     
-        .platos {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 10px;
-            background-color: rgb(90, 44, 136);
-            border-radius: 10px;
-
-        /* Estilos de la descripcion de la imagen */
-
-               .descripcion {
-
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                font-size: 20 px;
-                color: rgb(253, 250, 250);
-               }
-
-               .medidas {
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                font-size: 18px;
-                color: rgb(253, 250, 250);
-                }
-
-            }
-
-            .plato-negro, .plato-rosa, .plato-dibujos-rupestres, .plato-salpicado {
-               width: 80%;
-
-}
-}
-
-/* Estilos de la seccion tazas*/
-
-.seccion-tazas {
-    display: grid;
-    display: flex;
-    border: 1px, solid rgb(150, 103, 196);
+    margin-bottom: 40px;
+    border: 1px solid rgb(150, 103, 196);
     border-radius: 10px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 150px);
-    grid-template-areas:
-      "taza-verde-amarillo taza-azul-rosa"
-      ;
-    gap: 20px;
-    padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
 
-    .taza-verde-amarillo {
-        grid-area: taza-verde-amarillo;
-    }
-
-    .taza-azul-rosa {
-        grid-area: taza-azul-rosa;
-    }
-
-    /*Estilos del subtitulo taza*/
-    .subtitulo-tazas {
-        color: rgb(253, 250, 250);
-        text-align: center;
+    h2 {
+        grid-column: 1 / -1; 
+        color: white;
         font-size: 25px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
-        padding: 10px;
+        margin-bottom: 15px;
     }
 
-    /*Estilos de los divs tazas*/
-    .taza {
+    /* Tarjeta de producto */
+    .ensaladera, .compotera, .platos, .taza, .maceta-unica, .div-posacuchara, .otros {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 10px;
         background-color: rgb(90, 44, 136);
+        padding: 15px;
         border-radius: 10px;
+        text-align: center;
+        height: 100%; // Asegura que todas las cajas midan lo mismo
 
-        /* Estilos de la descripcion de la imagen */
+        img {
+            width: 100%;
+            height: 250px;       /* Altura reservada para la foto */
+            
+            // CORRECCIÓN AQUÍ:
+            object-fit: contain; /* La imagen se escala para verse completa sin recortes */
+            
+            background-color: rgba(255, 255, 255, 0.05); // Fondo sutil por si la foto es angosta
+            margin-bottom: 15px;
+        }
 
         .descripcion {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 20px;
-            color: rgb(253, 250, 250);
+            font-size: 18px;
+            color: white;
+            margin-top: auto;   /* Empuja el texto hacia arriba */
+            padding-bottom: 5px;
         }
 
         .medidas {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 18px;
-            color: rgb(253, 250, 250);
+            font-size: 14px;
+            color: rgb(220, 220, 220);
         }
-       .taza-verde-amarillo, .taza-azul-rosa {
-           width: 50%;
     }
-
 }
 }
-
-/* Estilos del div macetas*/
-
-.seccion-macetas {
-   display: grid;
-    display: flex;
-    border: 1px, solid rgb(150, 103, 196);
-    border-radius: 10px;
     
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 150px);
-    grid-template-areas:
-    "macetapared macetanena"
-    "macetapies macetacaritaconpies";
-
-    gap: 20px;
-    padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-    .macetapared {
-        grid-area: macetapared;
-    }
-    .macetanena {
-        grid-area: macetanena;
-    }
-    .macetapies {
-        grid-area: macetapies;
-    }
-    .macetacaritaconpies {
-        grid-area: macetacaritaconpies;
-    }
-
-    /*Estilos del subtitulo macetas*/
-    .subtitulo-macetas {
-        color: rgb(253, 250, 250);
-        text-align: center;
-        font-size: 25px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
-        padding: 10px;
-}
-
-/*Estilo del div macetas*/
-
-.maceta-unica {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 10px;
-    background-color: rgb(90, 44, 136);
-    border-radius: 10px;
-}
-
-
-/* Estilos de la descripcion de la imagen */
-
-               .descripcion {
-
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                font-size: 20 px;
-                color: rgb(253, 250, 250);
-               }
-
-               .medidas {
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                font-size: 18px;
-                color: rgb(253, 250, 250);
-                }
-
-                .macetapared, .macetanena, .macetapies, .macetacaritaconpies {
-                   width: 80%;
+       
 
 
 
 
-}
-}
 
-/*Estilos del div  posacucharas*/
-
-.posacucharas {
-display: flex;
-display: grid;
-border: 1px, solid rgb(150, 103, 196);
-border-radius: 10px;
-grid-template-columns: repeat(1 1fr);
-grid-template-rows: repeat(3, 100px);
-grid-template-areas: 
-"posacucharas-gatito"
-"posacucharas-frida"
-"posacucharas-blanca";
-gap: 20px;
-
-
-    .posacucharas-gatito {
-        grid-area: posacucharas-gatito;
-    }
-
-    .posacucharas-frida {
-        grid-area: posacucharas-frida;
-    }
-
-    .posacucharas-blanca {
-        grid-area: posacucharas-blanca;
-    }
-
-    /*Estilos del subtitulo posacucharas*/
-    .subtitulo-posacucharas {
-        color: rgb(253, 250, 250);
-        text-align: center;
-        font-size: 25px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
-        padding: 10px;
- /*Estilos de los divs posacucharas*/
-    .div-posacuchara {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 10px;
-        background-color: rgb(90, 44, 136);
-        border-radius: 10px;
-
-        /* Estilos de la descripcion de la imagen */
-
-               .descripcion {
-                
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                font-size: 20 px;
-                color: rgb(253, 250, 250);
-               }
-
-               .medidas {
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                font-size: 18px;
-                color: rgb(253, 250, 250);
-
-                .posacucharas-gatito, .posacucharas-frida, .posacucharas-blanca {
-                   width: 30%;
-
-                }
-
-
-            }
-        }
-    }
-}
-}
+            
 
 
 

@@ -313,11 +313,7 @@ header nav ul a {
   background-color: rgb(198, 149, 245);
   /* Estilos del título */
   /* Estilos del subtitulo */
-  /* Estilos del subtitulo de las secciones */
-  /* Estilos de la seccion de compoteras */
-  /* Estilos de la seccion tazas*/
-  /* Estilos del div macetas*/
-  /*Estilos del div  posacucharas*/
+  /* ESTA ES LA ESTRUCTURA PARA TODAS LAS SECCIONES */
 }
 .main-productos-artesanales #titulo-productos-artesanales {
   color: rgb(253, 250, 250);
@@ -340,346 +336,230 @@ header nav ul a {
   font-style: italic; /* Estilo cursiva para resaltar */
   font-size: 35px;
 }
-.main-productos-artesanales .seccion-ensaladeras {
+.main-productos-artesanales .seccion-ensaladeras,
+.main-productos-artesanales .seccion-compoteras,
+.main-productos-artesanales .seccion-platos,
+.main-productos-artesanales .seccion-tazas,
+.main-productos-artesanales .seccion-macetas,
+.main-productos-artesanales .posacucharas,
+.main-productos-artesanales .otros-productos {
   display: grid;
-  display: flex;
-  border: 1px, solid rgb(150, 103, 196);
-  border-radius: 10px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 150px);
-  grid-template-areas: "ensaladera-hojas ensaladera-toques-verdes" "ensaladera-gris-oscuro ensaladera-burbujas" "ensaladera-verde-rosa ensaladera-amarilla";
   gap: 30px;
+  width: 100%;
+  max-width: 1200px;
   padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  border: 1px solid rgb(150, 103, 196);
+  border-radius: 10px;
+  /* Tarjeta de producto */
 }
-.main-productos-artesanales .seccion-ensaladeras .ensaladera-hojas {
-  grid-area: ensaladera-hojas;
-}
-.main-productos-artesanales .seccion-ensaladeras .ensaladera-toques-verdes {
-  grid-area: ensaladera-toques-verdes;
-}
-.main-productos-artesanales .seccion-ensaladeras .ensaladera-gris-oscuro {
-  grid-area: ensaladera-gris-oscuro;
-}
-.main-productos-artesanales .seccion-ensaladeras .ensaladera-burbujas {
-  grid-area: ensaladera-burbujas;
-}
-.main-productos-artesanales .seccion-ensaladeras .ensaladera-verde-rosa {
-  grid-area: ensaladera-verde-rosa;
-}
-.main-productos-artesanales .seccion-ensaladeras .ensaladera-amarilla {
-  grid-area: ensaladera-amarilla;
-}
-.main-productos-artesanales .seccion-ensaladeras .subtitulo-ensaladera {
-  color: rgb(253, 250, 250);
-  text-align: start;
+.main-productos-artesanales .seccion-ensaladeras h2,
+.main-productos-artesanales .seccion-compoteras h2,
+.main-productos-artesanales .seccion-platos h2,
+.main-productos-artesanales .seccion-tazas h2,
+.main-productos-artesanales .seccion-macetas h2,
+.main-productos-artesanales .posacucharas h2,
+.main-productos-artesanales .otros-productos h2 {
+  grid-column: 1/-1;
+  color: white;
   font-size: 25px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  padding: 10px;
+  margin-bottom: 15px;
 }
-.main-productos-artesanales .seccion-ensaladeras .ensaladera {
+.main-productos-artesanales .seccion-ensaladeras .ensaladera, .main-productos-artesanales .seccion-ensaladeras .compotera, .main-productos-artesanales .seccion-ensaladeras .platos, .main-productos-artesanales .seccion-ensaladeras .taza, .main-productos-artesanales .seccion-ensaladeras .maceta-unica, .main-productos-artesanales .seccion-ensaladeras .div-posacuchara, .main-productos-artesanales .seccion-ensaladeras .otros,
+.main-productos-artesanales .seccion-compoteras .ensaladera,
+.main-productos-artesanales .seccion-compoteras .compotera,
+.main-productos-artesanales .seccion-compoteras .platos,
+.main-productos-artesanales .seccion-compoteras .taza,
+.main-productos-artesanales .seccion-compoteras .maceta-unica,
+.main-productos-artesanales .seccion-compoteras .div-posacuchara,
+.main-productos-artesanales .seccion-compoteras .otros,
+.main-productos-artesanales .seccion-platos .ensaladera,
+.main-productos-artesanales .seccion-platos .compotera,
+.main-productos-artesanales .seccion-platos .platos,
+.main-productos-artesanales .seccion-platos .taza,
+.main-productos-artesanales .seccion-platos .maceta-unica,
+.main-productos-artesanales .seccion-platos .div-posacuchara,
+.main-productos-artesanales .seccion-platos .otros,
+.main-productos-artesanales .seccion-tazas .ensaladera,
+.main-productos-artesanales .seccion-tazas .compotera,
+.main-productos-artesanales .seccion-tazas .platos,
+.main-productos-artesanales .seccion-tazas .taza,
+.main-productos-artesanales .seccion-tazas .maceta-unica,
+.main-productos-artesanales .seccion-tazas .div-posacuchara,
+.main-productos-artesanales .seccion-tazas .otros,
+.main-productos-artesanales .seccion-macetas .ensaladera,
+.main-productos-artesanales .seccion-macetas .compotera,
+.main-productos-artesanales .seccion-macetas .platos,
+.main-productos-artesanales .seccion-macetas .taza,
+.main-productos-artesanales .seccion-macetas .maceta-unica,
+.main-productos-artesanales .seccion-macetas .div-posacuchara,
+.main-productos-artesanales .seccion-macetas .otros,
+.main-productos-artesanales .posacucharas .ensaladera,
+.main-productos-artesanales .posacucharas .compotera,
+.main-productos-artesanales .posacucharas .platos,
+.main-productos-artesanales .posacucharas .taza,
+.main-productos-artesanales .posacucharas .maceta-unica,
+.main-productos-artesanales .posacucharas .div-posacuchara,
+.main-productos-artesanales .posacucharas .otros,
+.main-productos-artesanales .otros-productos .ensaladera,
+.main-productos-artesanales .otros-productos .compotera,
+.main-productos-artesanales .otros-productos .platos,
+.main-productos-artesanales .otros-productos .taza,
+.main-productos-artesanales .otros-productos .maceta-unica,
+.main-productos-artesanales .otros-productos .div-posacuchara,
+.main-productos-artesanales .otros-productos .otros {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 10px;
   background-color: rgb(90, 44, 136);
+  padding: 15px;
   border-radius: 10px;
-  /* Estilos de la descripcion de la imagen */
+  text-align: center;
+  height: 100%;
 }
-.main-productos-artesanales .seccion-ensaladeras .ensaladera .descripcion {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 20 px;
-  color: rgb(253, 250, 250);
+.main-productos-artesanales .seccion-ensaladeras .ensaladera img, .main-productos-artesanales .seccion-ensaladeras .compotera img, .main-productos-artesanales .seccion-ensaladeras .platos img, .main-productos-artesanales .seccion-ensaladeras .taza img, .main-productos-artesanales .seccion-ensaladeras .maceta-unica img, .main-productos-artesanales .seccion-ensaladeras .div-posacuchara img, .main-productos-artesanales .seccion-ensaladeras .otros img,
+.main-productos-artesanales .seccion-compoteras .ensaladera img,
+.main-productos-artesanales .seccion-compoteras .compotera img,
+.main-productos-artesanales .seccion-compoteras .platos img,
+.main-productos-artesanales .seccion-compoteras .taza img,
+.main-productos-artesanales .seccion-compoteras .maceta-unica img,
+.main-productos-artesanales .seccion-compoteras .div-posacuchara img,
+.main-productos-artesanales .seccion-compoteras .otros img,
+.main-productos-artesanales .seccion-platos .ensaladera img,
+.main-productos-artesanales .seccion-platos .compotera img,
+.main-productos-artesanales .seccion-platos .platos img,
+.main-productos-artesanales .seccion-platos .taza img,
+.main-productos-artesanales .seccion-platos .maceta-unica img,
+.main-productos-artesanales .seccion-platos .div-posacuchara img,
+.main-productos-artesanales .seccion-platos .otros img,
+.main-productos-artesanales .seccion-tazas .ensaladera img,
+.main-productos-artesanales .seccion-tazas .compotera img,
+.main-productos-artesanales .seccion-tazas .platos img,
+.main-productos-artesanales .seccion-tazas .taza img,
+.main-productos-artesanales .seccion-tazas .maceta-unica img,
+.main-productos-artesanales .seccion-tazas .div-posacuchara img,
+.main-productos-artesanales .seccion-tazas .otros img,
+.main-productos-artesanales .seccion-macetas .ensaladera img,
+.main-productos-artesanales .seccion-macetas .compotera img,
+.main-productos-artesanales .seccion-macetas .platos img,
+.main-productos-artesanales .seccion-macetas .taza img,
+.main-productos-artesanales .seccion-macetas .maceta-unica img,
+.main-productos-artesanales .seccion-macetas .div-posacuchara img,
+.main-productos-artesanales .seccion-macetas .otros img,
+.main-productos-artesanales .posacucharas .ensaladera img,
+.main-productos-artesanales .posacucharas .compotera img,
+.main-productos-artesanales .posacucharas .platos img,
+.main-productos-artesanales .posacucharas .taza img,
+.main-productos-artesanales .posacucharas .maceta-unica img,
+.main-productos-artesanales .posacucharas .div-posacuchara img,
+.main-productos-artesanales .posacucharas .otros img,
+.main-productos-artesanales .otros-productos .ensaladera img,
+.main-productos-artesanales .otros-productos .compotera img,
+.main-productos-artesanales .otros-productos .platos img,
+.main-productos-artesanales .otros-productos .taza img,
+.main-productos-artesanales .otros-productos .maceta-unica img,
+.main-productos-artesanales .otros-productos .div-posacuchara img,
+.main-productos-artesanales .otros-productos .otros img {
+  width: 100%;
+  height: 250px; /* Altura reservada para la foto */
+  object-fit: contain; /* La imagen se escala para verse completa sin recortes */
+  background-color: rgba(255, 255, 255, 0.05);
+  margin-bottom: 15px;
 }
-.main-productos-artesanales .seccion-ensaladeras .ensaladera .medidas {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+.main-productos-artesanales .seccion-ensaladeras .ensaladera .descripcion, .main-productos-artesanales .seccion-ensaladeras .compotera .descripcion, .main-productos-artesanales .seccion-ensaladeras .platos .descripcion, .main-productos-artesanales .seccion-ensaladeras .taza .descripcion, .main-productos-artesanales .seccion-ensaladeras .maceta-unica .descripcion, .main-productos-artesanales .seccion-ensaladeras .div-posacuchara .descripcion, .main-productos-artesanales .seccion-ensaladeras .otros .descripcion,
+.main-productos-artesanales .seccion-compoteras .ensaladera .descripcion,
+.main-productos-artesanales .seccion-compoteras .compotera .descripcion,
+.main-productos-artesanales .seccion-compoteras .platos .descripcion,
+.main-productos-artesanales .seccion-compoteras .taza .descripcion,
+.main-productos-artesanales .seccion-compoteras .maceta-unica .descripcion,
+.main-productos-artesanales .seccion-compoteras .div-posacuchara .descripcion,
+.main-productos-artesanales .seccion-compoteras .otros .descripcion,
+.main-productos-artesanales .seccion-platos .ensaladera .descripcion,
+.main-productos-artesanales .seccion-platos .compotera .descripcion,
+.main-productos-artesanales .seccion-platos .platos .descripcion,
+.main-productos-artesanales .seccion-platos .taza .descripcion,
+.main-productos-artesanales .seccion-platos .maceta-unica .descripcion,
+.main-productos-artesanales .seccion-platos .div-posacuchara .descripcion,
+.main-productos-artesanales .seccion-platos .otros .descripcion,
+.main-productos-artesanales .seccion-tazas .ensaladera .descripcion,
+.main-productos-artesanales .seccion-tazas .compotera .descripcion,
+.main-productos-artesanales .seccion-tazas .platos .descripcion,
+.main-productos-artesanales .seccion-tazas .taza .descripcion,
+.main-productos-artesanales .seccion-tazas .maceta-unica .descripcion,
+.main-productos-artesanales .seccion-tazas .div-posacuchara .descripcion,
+.main-productos-artesanales .seccion-tazas .otros .descripcion,
+.main-productos-artesanales .seccion-macetas .ensaladera .descripcion,
+.main-productos-artesanales .seccion-macetas .compotera .descripcion,
+.main-productos-artesanales .seccion-macetas .platos .descripcion,
+.main-productos-artesanales .seccion-macetas .taza .descripcion,
+.main-productos-artesanales .seccion-macetas .maceta-unica .descripcion,
+.main-productos-artesanales .seccion-macetas .div-posacuchara .descripcion,
+.main-productos-artesanales .seccion-macetas .otros .descripcion,
+.main-productos-artesanales .posacucharas .ensaladera .descripcion,
+.main-productos-artesanales .posacucharas .compotera .descripcion,
+.main-productos-artesanales .posacucharas .platos .descripcion,
+.main-productos-artesanales .posacucharas .taza .descripcion,
+.main-productos-artesanales .posacucharas .maceta-unica .descripcion,
+.main-productos-artesanales .posacucharas .div-posacuchara .descripcion,
+.main-productos-artesanales .posacucharas .otros .descripcion,
+.main-productos-artesanales .otros-productos .ensaladera .descripcion,
+.main-productos-artesanales .otros-productos .compotera .descripcion,
+.main-productos-artesanales .otros-productos .platos .descripcion,
+.main-productos-artesanales .otros-productos .taza .descripcion,
+.main-productos-artesanales .otros-productos .maceta-unica .descripcion,
+.main-productos-artesanales .otros-productos .div-posacuchara .descripcion,
+.main-productos-artesanales .otros-productos .otros .descripcion {
   font-size: 18px;
-  color: rgb(253, 250, 250);
+  color: white;
+  margin-top: auto; /* Empuja el texto hacia arriba */
+  padding-bottom: 5px;
 }
-.main-productos-artesanales .seccion-ensaladeras .ensaladera .ensaladera-hojas, .main-productos-artesanales .seccion-ensaladeras .ensaladera .ensaladera-toques-verdes, .main-productos-artesanales .seccion-ensaladeras .ensaladera .ensaladera-gris-oscuro, .main-productos-artesanales .seccion-ensaladeras .ensaladera .ensaladera-burbujas, .main-productos-artesanales .seccion-ensaladeras .ensaladera .ensaladera-verde-rosa, .main-productos-artesanales .seccion-ensaladeras .ensaladera .ensaladera-amarilla {
-  width: 80%;
-}
-.main-productos-artesanales .seccion-compoteras {
-  display: grid;
-  display: flex;
-  border: 1px, solid rgb(150, 103, 196);
-  border-radius: 10px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 150px);
-  grid-template-areas: "compotera-azul compotera-roja" "compotera-marmolada compotera-marmolada";
-  gap: 20px;
-  padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.main-productos-artesanales .seccion-compoteras .compotera-azul {
-  grid-area: compotera-azul;
-}
-.main-productos-artesanales .seccion-compoteras .compotera-roja {
-  grid-area: compotera-roja;
-}
-.main-productos-artesanales .seccion-compoteras .compotera-marmolada {
-  grid-area: compotera-marmolada;
-}
-.main-productos-artesanales .seccion-compoteras .subtitulo-compoteras {
-  color: rgb(253, 250, 250);
-  text-align: start;
-  font-size: 25px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  padding: 10px;
-}
-.main-productos-artesanales .seccion-compoteras .compotera {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 10px;
-  background-color: rgb(90, 44, 136);
-  border-radius: 10px;
-  /* Estilos de la descripcion de la imagen */
-}
-.main-productos-artesanales .seccion-compoteras .compotera .descripcion {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 20 px;
-  color: rgb(253, 250, 250);
-}
-.main-productos-artesanales .seccion-compoteras .compotera .medidas {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 18px;
-  color: rgb(253, 250, 250);
-}
-.main-productos-artesanales .seccion-compoteras .compotera-azul, .main-productos-artesanales .seccion-compoteras .compotera-roja, .main-productos-artesanales .seccion-compoteras .compotera-marmolada {
-  width: 80%;
-}
-.main-productos-artesanales .seccion-platos {
-  display: grid;
-  display: flex;
-  border: 1px, solid rgb(150, 103, 196);
-  border-radius: 10px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 150px);
-  grid-template-areas: "plato-negro plato-rosa" "plato-dibujos-rupestres plato-salpicado";
-  gap: 20px;
-  padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  /*Estilo del subtitulo platos*/
-  /*Estilos de los divs platos*/
-}
-.main-productos-artesanales .seccion-platos .plato-negro {
-  grid-area: plato-negro;
-}
-.main-productos-artesanales .seccion-platos .plato-rosa {
-  grid-area: plato-rosa;
-}
-.main-productos-artesanales .seccion-platos .plato-dibujos-rupestres {
-  grid-area: plato-dibujos-rupestres;
-}
-.main-productos-artesanales .seccion-platos .plato-salpicado {
-  grid-area: plato-salpicado;
-}
-.main-productos-artesanales .seccion-platos .subtitulo-platos {
-  color: rgb(253, 250, 250);
-  text-align: start;
-  font-size: 25px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  padding: 10px;
-}
-.main-productos-artesanales .seccion-platos .platos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 10px;
-  background-color: rgb(90, 44, 136);
-  border-radius: 10px;
-  /* Estilos de la descripcion de la imagen */
-}
-.main-productos-artesanales .seccion-platos .platos .descripcion {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 20 px;
-  color: rgb(253, 250, 250);
-}
-.main-productos-artesanales .seccion-platos .platos .medidas {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 18px;
-  color: rgb(253, 250, 250);
-}
-.main-productos-artesanales .seccion-platos .plato-negro, .main-productos-artesanales .seccion-platos .plato-rosa, .main-productos-artesanales .seccion-platos .plato-dibujos-rupestres, .main-productos-artesanales .seccion-platos .plato-salpicado {
-  width: 80%;
-}
-.main-productos-artesanales .seccion-tazas {
-  display: grid;
-  display: flex;
-  border: 1px, solid rgb(150, 103, 196);
-  border-radius: 10px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 150px);
-  grid-template-areas: "taza-verde-amarillo taza-azul-rosa";
-  gap: 20px;
-  padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  /*Estilos del subtitulo taza*/
-  /*Estilos de los divs tazas*/
-}
-.main-productos-artesanales .seccion-tazas .taza-verde-amarillo {
-  grid-area: taza-verde-amarillo;
-}
-.main-productos-artesanales .seccion-tazas .taza-azul-rosa {
-  grid-area: taza-azul-rosa;
-}
-.main-productos-artesanales .seccion-tazas .subtitulo-tazas {
-  color: rgb(253, 250, 250);
-  text-align: center;
-  font-size: 25px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  padding: 10px;
-}
-.main-productos-artesanales .seccion-tazas .taza {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 10px;
-  background-color: rgb(90, 44, 136);
-  border-radius: 10px;
-  /* Estilos de la descripcion de la imagen */
-}
-.main-productos-artesanales .seccion-tazas .taza .descripcion {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 20px;
-  color: rgb(253, 250, 250);
-}
-.main-productos-artesanales .seccion-tazas .taza .medidas {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 18px;
-  color: rgb(253, 250, 250);
-}
-.main-productos-artesanales .seccion-tazas .taza .taza-verde-amarillo, .main-productos-artesanales .seccion-tazas .taza .taza-azul-rosa {
-  width: 50%;
-}
-.main-productos-artesanales .seccion-macetas {
-  display: grid;
-  display: flex;
-  border: 1px, solid rgb(150, 103, 196);
-  border-radius: 10px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 150px);
-  grid-template-areas: "macetapared macetanena" "macetapies macetacaritaconpies";
-  gap: 20px;
-  padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  /*Estilos del subtitulo macetas*/
-  /*Estilo del div macetas*/
-  /* Estilos de la descripcion de la imagen */
-}
-.main-productos-artesanales .seccion-macetas .macetapared {
-  grid-area: macetapared;
-}
-.main-productos-artesanales .seccion-macetas .macetanena {
-  grid-area: macetanena;
-}
-.main-productos-artesanales .seccion-macetas .macetapies {
-  grid-area: macetapies;
-}
-.main-productos-artesanales .seccion-macetas .macetacaritaconpies {
-  grid-area: macetacaritaconpies;
-}
-.main-productos-artesanales .seccion-macetas .subtitulo-macetas {
-  color: rgb(253, 250, 250);
-  text-align: center;
-  font-size: 25px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  padding: 10px;
-}
-.main-productos-artesanales .seccion-macetas .maceta-unica {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  padding: 10px;
-  background-color: rgb(90, 44, 136);
-  border-radius: 10px;
-}
-.main-productos-artesanales .seccion-macetas .descripcion {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 20 px;
-  color: rgb(253, 250, 250);
-}
-.main-productos-artesanales .seccion-macetas .medidas {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 18px;
-  color: rgb(253, 250, 250);
-}
-.main-productos-artesanales .seccion-macetas .macetapared, .main-productos-artesanales .seccion-macetas .macetanena, .main-productos-artesanales .seccion-macetas .macetapies, .main-productos-artesanales .seccion-macetas .macetacaritaconpies {
-  width: 80%;
-}
-.main-productos-artesanales .posacucharas {
-  display: flex;
-  display: grid;
-  border: 1px, solid rgb(150, 103, 196);
-  border-radius: 10px;
-  grid-template-columns: repeat(1 1fr);
-  grid-template-rows: repeat(3, 100px);
-  grid-template-areas: "posacucharas-gatito" "posacucharas-frida" "posacucharas-blanca";
-  gap: 20px;
-  /*Estilos del subtitulo posacucharas*/
-}
-.main-productos-artesanales .posacucharas .posacucharas-gatito {
-  grid-area: posacucharas-gatito;
-}
-.main-productos-artesanales .posacucharas .posacucharas-frida {
-  grid-area: posacucharas-frida;
-}
-.main-productos-artesanales .posacucharas .posacucharas-blanca {
-  grid-area: posacucharas-blanca;
-}
-.main-productos-artesanales .posacucharas .subtitulo-posacucharas {
-  color: rgb(253, 250, 250);
-  text-align: center;
-  font-size: 25px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  padding: 10px;
-  /*Estilos de los divs posacucharas*/
-}
-.main-productos-artesanales .posacucharas .subtitulo-posacucharas .div-posacuchara {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 10px;
-  background-color: rgb(90, 44, 136);
-  border-radius: 10px;
-  /* Estilos de la descripcion de la imagen */
-}
-.main-productos-artesanales .posacucharas .subtitulo-posacucharas .div-posacuchara .descripcion {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 20 px;
-  color: rgb(253, 250, 250);
-}
-.main-productos-artesanales .posacucharas .subtitulo-posacucharas .div-posacuchara .medidas {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 18px;
-  color: rgb(253, 250, 250);
-}
-.main-productos-artesanales .posacucharas .subtitulo-posacucharas .div-posacuchara .medidas .posacucharas-gatito, .main-productos-artesanales .posacucharas .subtitulo-posacucharas .div-posacuchara .medidas .posacucharas-frida, .main-productos-artesanales .posacucharas .subtitulo-posacucharas .div-posacuchara .medidas .posacucharas-blanca {
-  width: 30%;
+.main-productos-artesanales .seccion-ensaladeras .ensaladera .medidas, .main-productos-artesanales .seccion-ensaladeras .compotera .medidas, .main-productos-artesanales .seccion-ensaladeras .platos .medidas, .main-productos-artesanales .seccion-ensaladeras .taza .medidas, .main-productos-artesanales .seccion-ensaladeras .maceta-unica .medidas, .main-productos-artesanales .seccion-ensaladeras .div-posacuchara .medidas, .main-productos-artesanales .seccion-ensaladeras .otros .medidas,
+.main-productos-artesanales .seccion-compoteras .ensaladera .medidas,
+.main-productos-artesanales .seccion-compoteras .compotera .medidas,
+.main-productos-artesanales .seccion-compoteras .platos .medidas,
+.main-productos-artesanales .seccion-compoteras .taza .medidas,
+.main-productos-artesanales .seccion-compoteras .maceta-unica .medidas,
+.main-productos-artesanales .seccion-compoteras .div-posacuchara .medidas,
+.main-productos-artesanales .seccion-compoteras .otros .medidas,
+.main-productos-artesanales .seccion-platos .ensaladera .medidas,
+.main-productos-artesanales .seccion-platos .compotera .medidas,
+.main-productos-artesanales .seccion-platos .platos .medidas,
+.main-productos-artesanales .seccion-platos .taza .medidas,
+.main-productos-artesanales .seccion-platos .maceta-unica .medidas,
+.main-productos-artesanales .seccion-platos .div-posacuchara .medidas,
+.main-productos-artesanales .seccion-platos .otros .medidas,
+.main-productos-artesanales .seccion-tazas .ensaladera .medidas,
+.main-productos-artesanales .seccion-tazas .compotera .medidas,
+.main-productos-artesanales .seccion-tazas .platos .medidas,
+.main-productos-artesanales .seccion-tazas .taza .medidas,
+.main-productos-artesanales .seccion-tazas .maceta-unica .medidas,
+.main-productos-artesanales .seccion-tazas .div-posacuchara .medidas,
+.main-productos-artesanales .seccion-tazas .otros .medidas,
+.main-productos-artesanales .seccion-macetas .ensaladera .medidas,
+.main-productos-artesanales .seccion-macetas .compotera .medidas,
+.main-productos-artesanales .seccion-macetas .platos .medidas,
+.main-productos-artesanales .seccion-macetas .taza .medidas,
+.main-productos-artesanales .seccion-macetas .maceta-unica .medidas,
+.main-productos-artesanales .seccion-macetas .div-posacuchara .medidas,
+.main-productos-artesanales .seccion-macetas .otros .medidas,
+.main-productos-artesanales .posacucharas .ensaladera .medidas,
+.main-productos-artesanales .posacucharas .compotera .medidas,
+.main-productos-artesanales .posacucharas .platos .medidas,
+.main-productos-artesanales .posacucharas .taza .medidas,
+.main-productos-artesanales .posacucharas .maceta-unica .medidas,
+.main-productos-artesanales .posacucharas .div-posacuchara .medidas,
+.main-productos-artesanales .posacucharas .otros .medidas,
+.main-productos-artesanales .otros-productos .ensaladera .medidas,
+.main-productos-artesanales .otros-productos .compotera .medidas,
+.main-productos-artesanales .otros-productos .platos .medidas,
+.main-productos-artesanales .otros-productos .taza .medidas,
+.main-productos-artesanales .otros-productos .maceta-unica .medidas,
+.main-productos-artesanales .otros-productos .div-posacuchara .medidas,
+.main-productos-artesanales .otros-productos .otros .medidas {
+  font-size: 14px;
+  color: rgb(220, 220, 220);
 }
 
 /*Estilos del main de quien soy*/
