@@ -10,49 +10,62 @@ footer {
     padding: 30px;
     margin-top: 0;
 
+    // Responsive: Apilar en móviles
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
     .caja-1, .caja-2 {
         display: flex;
         align-items: center;
+        gap: 10px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+
         .img-pie-de-pagina {
-            width: 50px;
+            width: 50px; // Tamaño para iconos fijos (tel/carta)
+            height: auto;
         } 
+        
         h3 {
             color: $text-color-header;
             font-family: $font-general;
             font-weight: bold;
             font-size: 15px;
+            margin: 0;
         }
     }
 
-    /* facebook instagram y whatsapp */
     .caja-3 {
         display: flex;
         align-items: center;
-        gap: 15px; // Aumenté un poco el espacio para que respiren al moverse
+        gap: 15px;
 
         a {
             display: inline-block;
             text-decoration: none;
-            /* Animación constante de flotado */
             animation: flotarIcono 3s ease-in-out infinite;
 
-            // Retraso para que se muevan de forma escalonada (efecto ola)
             &:nth-child(2) { animation-delay: 0.4s; }
             &:nth-child(3) { animation-delay: 0.8s; }
 
+            // Aquí forzamos que las imágenes de redes midan 60px
             .img-pie-de-pagina {
                 padding: 5px;
-                width: 60px;
-                /* Transición suave para cuando quites el mouse */
+                width: 60px; 
+                height: 60px;
+                object-fit: contain; // Evita que se deformen
                 transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
             }
 
-            /* Efecto al pasar el mouse */
             &:hover {
-                animation-play-state: paused; // Se detiene el flotado al tocarlo
-                
+                animation-play-state: paused;
                 .img-pie-de-pagina {
-                    transform: scale(1.2) translateY(-5px); // Crece y sube
+                    transform: scale(1.2) translateY(-5px);
                     filter: brightness(1.2) drop-shadow(0 5px 10px rgba(0,0,0,0.3));
                 }
             }

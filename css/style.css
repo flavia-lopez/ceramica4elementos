@@ -16,20 +16,34 @@ footer {
   background-color: rgb(130, 20, 204);
   padding: 30px;
   margin-top: 0;
-  /* facebook instagram y whatsapp */
+}
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
 }
 footer .caja-1, footer .caja-2 {
   display: flex;
   align-items: center;
+  gap: 10px;
+}
+@media (max-width: 768px) {
+  footer .caja-1, footer .caja-2 {
+    flex-direction: column;
+  }
 }
 footer .caja-1 .img-pie-de-pagina, footer .caja-2 .img-pie-de-pagina {
   width: 50px;
+  height: auto;
 }
 footer .caja-1 h3, footer .caja-2 h3 {
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   font-size: 15px;
+  margin: 0;
 }
 footer .caja-3 {
   display: flex;
@@ -39,9 +53,7 @@ footer .caja-3 {
 footer .caja-3 a {
   display: inline-block;
   text-decoration: none;
-  /* Animación constante de flotado */
   animation: flotarIcono 3s ease-in-out infinite;
-  /* Efecto al pasar el mouse */
 }
 footer .caja-3 a:nth-child(2) {
   animation-delay: 0.4s;
@@ -52,7 +64,8 @@ footer .caja-3 a:nth-child(3) {
 footer .caja-3 a .img-pie-de-pagina {
   padding: 5px;
   width: 60px;
-  /* Transición suave para cuando quites el mouse */
+  height: 60px;
+  object-fit: contain;
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
 }
 footer .caja-3 a:hover {
@@ -265,6 +278,63 @@ header .tituloprincipal-logo-alicia .img-ceramica-4-elementos {
   text-align: justify;
   padding: 10px;
   margin-left: 20px;
+}
+
+/*modo responsive*/
+.main-como-comprar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(198, 149, 245);
+  margin-top: 30px;
+  /* Títulos y textos generales */
+}
+.main-como-comprar .titulo-como-comprar {
+  color: rgb(243, 241, 241);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 10px;
+  /* Ajuste para móviles */
+}
+@media (max-width: 768px) {
+  .main-como-comprar .titulo-como-comprar {
+    font-size: 28px;
+  }
+}
+.main-como-comprar .texto-como-comprar,
+.main-como-comprar .contacto-como-comprar,
+.main-como-comprar .lista-como-comprar {
+  color: rgb(243, 241, 241);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  text-align: justify;
+  padding: 10px;
+  /* Ajustes para móviles */
+}
+@media (max-width: 768px) {
+  .main-como-comprar .texto-como-comprar,
+  .main-como-comprar .contacto-como-comprar,
+  .main-como-comprar .lista-como-comprar {
+    font-size: 16px;
+    text-align: left;
+    padding: 15px;
+  }
+}
+.main-como-comprar .lista-como-comprar {
+  margin-left: 20px;
+}
+@media (max-width: 768px) {
+  .main-como-comprar .lista-como-comprar {
+    margin-left: 0;
+    padding-left: 25px;
+  }
 }
 
 /*Estilos del main contacto*/

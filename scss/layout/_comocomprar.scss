@@ -48,3 +48,59 @@
 
 }
 }
+
+/*modo responsive*/
+
+.main-como-comprar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(198, 149, 245);
+    margin-top: 30px;
+
+    /* Títulos y textos generales */
+    .titulo-como-comprar {
+        color: rgb(243, 241, 241);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size: 35px;
+        margin-bottom: 20px; 
+        text-align: center;
+        padding: 10px;
+
+        /* Ajuste para móviles */
+        @media (max-width: 768px) {
+            font-size: 28px;
+        }
+    }
+
+    .texto-como-comprar, 
+    .contacto-como-comprar, 
+    .lista-como-comprar {
+        color: rgb(243, 241, 241);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 800px;
+        text-align: justify;
+        padding: 10px;
+
+        /* Ajustes para móviles */
+        @media (max-width: 768px) {
+            font-size: 16px;
+            text-align: left; // Evita espacios raros en pantallas angostas
+            padding: 15px;
+        }
+    }
+
+    .lista-como-comprar {
+        margin-left: 20px;
+        
+        @media (max-width: 768px) {
+            margin-left: 0; // Aprovechamos más el ancho en móvil
+            padding-left: 25px; // Espacio solo para las viñetas
+        }
+    }
+}
